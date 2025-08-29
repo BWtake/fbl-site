@@ -2,6 +2,7 @@ baseURL = "https://bwtake.github.io/fbl-site/"
 languageCode = "ja-jp"
 title = "未来サイバー生命体研究所（Future BioCybernetics Lab）"
 theme = "ananke"
+canonifyURLs = true 
 
 [menu]
   [[menu.main]]
