@@ -1,0 +1,61 @@
+/* ====== FBL / custom.css ====== */
+
+/* 1) ページ幅の軽い調整（任意） */
+.main, .container, .content, .section {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 2) Markdownテーブルの共通スタイル（基本） */
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+table, th, td {
+  border: 1px solid #aaa !important;
+}
+th, td {
+  padding: 8px !important;
+}
+th {
+  background-color: #f5f5f5 !important;
+}
+
+/* 3) 記事本文に限定して強制上書き（テーマCSSへの勝ち筋） */
+article table,
+article table th,
+article table td {
+  border: 1px solid #333 !important;
+  border-collapse: collapse !important;
+}
+article table th,
+article table td {
+  padding: 8px !important;
+}
+
+/* 4) Ananke（Tachyons）の本文ラッパに合わせて最終上書き
+      ※ .nested-copy-line-height は Ananke の本文ブロック */
+.nested-copy-line-height table,
+.nested-copy-line-height table th,
+.nested-copy-line-height table td {
+  border: 1px solid #333 !important;
+  border-collapse: collapse !important;
+}
+.nested-copy-line-height table th,
+.nested-copy-line-height table td {
+  padding: 8px !important;
+}
+
+/* 5) 記事ブロックの視覚的区切り（任意） */
+article {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+/* 6) 見出しと本文の間隔（任意） */
+h2, h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}

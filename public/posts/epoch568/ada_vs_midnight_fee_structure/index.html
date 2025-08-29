@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>ada_vs_midnight_fee_structure | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ADAとMidnightにおける署名・手数料構造の違いとその影響
+
+🧭 はじめに
+Cardano（ADA）とMidnight（NIGHT&#43;DUST）は、どちらもUTxOベースのブロックチェーンであるが、
+トランザクションの署名および手数料の設計において根本的に異なるアプローチを取っている。
+この違いは、ユーザーがウォレット（例：Lace）を用いて「接続」「署名」「投票」「送金」などを行う際、
+どの段階で費用が発生するのか／発生しないのかという体験の違いとして現れる。
+本ドキュメントでは、
+
+Cardanoにおける署名とADA手数料の関係
+Midnightにおける署名とDUST構造
+各操作時の「費用の有無」を判断する実用ポイント
+を体系的に解説する。
+
+
+🌐 Cardano（ADA）の場合
+🔹 基本構造
+
+すべてのオンチェーントランザクションにADAによるネットワーク手数料が必要
+署名を伴う行為がオンチェーン書き込みを伴えば、必ず手数料が発生
+
+🔹 代表的な操作と費用の有無
+
+  
+      
+          操作
+          オンチェーンTx
+          手数料
+          備考
+      
+  
+  
+      
+          ウォレット接続認証（例：GovTool接続）
+          ❌
+          ❌ 無料
+          オフチェーン署名のみ
+      
+      
+          DRep登録・解除
+          ✅
+          ✅ ADA
+          署名＋トランザクション送信
+      
+      
+          投票行動
+          ✅
+          ✅ ADA
+          投票ごとに署名とTxが発生
+      
+      
+          通常送金（ADA送信）
+          ✅
+          ✅ ADA
+          手数料は通常0.16〜0.17 ADA前後
+      
+      
+          Catalyst登録
+          ✅
+          ✅ ADA
+          Tx送信が発生
+      
+  
+
+
+🌙 Midnight（NIGHT &amp; DUST）の場合
+🔹 基本構造
+Midnightでは、取引手数料としてDUSTというリソースが用いられる。
+このDUSTは、ユーザーが保有するNIGHTトークンから自動的に生成される。
+
+NIGHTは消費されない
+DUSTは**生成→消費→消滅（減衰）**という循環を繰り返す
+保有NIGHTが多いほど、より多くのDUSTを生成できる
+DUSTを使えば、取引時に追加の通貨支払いは不要（実質的に無料体験）
+
+🔹 DUST設計の特徴
+
+  
+      
+          特性
+          内容
+      
+  
+  
+      
+          消費型
+          使うと消える（再利用不可）
+      
+      
+          減衰型
+          発生後に時間とともに消滅
+      
+      
+          非転送性
+          他アドレスに送ることはできない
+      
+      
+          生成元
+          NIGHT保有量に比例して生成
+      
+  
+
+
+🧾 操作別：費用が発生するかどうか
+
+  
+      
+          操作内容
+          ネットワーク
+          オンチェーンTx
+          手数料発生
+          使用リソース
+      
+  
+  
+      
+          ウォレットの接続（署名）
+          Cardano / Midnight
+          ❌
+          ❌ 無料
+          署名のみ
+      
+      
+          ガバナンス投票（提案・承認）
+          Cardano
+          ✅
+          ✅ ADA
+          通常Tx
+      
+      
+          NIGHT請求・受取
+          Cardano
+          ✅
+          ✅ ADA
+          RedemptionにてTx発生
+      
+      
+          通常送金（ADA）
+          Cardano
+          ✅
+          ✅ ADA
+          転送時に必須
+      
+      
+          通常送金（NIGHT）
+          Midnight
+          ✅
+          ✅ DUST
+          DUSTで支払う（自動生成）
+      
+      
+          Midnight Lost-and-Found請求
+          Midnight
+          ✅
+          ✅ DUST（自動）
+          DUSTがコントラクトに準備済み
+      
+  
+
+
+🔍 実用：手数料発生の見分け方
+【1】ウォレットUIでの確認（例：Lace）
+
+
+**「ネットワーク手数料」**の表示があるか？">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/epoch568/ada_vs_midnight_fee_structure/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/epoch568/ada_vs_midnight_fee_structure/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+  <meta property="og:title" content="ada_vs_midnight_fee_structure">
+  <meta property="og:description" content="ADAとMidnightにおける署名・手数料構造の違いとその影響 🧭 はじめに Cardano（ADA）とMidnight（NIGHT&#43;DUST）は、どちらもUTxOベースのブロックチェーンであるが、
+トランザクションの署名および手数料の設計において根本的に異なるアプローチを取っている。
+この違いは、ユーザーがウォレット（例：Lace）を用いて「接続」「署名」「投票」「送金」などを行う際、
+どの段階で費用が発生するのか／発生しないのかという体験の違いとして現れる。
+本ドキュメントでは、
+Cardanoにおける署名とADA手数料の関係 Midnightにおける署名とDUST構造 各操作時の「費用の有無」を判断する実用ポイント
+を体系的に解説する。 🌐 Cardano（ADA）の場合 🔹 基本構造 すべてのオンチェーントランザクションにADAによるネットワーク手数料が必要 署名を伴う行為がオンチェーン書き込みを伴えば、必ず手数料が発生 🔹 代表的な操作と費用の有無 操作 オンチェーンTx 手数料 備考 ウォレット接続認証（例：GovTool接続） ❌ ❌ 無料 オフチェーン署名のみ DRep登録・解除 ✅ ✅ ADA 署名＋トランザクション送信 投票行動 ✅ ✅ ADA 投票ごとに署名とTxが発生 通常送金（ADA送信） ✅ ✅ ADA 手数料は通常0.16〜0.17 ADA前後 Catalyst登録 ✅ ✅ ADA Tx送信が発生 🌙 Midnight（NIGHT &amp; DUST）の場合 🔹 基本構造 Midnightでは、取引手数料としてDUSTというリソースが用いられる。
+このDUSTは、ユーザーが保有するNIGHTトークンから自動的に生成される。
+NIGHTは消費されない DUSTは**生成→消費→消滅（減衰）**という循環を繰り返す 保有NIGHTが多いほど、より多くのDUSTを生成できる DUSTを使えば、取引時に追加の通貨支払いは不要（実質的に無料体験） 🔹 DUST設計の特徴 特性 内容 消費型 使うと消える（再利用不可） 減衰型 発生後に時間とともに消滅 非転送性 他アドレスに送ることはできない 生成元 NIGHT保有量に比例して生成 🧾 操作別：費用が発生するかどうか 操作内容 ネットワーク オンチェーンTx 手数料発生 使用リソース ウォレットの接続（署名） Cardano / Midnight ❌ ❌ 無料 署名のみ ガバナンス投票（提案・承認） Cardano ✅ ✅ ADA 通常Tx NIGHT請求・受取 Cardano ✅ ✅ ADA RedemptionにてTx発生 通常送金（ADA） Cardano ✅ ✅ ADA 転送時に必須 通常送金（NIGHT） Midnight ✅ ✅ DUST DUSTで支払う（自動生成） Midnight Lost-and-Found請求 Midnight ✅ ✅ DUST（自動） DUSTがコントラクトに準備済み 🔍 実用：手数料発生の見分け方 【1】ウォレットUIでの確認（例：Lace） **「ネットワーク手数料」**の表示があるか？">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-06T00:00:00+00:00">
+    <meta property="article:tag" content="観測記録">
+    <meta property="article:tag" content="カルダノ">
+    <meta property="article:tag" content="FBL">
+    <meta property="article:tag" content="ADA">
+    <meta property="article:tag" content="Midnight">
+
+  <meta itemprop="name" content="ada_vs_midnight_fee_structure">
+  <meta itemprop="description" content="ADAとMidnightにおける署名・手数料構造の違いとその影響 🧭 はじめに Cardano（ADA）とMidnight（NIGHT&#43;DUST）は、どちらもUTxOベースのブロックチェーンであるが、
+トランザクションの署名および手数料の設計において根本的に異なるアプローチを取っている。
+この違いは、ユーザーがウォレット（例：Lace）を用いて「接続」「署名」「投票」「送金」などを行う際、
+どの段階で費用が発生するのか／発生しないのかという体験の違いとして現れる。
+本ドキュメントでは、
+Cardanoにおける署名とADA手数料の関係 Midnightにおける署名とDUST構造 各操作時の「費用の有無」を判断する実用ポイント
+を体系的に解説する。 🌐 Cardano（ADA）の場合 🔹 基本構造 すべてのオンチェーントランザクションにADAによるネットワーク手数料が必要 署名を伴う行為がオンチェーン書き込みを伴えば、必ず手数料が発生 🔹 代表的な操作と費用の有無 操作 オンチェーンTx 手数料 備考 ウォレット接続認証（例：GovTool接続） ❌ ❌ 無料 オフチェーン署名のみ DRep登録・解除 ✅ ✅ ADA 署名＋トランザクション送信 投票行動 ✅ ✅ ADA 投票ごとに署名とTxが発生 通常送金（ADA送信） ✅ ✅ ADA 手数料は通常0.16〜0.17 ADA前後 Catalyst登録 ✅ ✅ ADA Tx送信が発生 🌙 Midnight（NIGHT &amp; DUST）の場合 🔹 基本構造 Midnightでは、取引手数料としてDUSTというリソースが用いられる。
+このDUSTは、ユーザーが保有するNIGHTトークンから自動的に生成される。
+NIGHTは消費されない DUSTは**生成→消費→消滅（減衰）**という循環を繰り返す 保有NIGHTが多いほど、より多くのDUSTを生成できる DUSTを使えば、取引時に追加の通貨支払いは不要（実質的に無料体験） 🔹 DUST設計の特徴 特性 内容 消費型 使うと消える（再利用不可） 減衰型 発生後に時間とともに消滅 非転送性 他アドレスに送ることはできない 生成元 NIGHT保有量に比例して生成 🧾 操作別：費用が発生するかどうか 操作内容 ネットワーク オンチェーンTx 手数料発生 使用リソース ウォレットの接続（署名） Cardano / Midnight ❌ ❌ 無料 署名のみ ガバナンス投票（提案・承認） Cardano ✅ ✅ ADA 通常Tx NIGHT請求・受取 Cardano ✅ ✅ ADA RedemptionにてTx発生 通常送金（ADA） Cardano ✅ ✅ ADA 転送時に必須 通常送金（NIGHT） Midnight ✅ ✅ DUST DUSTで支払う（自動生成） Midnight Lost-and-Found請求 Midnight ✅ ✅ DUST（自動） DUSTがコントラクトに準備済み 🔍 実用：手数料発生の見分け方 【1】ウォレットUIでの確認（例：Lace） **「ネットワーク手数料」**の表示があるか？">
+  <meta itemprop="datePublished" content="2025-07-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="156">
+  <meta itemprop="keywords" content="観測記録,カルダノ,FBL,ADA,Midnight">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ada_vs_midnight_fee_structure">
+  <meta name="twitter:description" content="ADAとMidnightにおける署名・手数料構造の違いとその影響 🧭 はじめに Cardano（ADA）とMidnight（NIGHT&#43;DUST）は、どちらもUTxOベースのブロックチェーンであるが、
+トランザクションの署名および手数料の設計において根本的に異なるアプローチを取っている。
+この違いは、ユーザーがウォレット（例：Lace）を用いて「接続」「署名」「投票」「送金」などを行う際、
+どの段階で費用が発生するのか／発生しないのかという体験の違いとして現れる。
+本ドキュメントでは、
+Cardanoにおける署名とADA手数料の関係 Midnightにおける署名とDUST構造 各操作時の「費用の有無」を判断する実用ポイント
+を体系的に解説する。 🌐 Cardano（ADA）の場合 🔹 基本構造 すべてのオンチェーントランザクションにADAによるネットワーク手数料が必要 署名を伴う行為がオンチェーン書き込みを伴えば、必ず手数料が発生 🔹 代表的な操作と費用の有無 操作 オンチェーンTx 手数料 備考 ウォレット接続認証（例：GovTool接続） ❌ ❌ 無料 オフチェーン署名のみ DRep登録・解除 ✅ ✅ ADA 署名＋トランザクション送信 投票行動 ✅ ✅ ADA 投票ごとに署名とTxが発生 通常送金（ADA送信） ✅ ✅ ADA 手数料は通常0.16〜0.17 ADA前後 Catalyst登録 ✅ ✅ ADA Tx送信が発生 🌙 Midnight（NIGHT &amp; DUST）の場合 🔹 基本構造 Midnightでは、取引手数料としてDUSTというリソースが用いられる。
+このDUSTは、ユーザーが保有するNIGHTトークンから自動的に生成される。
+NIGHTは消費されない DUSTは**生成→消費→消滅（減衰）**という循環を繰り返す 保有NIGHTが多いほど、より多くのDUSTを生成できる DUSTを使えば、取引時に追加の通貨支払いは不要（実質的に無料体験） 🔹 DUST設計の特徴 特性 内容 消費型 使うと消える（再利用不可） 減衰型 発生後に時間とともに消滅 非転送性 他アドレスに送ることはできない 生成元 NIGHT保有量に比例して生成 🧾 操作別：費用が発生するかどうか 操作内容 ネットワーク オンチェーンTx 手数料発生 使用リソース ウォレットの接続（署名） Cardano / Midnight ❌ ❌ 無料 署名のみ ガバナンス投票（提案・承認） Cardano ✅ ✅ ADA 通常Tx NIGHT請求・受取 Cardano ✅ ✅ ADA RedemptionにてTx発生 通常送金（ADA） Cardano ✅ ✅ ADA 転送時に必須 通常送金（NIGHT） Midnight ✅ ✅ DUST DUSTで支払う（自動生成） Midnight Lost-and-Found請求 Midnight ✅ ✅ DUST（自動） DUSTがコントラクトに準備済み 🔍 実用：手数料発生の見分け方 【1】ウォレットUIでの確認（例：Lace） **「ネットワーク手数料」**の表示があるか？">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所（Future BioCybernetics Lab）
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 568 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">ada_vs_midnight_fee_structure</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-07-06T00:00:00Z">July 6, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="adaとmidnightにおける署名手数料構造の違いとその影響">ADAとMidnightにおける署名・手数料構造の違いとその影響</h1>
+<hr>
+<h2 id="-はじめに">🧭 はじめに</h2>
+<p>Cardano（ADA）とMidnight（NIGHT+DUST）は、どちらもUTxOベースのブロックチェーンであるが、<br>
+<strong>トランザクションの署名および手数料の設計</strong>において根本的に異なるアプローチを取っている。</p>
+<p>この違いは、ユーザーがウォレット（例：Lace）を用いて「接続」「署名」「投票」「送金」などを行う際、<br>
+<strong>どの段階で費用が発生するのか／発生しないのか</strong>という体験の違いとして現れる。</p>
+<p>本ドキュメントでは、</p>
+<ul>
+<li>Cardanoにおける署名とADA手数料の関係</li>
+<li>Midnightにおける署名とDUST構造</li>
+<li>各操作時の「費用の有無」を判断する実用ポイント<br>
+を体系的に解説する。</li>
+</ul>
+<hr>
+<h2 id="-cardanoadaの場合">🌐 Cardano（ADA）の場合</h2>
+<h3 id="-基本構造">🔹 基本構造</h3>
+<ul>
+<li>すべてのオンチェーントランザクションに<strong>ADAによるネットワーク手数料が必要</strong></li>
+<li>署名を伴う行為がオンチェーン書き込みを伴えば、必ず手数料が発生</li>
+</ul>
+<h3 id="-代表的な操作と費用の有無">🔹 代表的な操作と費用の有無</h3>
+<table>
+  <thead>
+      <tr>
+          <th>操作</th>
+          <th>オンチェーンTx</th>
+          <th>手数料</th>
+          <th>備考</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ウォレット接続認証（例：GovTool接続）</td>
+          <td>❌</td>
+          <td>❌ 無料</td>
+          <td>オフチェーン署名のみ</td>
+      </tr>
+      <tr>
+          <td>DRep登録・解除</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>署名＋トランザクション送信</td>
+      </tr>
+      <tr>
+          <td>投票行動</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>投票ごとに署名とTxが発生</td>
+      </tr>
+      <tr>
+          <td>通常送金（ADA送信）</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>手数料は通常0.16〜0.17 ADA前後</td>
+      </tr>
+      <tr>
+          <td>Catalyst登録</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>Tx送信が発生</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-midnightnight--dustの場合">🌙 Midnight（NIGHT &amp; DUST）の場合</h2>
+<h3 id="-基本構造-1">🔹 基本構造</h3>
+<p>Midnightでは、取引手数料として<strong>DUST</strong>というリソースが用いられる。<br>
+このDUSTは、ユーザーが保有する<strong>NIGHTトークンから自動的に生成される</strong>。</p>
+<ul>
+<li><strong>NIGHTは消費されない</strong></li>
+<li>DUSTは**生成→消費→消滅（減衰）**という循環を繰り返す</li>
+<li>保有NIGHTが多いほど、より多くのDUSTを生成できる</li>
+<li>DUSTを使えば、取引時に追加の通貨支払いは不要（実質的に無料体験）</li>
+</ul>
+<h3 id="-dust設計の特徴">🔹 DUST設計の特徴</h3>
+<table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>消費型</td>
+          <td>使うと消える（再利用不可）</td>
+      </tr>
+      <tr>
+          <td>減衰型</td>
+          <td>発生後に時間とともに消滅</td>
+      </tr>
+      <tr>
+          <td>非転送性</td>
+          <td>他アドレスに送ることはできない</td>
+      </tr>
+      <tr>
+          <td>生成元</td>
+          <td>NIGHT保有量に比例して生成</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-操作別費用が発生するかどうか">🧾 操作別：費用が発生するかどうか</h2>
+<table>
+  <thead>
+      <tr>
+          <th>操作内容</th>
+          <th>ネットワーク</th>
+          <th>オンチェーンTx</th>
+          <th>手数料発生</th>
+          <th>使用リソース</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ウォレットの接続（署名）</td>
+          <td>Cardano / Midnight</td>
+          <td>❌</td>
+          <td>❌ 無料</td>
+          <td>署名のみ</td>
+      </tr>
+      <tr>
+          <td>ガバナンス投票（提案・承認）</td>
+          <td>Cardano</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>通常Tx</td>
+      </tr>
+      <tr>
+          <td>NIGHT請求・受取</td>
+          <td>Cardano</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>RedemptionにてTx発生</td>
+      </tr>
+      <tr>
+          <td>通常送金（ADA）</td>
+          <td>Cardano</td>
+          <td>✅</td>
+          <td>✅ ADA</td>
+          <td>転送時に必須</td>
+      </tr>
+      <tr>
+          <td>通常送金（NIGHT）</td>
+          <td>Midnight</td>
+          <td>✅</td>
+          <td>✅ DUST</td>
+          <td>DUSTで支払う（自動生成）</td>
+      </tr>
+      <tr>
+          <td>Midnight Lost-and-Found請求</td>
+          <td>Midnight</td>
+          <td>✅</td>
+          <td>✅ DUST（自動）</td>
+          <td>DUSTがコントラクトに準備済み</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-実用手数料発生の見分け方">🔍 実用：手数料発生の見分け方</h2>
+<h3 id="1ウォレットuiでの確認例lace">【1】ウォレットUIでの確認（例：Lace）</h3>
+<ul>
+<li>
+<p>**「ネットワーク手数料」**の表示があるか？</p>
+<ul>
+<li>✅ ある → 手数料が必要（ADAまたはDUST）</li>
+<li>❌ ない → オフチェーン署名のみ</li>
+</ul>
+</li>
+<li>
+<p><strong>トランザクション詳細</strong>が表示されるか？</p>
+<ul>
+<li>→ 表示されればTxとしてネットワークに送られる可能性が高い</li>
+</ul>
+</li>
+</ul>
+<h3 id="2操作の性質を理解する">【2】操作の性質を理解する</h3>
+<table>
+  <thead>
+      <tr>
+          <th>判断のポイント</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ブロックチェーンに記録が必要？</td>
+          <td>✅ → オンチェーンTx＝手数料発生</td>
+      </tr>
+      <tr>
+          <td>ただの「認証・接続」行為か？</td>
+          <td>✅ → オフチェーン署名＝無料</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-まとめ">🎯 まとめ</h2>
+<ul>
+<li>Cardanoでは、<strong>オンチェーン行動には必ずADA手数料</strong>がかかる</li>
+<li>Midnightでは、<strong>NIGHTが生成するDUSTによって、実質無料でTxが可能</strong></li>
+<li>DUSTはユーザー体験をなめらかにしつつ、スパム防止機能も備える</li>
+<li><strong>送金においても</strong>、CardanoはADA、MidnightはDUSTが必要になる点は共通だが、費用構造は全く異なる</li>
+<li>手数料の有無は、ウォレットの表示や行動の性質から見極めることが可能</li>
+</ul>
+<p>MidnightのDUST設計は、Web3をより<strong>ユニバーサルで直感的なUXへと進化させる鍵</strong>となっている。</p>
+<hr>
+<p>作成日: 2025年7月6日</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/epoch568/dust_mechanics_explained/">dust_mechanics_explained</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch568/btc_whale_midnight_analysis/">BTC_whale_midnight_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch567/nightdust_doublestructure_report/">NightDust_DoubleStructure_Report</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch560/realusd_midnight_cardano_ama_analysis/">RealUSD_Midnight_Cardano_AMA_Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch568/ctrlwallet_emurgo_analysis/">ctrlwallet_emurgo_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch568/cardano_tailwind_vitalik_ethcc2025/">cardano_tailwind_vitalik_ethcc2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch567/easygo_vs_glacier/">easygo_vs_glacier</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch567/katana_vs_cardano/">katana_vs_cardano</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch567/xrpl_evm_vs_midnight_report/">XRPL_EVM_vs_Midnight_Report</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch567/wolfram_crosschain_poc_report/">Wolfram_CrossChain_PoC_Report</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch564/charles_toughlove_ama2025/">charles_toughlove_ama2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch564/cardano_eth_solana_japan_compare_2025/">cardano_eth_solana_japan_compare_2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch563/cardano_stablecoin_efficiency_analysis/">cardano_stablecoin_efficiency_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch563/eutxo_vs_account_model_and_scenario_analysis/">EUTxO_vs_Account_Model_and_Scenario_Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch563/ama-%E8%B3%AA%E5%95%8F_2025%E5%B9%B46%E6%9C%88%E7%89%88/">Ouroboros_Genesis_解説_2025年版</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>wallet_web3_comparison_analysis | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="スマートフォンウォレット比較と仮想通貨対応の将来性分析
+2025年現在、Google、Apple、Samsungが提供するスマートフォンウォレットは、物理的な財布の代替として進化を遂げつつあります。これらのウォレットはクレジットカード、交通系IC、ID証明書、チケット類などを統合する一方で、「仮想通貨（Web3）ウォレット」との連携にはまだ踏み込んでいません。
+しかし、Google WalletにおけるZKP（ゼロ知識証明）導入のように、プライバシー重視型の技術が採用される動きは、将来的にWeb3領域との融合の可能性を示唆しています。
+
+スマートフォンウォレット機能の比較表（2025年5月時点）
+
+  
+      
+          機能 / ウォレット
+          Google Wallet
+          Apple Wallet
+          Samsung Wallet
+      
+  
+  
+      
+          決済機能
+          Google Pay経由（QUICPay, Suica）
+          Apple Pay（iD, Suica, QUICPay）
+          Samsung Pay（磁気互換）
+      
+      
+          クレジット/デビットカード登録
+          ◯
+          ◯
+          ◯
+      
+      
+          交通系ICカード
+          Suica（日本）、レイルカード（英）
+          Suica、PASMO（日本）
+          Suica（日本）
+      
+      
+          搭乗券・イベントチケット
+          ◯（QRコード対応）
+          ◯（Wallet対応フォーマット）
+          ◯（Google形式ベース）
+      
+      
+          ポイントカード・会員証
+          ◯（バーコード）
+          ◯（NFC or QR）
+          ◯
+      
+      
+          ID・免許証など
+          一部州・国でZKPベースID導入中
+          米国一部州（2023年以降）
+          韓国など国家ID統合中
+      
+      
+          医療証明・ワクチン証明
+          ◯（PDF or gov連携）
+          ◯（Healthアプリ連携）
+          ◯
+      
+      
+          仮想通貨管理（直接）
+          ×（未対応）
+          ×（未対応）
+          ×（未対応）
+      
+      
+          ZKP技術の活用
+          ◯（年齢確認IDに導入）
+          △（特許保有、実装なし）
+          ×
+      
+  
+
+
+ZKPとWeb3ウォレットへの拡張可能性
+
+Apple：NFC制御権とセキュリティ上の理由から、外部ウォレットとの連携には消極的。
+Samsung：かつてはBlockchain Walletを提供していたが、2023年に廃止。再拡張には不透明感あり。
+Google：Google CloudがEthereumやSolanaのノード提供を開始しており、Web3技術との橋渡しの可能性が高い。
+
+
+5段階シナリオ分析：仮想通貨対応への拡張（2025〜2030）
+
+  
+      
+          シナリオ
+          内容
+          実現可能性（主観）
+      
+  
+  
+      
+          S5（融合）
+          Apple/Google/Samsungが仮想通貨・DID・ZKPを公式サポート。
+          15%
+      
+      
+          S4（限定統合）
+          NFTチケットやDID証明などWeb3要素との部分連携。
+          30%
+      
+      
+          S3（外部連携型）
+          Metamask等とのAPI連携にとどまる。
+          35%
+      
+      
+          S2（分断）
+          法定通貨圏とWeb3が別ルートで発展。
+          15%
+      
+      
+          S1（対立）
+          規制やセキュリティ懸念で仮想通貨連携が封じられる。
+          5%
+      
+  
+
+
+結論
+現時点では、これらのウォレットが仮想通貨資産を直接管理する機能はありませんが、DIDやZKP技術の発展により、Web3とWeb2の交差点が見え始めています。特にGoogleはクラウドとモバイルの両方でWeb3支援基盤を持ち、今後の鍵を握る可能性が高いと言えるでしょう。">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/epoch555/wallet_web3_comparison_analysis/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/epoch555/wallet_web3_comparison_analysis/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+  <meta property="og:title" content="wallet_web3_comparison_analysis">
+  <meta property="og:description" content="スマートフォンウォレット比較と仮想通貨対応の将来性分析 2025年現在、Google、Apple、Samsungが提供するスマートフォンウォレットは、物理的な財布の代替として進化を遂げつつあります。これらのウォレットはクレジットカード、交通系IC、ID証明書、チケット類などを統合する一方で、「仮想通貨（Web3）ウォレット」との連携にはまだ踏み込んでいません。
+しかし、Google WalletにおけるZKP（ゼロ知識証明）導入のように、プライバシー重視型の技術が採用される動きは、将来的にWeb3領域との融合の可能性を示唆しています。
+スマートフォンウォレット機能の比較表（2025年5月時点） 機能 / ウォレット Google Wallet Apple Wallet Samsung Wallet 決済機能 Google Pay経由（QUICPay, Suica） Apple Pay（iD, Suica, QUICPay） Samsung Pay（磁気互換） クレジット/デビットカード登録 ◯ ◯ ◯ 交通系ICカード Suica（日本）、レイルカード（英） Suica、PASMO（日本） Suica（日本） 搭乗券・イベントチケット ◯（QRコード対応） ◯（Wallet対応フォーマット） ◯（Google形式ベース） ポイントカード・会員証 ◯（バーコード） ◯（NFC or QR） ◯ ID・免許証など 一部州・国でZKPベースID導入中 米国一部州（2023年以降） 韓国など国家ID統合中 医療証明・ワクチン証明 ◯（PDF or gov連携） ◯（Healthアプリ連携） ◯ 仮想通貨管理（直接） ×（未対応） ×（未対応） ×（未対応） ZKP技術の活用 ◯（年齢確認IDに導入） △（特許保有、実装なし） × ZKPとWeb3ウォレットへの拡張可能性 Apple：NFC制御権とセキュリティ上の理由から、外部ウォレットとの連携には消極的。 Samsung：かつてはBlockchain Walletを提供していたが、2023年に廃止。再拡張には不透明感あり。 Google：Google CloudがEthereumやSolanaのノード提供を開始しており、Web3技術との橋渡しの可能性が高い。 5段階シナリオ分析：仮想通貨対応への拡張（2025〜2030） シナリオ 内容 実現可能性（主観） S5（融合） Apple/Google/Samsungが仮想通貨・DID・ZKPを公式サポート。 15% S4（限定統合） NFTチケットやDID証明などWeb3要素との部分連携。 30% S3（外部連携型） Metamask等とのAPI連携にとどまる。 35% S2（分断） 法定通貨圏とWeb3が別ルートで発展。 15% S1（対立） 規制やセキュリティ懸念で仮想通貨連携が封じられる。 5% 結論 現時点では、これらのウォレットが仮想通貨資産を直接管理する機能はありませんが、DIDやZKP技術の発展により、Web3とWeb2の交差点が見え始めています。特にGoogleはクラウドとモバイルの両方でWeb3支援基盤を持ち、今後の鍵を握る可能性が高いと言えるでしょう。">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-04T00:00:00+00:00">
+    <meta property="article:tag" content="観測記録">
+    <meta property="article:tag" content="カルダノ">
+    <meta property="article:tag" content="FBL">
+    <meta property="article:tag" content="ADA">
+    <meta property="article:tag" content="BTC">
+    <meta property="article:tag" content="ETH">
+
+  <meta itemprop="name" content="wallet_web3_comparison_analysis">
+  <meta itemprop="description" content="スマートフォンウォレット比較と仮想通貨対応の将来性分析 2025年現在、Google、Apple、Samsungが提供するスマートフォンウォレットは、物理的な財布の代替として進化を遂げつつあります。これらのウォレットはクレジットカード、交通系IC、ID証明書、チケット類などを統合する一方で、「仮想通貨（Web3）ウォレット」との連携にはまだ踏み込んでいません。
+しかし、Google WalletにおけるZKP（ゼロ知識証明）導入のように、プライバシー重視型の技術が採用される動きは、将来的にWeb3領域との融合の可能性を示唆しています。
+スマートフォンウォレット機能の比較表（2025年5月時点） 機能 / ウォレット Google Wallet Apple Wallet Samsung Wallet 決済機能 Google Pay経由（QUICPay, Suica） Apple Pay（iD, Suica, QUICPay） Samsung Pay（磁気互換） クレジット/デビットカード登録 ◯ ◯ ◯ 交通系ICカード Suica（日本）、レイルカード（英） Suica、PASMO（日本） Suica（日本） 搭乗券・イベントチケット ◯（QRコード対応） ◯（Wallet対応フォーマット） ◯（Google形式ベース） ポイントカード・会員証 ◯（バーコード） ◯（NFC or QR） ◯ ID・免許証など 一部州・国でZKPベースID導入中 米国一部州（2023年以降） 韓国など国家ID統合中 医療証明・ワクチン証明 ◯（PDF or gov連携） ◯（Healthアプリ連携） ◯ 仮想通貨管理（直接） ×（未対応） ×（未対応） ×（未対応） ZKP技術の活用 ◯（年齢確認IDに導入） △（特許保有、実装なし） × ZKPとWeb3ウォレットへの拡張可能性 Apple：NFC制御権とセキュリティ上の理由から、外部ウォレットとの連携には消極的。 Samsung：かつてはBlockchain Walletを提供していたが、2023年に廃止。再拡張には不透明感あり。 Google：Google CloudがEthereumやSolanaのノード提供を開始しており、Web3技術との橋渡しの可能性が高い。 5段階シナリオ分析：仮想通貨対応への拡張（2025〜2030） シナリオ 内容 実現可能性（主観） S5（融合） Apple/Google/Samsungが仮想通貨・DID・ZKPを公式サポート。 15% S4（限定統合） NFTチケットやDID証明などWeb3要素との部分連携。 30% S3（外部連携型） Metamask等とのAPI連携にとどまる。 35% S2（分断） 法定通貨圏とWeb3が別ルートで発展。 15% S1（対立） 規制やセキュリティ懸念で仮想通貨連携が封じられる。 5% 結論 現時点では、これらのウォレットが仮想通貨資産を直接管理する機能はありませんが、DIDやZKP技術の発展により、Web3とWeb2の交差点が見え始めています。特にGoogleはクラウドとモバイルの両方でWeb3支援基盤を持ち、今後の鍵を握る可能性が高いと言えるでしょう。">
+  <meta itemprop="datePublished" content="2025-05-04T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="89">
+  <meta itemprop="keywords" content="観測記録,カルダノ,FBL,ADA,BTC,ETH,SOL,比較">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="wallet_web3_comparison_analysis">
+  <meta name="twitter:description" content="スマートフォンウォレット比較と仮想通貨対応の将来性分析 2025年現在、Google、Apple、Samsungが提供するスマートフォンウォレットは、物理的な財布の代替として進化を遂げつつあります。これらのウォレットはクレジットカード、交通系IC、ID証明書、チケット類などを統合する一方で、「仮想通貨（Web3）ウォレット」との連携にはまだ踏み込んでいません。
+しかし、Google WalletにおけるZKP（ゼロ知識証明）導入のように、プライバシー重視型の技術が採用される動きは、将来的にWeb3領域との融合の可能性を示唆しています。
+スマートフォンウォレット機能の比較表（2025年5月時点） 機能 / ウォレット Google Wallet Apple Wallet Samsung Wallet 決済機能 Google Pay経由（QUICPay, Suica） Apple Pay（iD, Suica, QUICPay） Samsung Pay（磁気互換） クレジット/デビットカード登録 ◯ ◯ ◯ 交通系ICカード Suica（日本）、レイルカード（英） Suica、PASMO（日本） Suica（日本） 搭乗券・イベントチケット ◯（QRコード対応） ◯（Wallet対応フォーマット） ◯（Google形式ベース） ポイントカード・会員証 ◯（バーコード） ◯（NFC or QR） ◯ ID・免許証など 一部州・国でZKPベースID導入中 米国一部州（2023年以降） 韓国など国家ID統合中 医療証明・ワクチン証明 ◯（PDF or gov連携） ◯（Healthアプリ連携） ◯ 仮想通貨管理（直接） ×（未対応） ×（未対応） ×（未対応） ZKP技術の活用 ◯（年齢確認IDに導入） △（特許保有、実装なし） × ZKPとWeb3ウォレットへの拡張可能性 Apple：NFC制御権とセキュリティ上の理由から、外部ウォレットとの連携には消極的。 Samsung：かつてはBlockchain Walletを提供していたが、2023年に廃止。再拡張には不透明感あり。 Google：Google CloudがEthereumやSolanaのノード提供を開始しており、Web3技術との橋渡しの可能性が高い。 5段階シナリオ分析：仮想通貨対応への拡張（2025〜2030） シナリオ 内容 実現可能性（主観） S5（融合） Apple/Google/Samsungが仮想通貨・DID・ZKPを公式サポート。 15% S4（限定統合） NFTチケットやDID証明などWeb3要素との部分連携。 30% S3（外部連携型） Metamask等とのAPI連携にとどまる。 35% S2（分断） 法定通貨圏とWeb3が別ルートで発展。 15% S1（対立） 規制やセキュリティ懸念で仮想通貨連携が封じられる。 5% 結論 現時点では、これらのウォレットが仮想通貨資産を直接管理する機能はありませんが、DIDやZKP技術の発展により、Web3とWeb2の交差点が見え始めています。特にGoogleはクラウドとモバイルの両方でWeb3支援基盤を持ち、今後の鍵を握る可能性が高いと言えるでしょう。">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所（Future BioCybernetics Lab）
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 555 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">wallet_web3_comparison_analysis</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-05-04T00:00:00Z">May 4, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="スマートフォンウォレット比較と仮想通貨対応の将来性分析">スマートフォンウォレット比較と仮想通貨対応の将来性分析</h1>
+<p>2025年現在、Google、Apple、Samsungが提供するスマートフォンウォレットは、物理的な財布の代替として進化を遂げつつあります。これらのウォレットはクレジットカード、交通系IC、ID証明書、チケット類などを統合する一方で、「仮想通貨（Web3）ウォレット」との連携にはまだ踏み込んでいません。</p>
+<p>しかし、Google WalletにおけるZKP（ゼロ知識証明）導入のように、プライバシー重視型の技術が採用される動きは、将来的にWeb3領域との融合の可能性を示唆しています。</p>
+<hr>
+<h2 id="スマートフォンウォレット機能の比較表2025年5月時点">スマートフォンウォレット機能の比較表（2025年5月時点）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>機能 / ウォレット</th>
+          <th>Google Wallet</th>
+          <th>Apple Wallet</th>
+          <th>Samsung Wallet</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>決済機能</strong></td>
+          <td>Google Pay経由（QUICPay, Suica）</td>
+          <td>Apple Pay（iD, Suica, QUICPay）</td>
+          <td>Samsung Pay（磁気互換）</td>
+      </tr>
+      <tr>
+          <td><strong>クレジット/デビットカード登録</strong></td>
+          <td>◯</td>
+          <td>◯</td>
+          <td>◯</td>
+      </tr>
+      <tr>
+          <td><strong>交通系ICカード</strong></td>
+          <td>Suica（日本）、レイルカード（英）</td>
+          <td>Suica、PASMO（日本）</td>
+          <td>Suica（日本）</td>
+      </tr>
+      <tr>
+          <td><strong>搭乗券・イベントチケット</strong></td>
+          <td>◯（QRコード対応）</td>
+          <td>◯（Wallet対応フォーマット）</td>
+          <td>◯（Google形式ベース）</td>
+      </tr>
+      <tr>
+          <td><strong>ポイントカード・会員証</strong></td>
+          <td>◯（バーコード）</td>
+          <td>◯（NFC or QR）</td>
+          <td>◯</td>
+      </tr>
+      <tr>
+          <td><strong>ID・免許証など</strong></td>
+          <td>一部州・国でZKPベースID導入中</td>
+          <td>米国一部州（2023年以降）</td>
+          <td>韓国など国家ID統合中</td>
+      </tr>
+      <tr>
+          <td><strong>医療証明・ワクチン証明</strong></td>
+          <td>◯（PDF or gov連携）</td>
+          <td>◯（Healthアプリ連携）</td>
+          <td>◯</td>
+      </tr>
+      <tr>
+          <td><strong>仮想通貨管理（直接）</strong></td>
+          <td>×（未対応）</td>
+          <td>×（未対応）</td>
+          <td>×（未対応）</td>
+      </tr>
+      <tr>
+          <td><strong>ZKP技術の活用</strong></td>
+          <td>◯（年齢確認IDに導入）</td>
+          <td>△（特許保有、実装なし）</td>
+          <td>×</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="zkpとweb3ウォレットへの拡張可能性">ZKPとWeb3ウォレットへの拡張可能性</h2>
+<ul>
+<li><strong>Apple</strong>：NFC制御権とセキュリティ上の理由から、外部ウォレットとの連携には消極的。</li>
+<li><strong>Samsung</strong>：かつてはBlockchain Walletを提供していたが、2023年に廃止。再拡張には不透明感あり。</li>
+<li><strong>Google</strong>：Google CloudがEthereumやSolanaのノード提供を開始しており、Web3技術との橋渡しの可能性が高い。</li>
+</ul>
+<hr>
+<h2 id="5段階シナリオ分析仮想通貨対応への拡張20252030">5段階シナリオ分析：仮想通貨対応への拡張（2025〜2030）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>シナリオ</th>
+          <th>内容</th>
+          <th>実現可能性（主観）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S5（融合）</td>
+          <td>Apple/Google/Samsungが仮想通貨・DID・ZKPを公式サポート。</td>
+          <td>15%</td>
+      </tr>
+      <tr>
+          <td>S4（限定統合）</td>
+          <td>NFTチケットやDID証明などWeb3要素との部分連携。</td>
+          <td>30%</td>
+      </tr>
+      <tr>
+          <td>S3（外部連携型）</td>
+          <td>Metamask等とのAPI連携にとどまる。</td>
+          <td>35%</td>
+      </tr>
+      <tr>
+          <td>S2（分断）</td>
+          <td>法定通貨圏とWeb3が別ルートで発展。</td>
+          <td>15%</td>
+      </tr>
+      <tr>
+          <td>S1（対立）</td>
+          <td>規制やセキュリティ懸念で仮想通貨連携が封じられる。</td>
+          <td>5%</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="結論">結論</h2>
+<p>現時点では、これらのウォレットが仮想通貨資産を直接管理する機能はありませんが、DIDやZKP技術の発展により、Web3とWeb2の交差点が見え始めています。特にGoogleはクラウドとモバイルの両方でWeb3支援基盤を持ち、今後の鍵を握る可能性が高いと言えるでしょう。</p>
+<hr>
+<p>作成日時：2025-05-04 04:24</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/epoch555/dex_comparison_uniswap_pancakeswap_minswap_sundaeswap/">DEX_comparison_Uniswap_PancakeSwap_Minswap_SundaeSwap</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/google_wallet_zkp_midnight_analysis/">google_wallet_zkp_midnight_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/cardano_ethereum_sui_comparison/">Cardano_Ethereum_Sui_Comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/chain_model_size_comparison/">Chain_Model_Size_Comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/ethereum_vs_cardano_ama13/">Ethereum_vs_Cardano_AMA13</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/l1_blockchain_technical_comparison_sui_aptos_solana_cardano-1/">L1_Blockchain_Technical_Comparison_Sui_Aptos_Solana_Cardano (1)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/zk_project_comparison_2025/">zk_project_comparison_2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/leios_blockchain_scalability_comparison/">Leios_Blockchain_Scalability_Comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/minotaur_cardano_consensus/">Minotaur_Cardano_Consensus</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/ethereum_cardano_2025_roadmap_analysis/">ethereum_cardano_2025_roadmap_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/ethereum_cardano_token_address_comparison/">ethereum_cardano_token_address_comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/cardano_ripple_rlusd_scenario_20250430/">Cardano_Ripple_RLUSD_Scenario_20250430</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/ethereum_vs_midnight_architecture_analysis/">ethereum_vs_midnight_architecture_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/governance_models_comparison/">governance_models_comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/epoch555/minotaur_mechanism_explained-1/">minotaur_mechanism_explained</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

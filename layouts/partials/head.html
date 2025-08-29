@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+
+<!-- 👇 カスタムCSSの読み込み -->
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+
+<!-- 👇 Google Analytics（GA4）タグの埋め込み -->
+{{ with site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{ end }}

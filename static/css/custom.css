@@ -1,0 +1,51 @@
+/* ページ幅の調整 */
+.main, .container, .content, .section {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 表に枠線を追加 */
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+table, th, td {
+  border: 1px solid #aaa !important;
+  padding: 8px !important;
+}
+
+th {
+  background-color: #f5f5f5 !important;
+}
+/* 記事の境界を明確にする */
+article {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+/* 記事本文内のテーブルに枠線を強制 */
+article table,
+article table th,
+article table td {
+  border: 1px solid #333 !important;
+  border-collapse: collapse !important;
+}
+
+article table th,
+article table td {
+  padding: 8px !important;
+}
+/* Ananke 本文ラッパーに合わせて “確実に” 枠線を上書き */
+.nested-copy-line-height table,
+.nested-copy-line-height table th,
+.nested-copy-line-height table td {
+  border: 1px solid #333 !important;
+  border-collapse: collapse !important;
+}
+
+.nested-copy-line-height table th,
+.nested-copy-line-height table td {
+  padding: 8px !important;
+}

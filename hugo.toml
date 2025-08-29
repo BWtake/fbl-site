@@ -1,0 +1,33 @@
+baseURL = "http://localhost:1313/"
+languageCode = "ja-jp"
+title = "未来サイバー生命体研究所（Future BioCybernetics Lab）"
+theme = "ananke"
+
+[menu]
+  [[menu.main]]
+    name = "所長紹介"
+    url = "/bwtake/"
+    weight = 10
+
+  [[menu.main]]
+    name = "CGTA紹介"
+    url = "/cgta/"
+    weight = 20
+
+  [[menu.main]]
+    name = "観測ノート"
+    url = "/posts/"
+    weight = 30
+
+[[menu.main]]
+  name = "FBL"
+  url = "/fbl-central-question/"
+  weight = 5
+
+
+[params]
+  mainSections = ["posts"]
+  recentPostsLimit = 3
+  customCSS = ["css/custom.css"]
+  googleAnalytics = "G-XTDDG90VL1"
+  custom_css = ["custom.css"]
