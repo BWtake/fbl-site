@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Midnightトークン請求における署名・公開鍵・秘密鍵の解説 | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <title>Midnightトークン請求における署名・公開鍵・秘密鍵の解説 | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="🧠 暗号資産ウォレットにおける基礎知識
 🔐 秘密鍵（Private Key）
@@ -128,11 +128,9 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
 
 
-
-  
 
 
     
@@ -146,11 +144,11 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">
-  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
   <meta property="og:title" content="Midnightトークン請求における署名・公開鍵・秘密鍵の解説">
   <meta property="og:description" content="🧠 暗号資産ウォレットにおける基礎知識 🔐 秘密鍵（Private Key） あなたの資産をコントロールするための唯一の鍵 絶対に他人に見せてはいけない ウォレット内部で自動的に生成される この鍵から 署名 を作成する 🔓 公開鍵（Public Key） 秘密鍵から数学的に導出される 他人に渡しても安全な「証明用の鍵」 ブロックチェーンアドレス（addr1... や stake1...）の元になる情報 署名の正当性を検証するために使う 🖊️ 署名（Signature） 「このメッセージに、私が署名した」という暗号学的証明 メッセージ内容 &#43; 秘密鍵 から生成される 公開鍵で正当性を確認できる MIDNIGHTの請求では「私はこのアドレスの正当な所有者です」と示すために使用 ✅ MidnightのClaimフォーム解説 入力項目 内容 Signature 指定されたアドレス（例：stake1u...）を署名した結果 Public key 署名に使ったアドレスに対応する公開鍵（hex形式） 指定アドレス フォームに表示されているステークアドレス（変更不可） 🛠️ 操作手順（例：Eternlウォレット） https://eternl.io にアクセス 対象のステークアドレスを持つウォレットを選択 メニュー → Signing を開く 指定されたメッセージ（stakeアドレス）を入力 署名と公開鍵が表示される → コピーしてフォームに貼り付け 🔒 セキュリティ注意点 秘密鍵は絶対に入力してはいけない 公開鍵と署名は、必ず同じ鍵ペアに基づくものを使う 他人の署名や公開鍵を使っても請求は無効になる 自分のウォレットに正しく紐づくアドレスであることを確認 💡 補足：Laceは非対応（2025年8月現在） Laceウォレットはメッセージ署名機能が未実装 EternlやTyphon、あるいはCardano CLIなどを使用する必要あり 必要ならインポート方法も案内可能 📄 まとめ表 項目 入力が必要？ 説明 秘密鍵 ❌ 絶対に入力禁止。署名作成のみに使用される内部情報 公開鍵 ✅ 自分の署名が正しいかを相手が検証するために提供 署名 ✅ 指定メッセージを、自分の秘密鍵で署名したデータ ステークアドレス 表示のみ 指定されたアドレス（Claim対象） 📬 最終確認チェックリスト 指定されたstakeアドレスを正しく確認したか？ 自分のウォレットで署名を作成したか？ 公開鍵と署名が同じ鍵ペアから生成されているか？ 秘密鍵を入力していないか？ 作成日時：2025-08-06（Epoch 574）">
   <meta property="og:locale" content="ja_jp">
@@ -186,9 +184,9 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
       
-        未来サイバー生命体研究所（Future BioCybernetics Lab）
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
       
     </a>
     <div class="flex-l items-center">
@@ -198,25 +196,25 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
               FBL
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
               所長紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
               CGTA紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
               観測ノート
             </a>
           </li>
@@ -370,31 +368,31 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+     <a href="http://localhost:1313/fbl-site/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/night/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">NIGHT</a>
+     <a href="http://localhost:1313/fbl-site/tags/night/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">NIGHT</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/drep/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DRep</a>
+     <a href="http://localhost:1313/fbl-site/tags/drep/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DRep</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">セキュリティ</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">セキュリティ</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E6%9A%97%E5%8F%B7%E6%8A%80%E8%A1%93/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">暗号技術</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E6%9A%97%E5%8F%B7%E6%8A%80%E8%A1%93/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">暗号技術</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/obsidian/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Obsidian</a>
+     <a href="http://localhost:1313/fbl-site/tags/obsidian/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Obsidian</a>
    </li>
   
 </ul>
@@ -414,63 +412,63 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch569/ethereum_zkevm_vs_midnight_comparison_20250712/">Ethereum_zkEVM_vs_Midnight_Comparison_20250712</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/ethereum_zkevm_vs_midnight_comparison_20250712/">Ethereum_zkEVM_vs_Midnight_Comparison_20250712</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch568/ada_vs_midnight_fee_structure/">ada_vs_midnight_fee_structure</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/ada_vs_midnight_fee_structure/">ada_vs_midnight_fee_structure</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch568/ctrlwallet_emurgo_analysis/">ctrlwallet_emurgo_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/ctrlwallet_emurgo_analysis/">ctrlwallet_emurgo_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch568/dust_mechanics_explained/">dust_mechanics_explained</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/dust_mechanics_explained/">dust_mechanics_explained</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch568/btc_whale_midnight_analysis/">BTC_whale_midnight_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/btc_whale_midnight_analysis/">BTC_whale_midnight_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch567/nightdust_doublestructure_report/">NightDust_DoubleStructure_Report</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch567/nightdust_doublestructure_report/">NightDust_DoubleStructure_Report</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch564/quantum_resilience_crosschain_analysis_cardano/">quantum_resilience_crosschain_analysis_cardano</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch564/quantum_resilience_crosschain_analysis_cardano/">quantum_resilience_crosschain_analysis_cardano</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch564/midnight_spo_validation/">midnight_spo_validation</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch564/midnight_spo_validation/">midnight_spo_validation</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch560/realusd_midnight_cardano_ama_analysis/">RealUSD_Midnight_Cardano_AMA_Analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch560/realusd_midnight_cardano_ama_analysis/">RealUSD_Midnight_Cardano_AMA_Analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch558/glacierdrop_activity_checklist_20250515/">GlacierDrop_Activity_Checklist_20250515</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch558/glacierdrop_activity_checklist_20250515/">GlacierDrop_Activity_Checklist_20250515</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch574/bwtake_cgta_drep_criteria_epoch366/">BWtake &amp; CGTAチームのDRep判断基準（2025年8月改訂）</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/bwtake_cgta_drep_criteria_epoch366/">BWtake &amp; CGTAチームのDRep判断基準（2025年8月改訂）</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch573/midnight_glacier_drop/">Midnight NIGHTトークン: Glacier Drop詳細解説（2025年8月最新版）</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch573/midnight_glacier_drop/">Midnight NIGHTトークン: Glacier Drop詳細解説（2025年8月最新版）</a>
         </li>
 	    
     </ul>
@@ -483,8 +481,8 @@ EternlやTyphon、あるいはCardano CLIなどを使用する必要あり
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
   </a>
     <div><div class="ananke-socials"></div>
 </div>

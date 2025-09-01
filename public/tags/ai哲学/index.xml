@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI哲学 on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/tags/ai%E5%93%B2%E5%AD%A6/</link>
-    <description>Recent content in AI哲学 on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>AI哲学 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/tags/ai%E5%93%B2%E5%AD%A6/</link>
+    <description>Recent content in AI哲学 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 08 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai%E5%93%B2%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fbl-site/tags/ai%E5%93%B2%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI_Coding_Singularity_Scenarios</title>
-      <link>http://localhost:1313/posts/epoch556/ai_coding_singularity_scenarios/</link>
+      <link>http://localhost:1313/fbl-site/posts/epoch556/ai_coding_singularity_scenarios/</link>
       <pubDate>Thu, 08 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/epoch556/ai_coding_singularity_scenarios/</guid>
+      <guid>http://localhost:1313/fbl-site/posts/epoch556/ai_coding_singularity_scenarios/</guid>
       <description>&lt;h1 id=&#34;aiコーディング支援技術とシンギュラリティのシナリオ比較windsurf事例&#34;&gt;AIコーディング支援技術とシンギュラリティのシナリオ比較（Windsurf事例）&lt;/h1&gt;&#xA;&lt;h2 id=&#34;加速シナリオ-vs-抑制シナリオaiコーディング支援とシンギュラリティ&#34;&gt;【加速シナリオ vs 抑制シナリオ：AIコーディング支援とシンギュラリティ】&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;段階&lt;/th&gt;&#xA;          &lt;th&gt;加速シナリオ（Accelerated Path）&lt;/th&gt;&#xA;          &lt;th&gt;抑制シナリオ（Regulated Path）&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;S5&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;（2035〜？）&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;シンギュラリティ達成&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;人間の介入なしにAIが自己設計・自己評価・自己最適化。技術的特異点到来。&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;「制御可能なAGI」への収束&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;人間の制御下にあるAGIモデルのみが運用され、特異点は遠ざかる。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;S4&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;指数的進化フェーズ突入&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;数日で新しい大規模AIが設計・訓練される世界へ。システムが自己進化ループに突入。&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;技術停滞と反動&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;AIトラブルや制御不能問題が頻発。各国が共同で「AI停止協定」導入を模索。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;S3&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;AIがAIを改良する時代へ&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;AI自身が自分のモデル構造を改良する「メタAI」が登場。研究者の補助役を超える。&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;開発者の関与義務化&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;AIが出力したコードは必ず人間がレビュー・承認。自己改良には制限。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;S2&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;AIによる開発自動化の拡張&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;複雑なアプリや新モデルの設計をAIが主導。自己評価やA/Bテストも自動化。&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;政策によるAI設計規制&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;「高リスクAIコード生成」には監査や倫理審査が必須に。用途が限定される。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;strong&gt;S1&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;（2025〜）&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;高度コーディングAIの普及&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;Windsurfのようなツールがプロ向けに急拡大。企業や開発者が依存し始める。&lt;/td&gt;&#xA;          &lt;td&gt;&lt;strong&gt;限定的な商用展開&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;一部の技術者に限られた範囲で導入。精度や責任問題から導入速度が抑えられる。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;補足&#34;&gt;補足&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;加速シナリオ&lt;/strong&gt;：商用需要と研究開発の好循環が続き、AIが自己設計を進めることで指数関数的な成長に至る。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;抑制シナリオ&lt;/strong&gt;：安全性・倫理性・社会的制御を優先し、AGIに至るまでの道のりが意図的に遅らされる。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;&#xA;&lt;p&gt;この進展のどちらを辿るかは、以下の要素に大きく依存する：&lt;/p&gt;</description>
     </item>
   </channel>

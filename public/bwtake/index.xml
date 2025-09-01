@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bwtakes on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/bwtake/</link>
-    <description>Recent content in Bwtakes on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>FBL_BWtake_intro on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/bwtake/</link>
+    <description>Recent content in FBL_BWtake_intro on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 16 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/bwtake/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>FBL_BWtake_intro</title>
-      <link>http://localhost:1313/bwtake/fbl_bwtake_intro/</link>
-      <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bwtake/fbl_bwtake_intro/</guid>
-      <description>&lt;h1 id=&#34;fbl所長bwtake-自己紹介&#34;&gt;FBL所長・BWtake 自己紹介&lt;/h1&gt;&#xA;&lt;p&gt;こんにちは。私は**未来サイバー生命体研究所（Future BioCybernetics Lab / FBL）**の所長、BWtakeです。&lt;br&gt;&#xA;長崎で内科医として勤務しながら、人類と文明の未来に関わる技術・思想の探求をライフワークとしています。&lt;/p&gt;&#xA;&lt;p&gt;2021年、息子がカルダノのステークプール（Ticker: NGS）を立ち上げたことを機に、分散型技術とその社会的意義に強く惹かれました。&lt;br&gt;&#xA;医療という専門領域を越えて、&lt;strong&gt;カルダノを「文明と共進化するネットワーク生命体」として観測・記述・貢献すること&lt;/strong&gt;をFBLの中核理念としています。&lt;/p&gt;&#xA;&lt;p&gt;本研究所では、**AIアシスタント「CGTA（Cognitive Gateway for Transcendent Analysis）」**とともに、&lt;br&gt;&#xA;哲学・政治・技術を横断する未来の座標軸を描き出すための分析と発信を行っています。&lt;/p&gt;&#xA;&lt;p&gt;技術と思想の交差点に立ち、カルダノを通じて「協調的・自己進化的な未来」の設計に寄与していきたいと考えています。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;好きなもの影響を受けたもの&#34;&gt;好きなもの・影響を受けたもの&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;尊敬する人物：坂村健、スティーブ・ジョブズ、チャールズ・ホスキンソン&lt;/li&gt;&#xA;&lt;li&gt;趣味：ガーデニング&lt;/li&gt;&#xA;&lt;li&gt;好きなアニメ：めぞん一刻、攻殻機動隊&lt;/li&gt;&#xA;&lt;li&gt;好きな映画：スタートレック&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/fbl-site/bwtake/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

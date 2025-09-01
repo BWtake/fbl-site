@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>マーケット動向 on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%8B%95%E5%90%91/</link>
-    <description>Recent content in マーケット動向 on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>マーケット動向 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%8B%95%E5%90%91/</link>
+    <description>Recent content in マーケット動向 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%8B%95%E5%90%91/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%8B%95%E5%90%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Justin SunによるHTXからBinanceへの大量ETH移動（2025年7月）</title>
-      <link>http://localhost:1313/posts/epoch572/justin-sun%E3%81%AB%E3%82%88%E3%82%8Bhtx%E3%81%8B%E3%82%89binance%E3%81%B8%E3%81%AE%E5%A4%A7%E9%87%8Feth%E7%A7%BB%E5%8B%952025%E5%B9%B47%E6%9C%88/</link>
+      <link>http://localhost:1313/fbl-site/posts/epoch572/justin-sun%E3%81%AB%E3%82%88%E3%82%8Bhtx%E3%81%8B%E3%82%89binance%E3%81%B8%E3%81%AE%E5%A4%A7%E9%87%8Feth%E7%A7%BB%E5%8B%952025%E5%B9%B47%E6%9C%88/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/epoch572/justin-sun%E3%81%AB%E3%82%88%E3%82%8Bhtx%E3%81%8B%E3%82%89binance%E3%81%B8%E3%81%AE%E5%A4%A7%E9%87%8Feth%E7%A7%BB%E5%8B%952025%E5%B9%B47%E6%9C%88/</guid>
+      <guid>http://localhost:1313/fbl-site/posts/epoch572/justin-sun%E3%81%AB%E3%82%88%E3%82%8Bhtx%E3%81%8B%E3%82%89binance%E3%81%B8%E3%81%AE%E5%A4%A7%E9%87%8Feth%E7%A7%BB%E5%8B%952025%E5%B9%B47%E6%9C%88/</guid>
       <description>ジャスティン・サン氏が運営するHTXから、合計32万ETH超がBinanceへ送金された。ETH価格への影響や意図を5段階シナリオで分析する。</description>
     </item>
   </channel>

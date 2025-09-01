@@ -1,11 +1,432 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>Categories on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/categories/</link>
+    <description>Recent content in Categories on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/fbl-site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analysis</title>
+      <link>http://localhost:1313/fbl-site/categories/analysis/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Governance</title>
+      <link>http://localhost:1313/fbl-site/categories/governance/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/governance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AIニュース</title>
+      <link>http://localhost:1313/fbl-site/categories/ai%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/ai%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI動向</title>
+      <link>http://localhost:1313/fbl-site/categories/openai%E5%8B%95%E5%90%91/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/openai%E5%8B%95%E5%90%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DeFi</title>
+      <link>http://localhost:1313/fbl-site/categories/defi/</link>
+      <pubDate>Fri, 22 Aug 2025 18:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/defi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ガバナンス</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9/</link>
+      <pubDate>Fri, 22 Aug 2025 18:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cardano</title>
+      <link>http://localhost:1313/fbl-site/categories/cardano/</link>
+      <pubDate>Fri, 22 Aug 2025 13:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/cardano/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/fbl-site/categories/tools/</link>
+      <pubDate>Fri, 22 Aug 2025 13:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Midnight</title>
+      <link>http://localhost:1313/fbl-site/categories/midnight/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/midnight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NIGHT</title>
+      <link>http://localhost:1313/fbl-site/categories/night/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/night/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>マーケット分析</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 15 Aug 2025 09:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%88%86%E6%9E%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>分散型社会</title>
+      <link>http://localhost:1313/fbl-site/categories/%E5%88%86%E6%95%A3%E5%9E%8B%E7%A4%BE%E4%BC%9A/</link>
+      <pubDate>Fri, 15 Aug 2025 09:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E5%88%86%E6%95%A3%E5%9E%8B%E7%A4%BE%E4%BC%9A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ニュース分析</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E5%88%86%E6%9E%90/</link>
+      <pubDate>Thu, 14 Aug 2025 08:40:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E5%88%86%E6%9E%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>日本</title>
+      <link>http://localhost:1313/fbl-site/categories/%E6%97%A5%E6%9C%AC/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E6%97%A5%E6%9C%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>暗号資産</title>
+      <link>http://localhost:1313/fbl-site/categories/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>金融商品</title>
+      <link>http://localhost:1313/fbl-site/categories/%E9%87%91%E8%9E%8D%E5%95%86%E5%93%81/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E9%87%91%E8%9E%8D%E5%95%86%E5%93%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技術トレンド</title>
+      <link>http://localhost:1313/fbl-site/categories/%E6%8A%80%E8%A1%93%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89/</link>
+      <pubDate>Wed, 06 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E6%8A%80%E8%A1%93%E3%83%88%E3%83%AC%E3%83%B3%E3%83%89/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Airdrop Guide</title>
+      <link>http://localhost:1313/fbl-site/categories/airdrop-guide/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/airdrop-guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tokenomics</title>
+      <link>http://localhost:1313/fbl-site/categories/tokenomics/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/tokenomics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DAO</title>
+      <link>http://localhost:1313/fbl-site/categories/dao/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/dao/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BWtake</title>
+      <link>http://localhost:1313/fbl-site/categories/bwtake/</link>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/bwtake/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>エアドロップ</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web3動向</title>
+      <link>http://localhost:1313/fbl-site/categories/web3%E5%8B%95%E5%90%91/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/web3%E5%8B%95%E5%90%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ニュース解説</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E8%A7%A3%E8%AA%AC/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E8%A7%A3%E8%AA%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>仮想通貨</title>
+      <link>http://localhost:1313/fbl-site/categories/%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>哲学的考察</title>
+      <link>http://localhost:1313/fbl-site/categories/%E5%93%B2%E5%AD%A6%E7%9A%84%E8%80%83%E5%AF%9F/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E5%93%B2%E5%AD%A6%E7%9A%84%E8%80%83%E5%AF%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>未来構想</title>
+      <link>http://localhost:1313/fbl-site/categories/%E6%9C%AA%E6%9D%A5%E6%A7%8B%E6%83%B3/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E6%9C%AA%E6%9D%A5%E6%A7%8B%E6%83%B3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cardanoエコシステム分析</title>
+      <link>http://localhost:1313/fbl-site/categories/cardano%E3%82%A8%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%88%86%E6%9E%90/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/cardano%E3%82%A8%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%88%86%E6%9E%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crypto Policy</title>
+      <link>http://localhost:1313/fbl-site/categories/crypto-policy/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/crypto-policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Japan</title>
+      <link>http://localhost:1313/fbl-site/categories/japan/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/japan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cardanoエコシステム</title>
+      <link>http://localhost:1313/fbl-site/categories/cardano%E3%82%A8%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</link>
+      <pubDate>Tue, 29 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/cardano%E3%82%A8%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>仮想通貨市場分析</title>
+      <link>http://localhost:1313/fbl-site/categories/%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8%E5%B8%82%E5%A0%B4%E5%88%86%E6%9E%90/</link>
+      <pubDate>Tue, 29 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8%E5%B8%82%E5%A0%B4%E5%88%86%E6%9E%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ウォレット</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>カルダノ</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>マルチチェーン</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>仮想通貨レポート</title>
+      <link>http://localhost:1313/fbl-site/categories/%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>分散型ID</title>
+      <link>http://localhost:1313/fbl-site/categories/%E5%88%86%E6%95%A3%E5%9E%8Bid/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E5%88%86%E6%95%A3%E5%9E%8Bid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BTC動向</title>
+      <link>http://localhost:1313/fbl-site/categories/btc%E5%8B%95%E5%90%91/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/btc%E5%8B%95%E5%90%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cardano観測</title>
+      <link>http://localhost:1313/fbl-site/categories/cardano%E8%A6%B3%E6%B8%AC/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/cardano%E8%A6%B3%E6%B8%AC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CGTAレポート</title>
+      <link>http://localhost:1313/fbl-site/categories/cgta%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/cgta%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deepリサーチ</title>
+      <link>http://localhost:1313/fbl-site/categories/deep%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/deep%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>オンチェーン分析</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%82%AA%E3%83%B3%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%82%AA%E3%83%B3%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E5%88%86%E6%9E%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>クジラ監視</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%82%AF%E3%82%B8%E3%83%A9%E7%9B%A3%E8%A6%96/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%82%AF%E3%82%B8%E3%83%A9%E7%9B%A3%E8%A6%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>マーケット構造</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E6%A7%8B%E9%80%A0/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E6%A7%8B%E9%80%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>メディア戦略</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E6%88%A6%E7%95%A5/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E6%88%A6%E7%95%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crypto/NFT動向</title>
+      <link>http://localhost:1313/fbl-site/categories/crypto/nft%E5%8B%95%E5%90%91/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/crypto/nft%E5%8B%95%E5%90%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>マーケットレポート</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>マーケット動向</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%8B%95%E5%90%91/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E5%8B%95%E5%90%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Midnightエコシステム</title>
+      <link>http://localhost:1313/fbl-site/categories/midnight%E3%82%A8%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</link>
+      <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/midnight%E3%82%A8%E3%82%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web3</title>
+      <link>http://localhost:1313/fbl-site/categories/web3/</link>
+      <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/web3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>プロフィールNFT</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%ABnft/</link>
+      <pubDate>Wed, 23 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%ABnft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>観測ノート</title>
+      <link>http://localhost:1313/fbl-site/categories/%E8%A6%B3%E6%B8%AC%E3%83%8E%E3%83%BC%E3%83%88/</link>
+      <pubDate>Tue, 22 Jul 2025 15:30:00 +0900</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E8%A6%B3%E6%B8%AC%E3%83%8E%E3%83%BC%E3%83%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web3 UX</title>
+      <link>http://localhost:1313/fbl-site/categories/web3-ux/</link>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/web3-ux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>速報ニュース検証</title>
+      <link>http://localhost:1313/fbl-site/categories/%E9%80%9F%E5%A0%B1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E6%A4%9C%E8%A8%BC/</link>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E9%80%9F%E5%A0%B1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E6%A4%9C%E8%A8%BC/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Formal Verification</title>
+      <link>http://localhost:1313/fbl-site/categories/formal-verification/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/formal-verification/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smart Contracts</title>
+      <link>http://localhost:1313/fbl-site/categories/smart-contracts/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/smart-contracts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ブロックチェーン</title>
+      <link>http://localhost:1313/fbl-site/categories/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>米国政策</title>
+      <link>http://localhost:1313/fbl-site/categories/%E7%B1%B3%E5%9B%BD%E6%94%BF%E7%AD%96/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E7%B1%B3%E5%9B%BD%E6%94%BF%E7%AD%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>規制</title>
+      <link>http://localhost:1313/fbl-site/categories/%E8%A6%8F%E5%88%B6/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E8%A6%8F%E5%88%B6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>量子コンピューティング</title>
+      <link>http://localhost:1313/fbl-site/categories/%E9%87%8F%E5%AD%90%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/</link>
+      <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/categories/%E9%87%8F%E5%AD%90%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

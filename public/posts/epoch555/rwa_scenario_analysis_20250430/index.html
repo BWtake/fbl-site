@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>RWA_Scenario_Analysis_20250430 | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <title>RWA_Scenario_Analysis_20250430 | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Cardano・Ethereum・RippleのRWA技術比較
 Cardano・Ethereum・RippleのRWA対応における「技術面」の違いをさらに詳細に細分化して比較しました。
@@ -87,11 +87,9 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
 
 
-
-  
 
 
     
@@ -105,11 +103,11 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/epoch555/rwa_scenario_analysis_20250430/">
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch555/rwa_scenario_analysis_20250430/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/epoch555/rwa_scenario_analysis_20250430/">
-  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch555/rwa_scenario_analysis_20250430/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
   <meta property="og:title" content="RWA_Scenario_Analysis_20250430">
   <meta property="og:description" content="Cardano・Ethereum・RippleのRWA技術比較 Cardano・Ethereum・RippleのRWA対応における「技術面」の違いをさらに詳細に細分化して比較しました。
 📊 技術詳細比較表 項目 Cardano Ethereum Ripple（XRPL） 台帳モデル EUTxO（拡張UTxO）モデル→ トークン処理に決定論があり静的解析しやすい アカウントベース→ 状態遷移型。トランザクションごとにグローバルステートが変動 アカウントベース（XRP Ledger）→ 軽量・高スループットに最適化 トークンの基本設計 ネイティブトークン（スマコン不要）CIP-68によりメタデータ・NFT機能も拡張 ERC-20 / ERC-721 / ERC-1155 など複数の標準あり。スマコン必須で自由度が高い IOUモデル（Issued Currencies）→ 第三者が「信用」をもとに発行する形 スマートコントラクト Plutus（Haskellベース）Marlowe（金融DSL）で契約ロジックも構築可 Solidity / Vyper など高機能な言語で任意設計可能 Hooks（軽量スマコン）開発中→ 条件付き送金やメモ処理など トークンの信頼設計 DIDやオンチェーン検証により「自己証明可能」な構造を構築可 スマコン設計に依存。マルチシグ・KYC連携・ポリシー制御も任意実装可能 発行主体の信用ベース（IOUの元本保証など） メタデータ対応 CIP-68：メイン・スクリプト・参照トークンの3層構造で改変可能NFTなど高度表現可能 任意のメタデータをスマコン経由で保存IPFS・The Graphとの連携も豊富 基本的に最小限。外部リンクやメモ程度で設計は限定的 清算・決済 スクリプトによるロジック制御可能→ 複数トークン間で同時決済・条件付き移転も可 AMMやレンディングにより清算機構が多様化→ DeFi流動性層と密接に接続 XRPを用いた即時決済と送受信→ IOU同士のブリッジ転送にも対応 オラクル統合 Charli3やDjed等のカルダノネイティブなオラクルが登場中（自己完結性重視） Chainlinkをはじめとする外部オラクルが多数対応（価格・天候・指数など） Chainlinkなどに外部依存傾向あり。標準統合は薄い レイヤー2・スケーリング Hydra：マルチ参加者高速決済、Mithril：状態圧縮署名Leios：EUTxO拡張処理層 Optimism, Arbitrum, zkSyncなどが稼働中。多様な用途に応じたL2が乱立 特定のL2構想はまだ薄い。XRPL内で完結する方向性が強い ガバナンス連携 DRep制度、憲法化、投票記録等と連動可能。→ ガバナンスRWA実装が可能 SnapshotやGovernorなど外部連携で構築される傾向 Ripple社主導の統制型設計（分散的ガバナンスは限定的） この比較は、RWAにおける「定義・保証・運用」の全工程において、各チェーンの設計思想と適用範囲の違いを明確に示しています。">
@@ -148,9 +146,9 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
       
-        未来サイバー生命体研究所（Future BioCybernetics Lab）
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
       
     </a>
     <div class="flex-l items-center">
@@ -160,25 +158,25 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
               FBL
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
               所長紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
               CGTA紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
               観測ノート
             </a>
           </li>
@@ -447,35 +445,35 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+     <a href="http://localhost:1313/fbl-site/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+     <a href="http://localhost:1313/fbl-site/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+     <a href="http://localhost:1313/fbl-site/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+     <a href="http://localhost:1313/fbl-site/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
    </li>
   
 </ul>
@@ -495,43 +493,39 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/epoch555/ripple_vs_cardano_rwa_20250430/">Ripple_vs_Cardano_RWA_20250430</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ripple_vs_cardano_rwa_20250430/">Ripple_vs_Cardano_RWA_20250430</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch554/cardano_bitcoin_defi_projects/">cardano_bitcoin_defi_projects</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/cardano_bitcoin_defi_projects/">cardano_bitcoin_defi_projects</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch554/project_review_luna_eos_iota_nxt/">🚀Project_Review_LUNA_EOS_IOTA_NXT</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/project_review_luna_eos_iota_nxt/">🚀Project_Review_LUNA_EOS_IOTA_NXT</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch554/atala_prism_hyperledger_review/">🚀atala_prism_hyperledger_review</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/atala_prism_hyperledger_review/">🚀atala_prism_hyperledger_review</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch553/cardano_vs_sui_comparison/">🚀Cardano_vs_Sui_Comparison</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch553/cardano_vs_sui_comparison/">🚀Cardano_vs_Sui_Comparison</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch553/chain_size_and_growth_summary/">🚀Chain_Size_and_Growth_Summary</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch553/chain_size_and_growth_summary/">🚀Chain_Size_and_Growth_Summary</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/bwtake/">FBL_BWtake_intro</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/cardano%E3%81%8C%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E6%88%A6%E7%95%A5%E3%81%B8%E7%A7%BB%E8%A1%8Crare-evo%E3%81%A7%E3%81%AE%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%99%BA%E8%A1%A8%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3%E6%9E%90/">Cardanoがマルチチェーン戦略へ移行｜Rare Evoでのホスキンソン発表を徹底解析</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/cgta/">CGTA｜超越的分析知性への認知ゲートウェイ</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch549/%EF%B8%8Ffbl_central_question_with_translation/">未来サイバー生命体研究所と中心問い（FBL）</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/fbl-central-question/">未来サイバー生命体研究所と中心問い(Central Question)</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/epoch549/%EF%B8%8Ffbl_central_question_with_translation/">未来サイバー生命体研究所と中心問い（FBL）</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/utxo%E9%99%A3%E5%96%B6%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E4%B8%BB%E8%A6%81%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A8%E3%81%9D%E3%81%AE%E6%80%9D%E6%83%B3%E7%9A%84%E6%8A%80%E8%A1%93%E7%9A%84%E7%AB%8B%E3%81%A1%E4%BD%8D%E7%BD%AE/">UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置</a>
         </li>
 	    
     </ul>
@@ -544,8 +538,8 @@ Cardano・Ethereum・RippleのRWA対応における「技術面」の違いを�
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
   </a>
     <div><div class="ananke-socials"></div>
 </div>

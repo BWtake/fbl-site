@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Explorer on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/tags/explorer/</link>
-    <description>Recent content in Explorer on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>Explorer on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/tags/explorer/</link>
+    <description>Recent content in Explorer on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 22 Aug 2025 13:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/explorer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fbl-site/tags/explorer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AdaStat.net 使い方完全ガイド</title>
-      <link>http://localhost:1313/posts/epoch577/-adastat.net-%E4%BD%BF%E3%81%84%E6%96%B9%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/</link>
+      <link>http://localhost:1313/fbl-site/posts/epoch577/-adastat.net-%E4%BD%BF%E3%81%84%E6%96%B9%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/</link>
       <pubDate>Fri, 22 Aug 2025 13:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/epoch577/-adastat.net-%E4%BD%BF%E3%81%84%E6%96%B9%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/</guid>
+      <guid>http://localhost:1313/fbl-site/posts/epoch577/-adastat.net-%E4%BD%BF%E3%81%84%E6%96%B9%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/</guid>
       <description>独立系Cardanoブロックチェーン・エクスプローラー AdaStat.net の特徴と実務フロー。トランザクション確認、ステーキング報酬追跡、プール比較、トークン調査、オンチェーン・ガバナンス監視、API活用まで。</description>
     </item>
   </channel>

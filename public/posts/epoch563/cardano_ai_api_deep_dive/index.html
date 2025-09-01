@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>cardano_ai_api_deep_dive | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <title>cardano_ai_api_deep_dive | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Cardano × AI API連携の深掘り分析
 🧠 1. 現在の議論状況（2024〜2025）
@@ -145,11 +145,9 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
 
 
-
-  
 
 
     
@@ -163,11 +161,11 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/epoch563/cardano_ai_api_deep_dive/">
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch563/cardano_ai_api_deep_dive/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/epoch563/cardano_ai_api_deep_dive/">
-  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch563/cardano_ai_api_deep_dive/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
   <meta property="og:title" content="cardano_ai_api_deep_dive">
   <meta property="og:description" content="Cardano × AI API連携の深掘り分析 🧠 1. 現在の議論状況（2024〜2025） 取り組み 概要 出典 SingularityNETのCardano移植（AGIX） EthereumからCardanoへ。AI DAppの分散化とPlutus連携 SingularityNET公式 Hypercycle AI処理用のL2。Cardanoと接続しZK＋AI推論連携を目指す Hypercycle公式 Midnight &#43; AI ZKでAIの出力証明付きプライベート推論を目指す Midnight Plutus×GPT連携PoC GPTでPlutusコード生成を試みる実験。DRep支援やDApp開発用 IOG開発者コミュニティなど 🔧 2. 技術的補完関係（APIレイヤー構造） 接続形式 内容 実現段階 Off-chain AI API → On-chain契約 外部AIがCardanoスマコンを呼び出す 実験・PoC段階 On-chain呼出し → AI推論 Plutusがオラクル経由でAIに質問 AGIX連携で検討中 AIによるDRep支援 提案評価や投票判断をAIが支援 構想段階（GovToolやLaceと連携可能性） 🧭 3. 社会的・制度的インパクト 展開軸 内容 例 AI行動透明性 出力の根拠・設定をZKで証明 出力にプロンプトと設定ログ添付 公共AIの制度化 AIの行動規範をオンチェーン記録 教育・裁判AIの倫理設定投票 トークン報酬化 貢献度をAIが計算→Cardanoで配布 提案生成AIの貢献がAGIX/ADAで報酬化 🔮 4. 今後のシナリオ（AI×Cardano連携） シナリオ 内容 実現確度（推定） S5 AIとブロックチェーンが制度・評価・合意形成で協働する世界標準に 35% S4 AGIX/Hypercycleの実運用とMidnight連携が進み社会実装 30% S3 Catalyst評価支援、Lace連携などでユースケースが普及 20% S2 実験的活用に留まり、大規模実装には至らず 10% S1 倫理・規制上の壁で連携自体が凍結・回避される 5% ✅ CGTA結論 CardanoはAIとのAPIレベルでの接続・統合を明示的に構想しており、単なるデータ連携ではなく「AIが公共制度に参加し、ブロックチェーンがその根拠と正当性を保証する」段階まで見据えている。これは他のチェーンにない特徴であり、将来のガバナンスAI・公共AIインフラとしての進展が期待される。">
   <meta property="og:locale" content="ja_jp">
@@ -203,9 +201,9 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
       
-        未来サイバー生命体研究所（Future BioCybernetics Lab）
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
       
     </a>
     <div class="flex-l items-center">
@@ -215,25 +213,25 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
               FBL
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
               所長紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
               CGTA紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
               観測ノート
             </a>
           </li>
@@ -406,35 +404,35 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+     <a href="http://localhost:1313/fbl-site/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+     <a href="http://localhost:1313/fbl-site/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+     <a href="http://localhost:1313/fbl-site/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+     <a href="http://localhost:1313/fbl-site/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
    </li>
   
 </ul>
@@ -454,63 +452,63 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/epoch563/cardano_eth_sol_philosophy_toolperspective_2025/">Cardano_ETH_SOL_Philosophy_ToolPerspective_2025</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/cardano_eth_sol_philosophy_toolperspective_2025/">Cardano_ETH_SOL_Philosophy_ToolPerspective_2025</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch563/cardinal_bitcoin_defi_cardano_analysis_20250610/">Cardinal_Bitcoin_DeFi_Cardano_Analysis_20250610</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/cardinal_bitcoin_defi_cardano_analysis_20250610/">Cardinal_Bitcoin_DeFi_Cardano_Analysis_20250610</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch563/usdm_lace_integration_cgta_analysis.md/">USDM_Lace_Integration_CGTA_Analysis.md</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/usdm_lace_integration_cgta_analysis.md/">USDM_Lace_Integration_CGTA_Analysis.md</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch563/charles_ai_blockchain_ai_integration_with_records/">charles_ai_blockchain_ai_integration_with_records</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/charles_ai_blockchain_ai_integration_with_records/">charles_ai_blockchain_ai_integration_with_records</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch563/charles_ai_blockchain_complementarity_final/">charles_ai_blockchain_complementarity_final</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/charles_ai_blockchain_complementarity_final/">charles_ai_blockchain_complementarity_final</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch563/nasdaq_crypto_index_comparison/">nasdaq_crypto_index_comparison</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/nasdaq_crypto_index_comparison/">nasdaq_crypto_index_comparison</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch562/cardano_game_development_scenario_analysis/">Cardano_Game_Development_Scenario_Analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch562/cardano_game_development_scenario_analysis/">Cardano_Game_Development_Scenario_Analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch562/nbx_cardano_mica_defi_analysis/">NBX_Cardano_MiCA_DeFi_Analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch562/nbx_cardano_mica_defi_analysis/">NBX_Cardano_MiCA_DeFi_Analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch562/sec_staking_shift_vs_cardano_impact/">SEC_staking_shift_vs_Cardano_impact</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch562/sec_staking_shift_vs_cardano_impact/">SEC_staking_shift_vs_Cardano_impact</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch561/ethereum_vs_cardano_l2_reorganization_report_with_probabilities/">Ethereum_vs_Cardano_L2_Reorganization_Report_with_Probabilities</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/ethereum_vs_cardano_l2_reorganization_report_with_probabilities/">Ethereum_vs_Cardano_L2_Reorganization_Report_with_Probabilities</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch561/snek_vs_solaxy_l1_l2_comparison/">SNEK_vs_Solaxy_L1_L2_Comparison</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/snek_vs_solaxy_l1_l2_comparison/">SNEK_vs_Solaxy_L1_L2_Comparison</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch561/snek_vs_hosky_scenario_analysis/">snek_vs_hosky_scenario_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/snek_vs_hosky_scenario_analysis/">snek_vs_hosky_scenario_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch561/charles_virtual_city_ama_analysis/">charles_virtual_city_ama_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/charles_virtual_city_ama_analysis/">charles_virtual_city_ama_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch561/homo_deus_scenario_analysis/">homo_deus_scenario_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/homo_deus_scenario_analysis/">homo_deus_scenario_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch561/zk_recursion_vs_folding_charles_ama/">zk_recursion_vs_folding_charles_ama</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/zk_recursion_vs_folding_charles_ama/">zk_recursion_vs_folding_charles_ama</a>
         </li>
 	    
     </ul>
@@ -523,8 +521,8 @@ CardanoはAIとのAPIレベルでの接続・統合を明示的に構想して�
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
   </a>
     <div><div class="ananke-socials"></div>
 </div>

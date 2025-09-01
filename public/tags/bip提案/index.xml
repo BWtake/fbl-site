@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BIP提案 on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/tags/bip%E6%8F%90%E6%A1%88/</link>
-    <description>Recent content in BIP提案 on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>BIP提案 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/tags/bip%E6%8F%90%E6%A1%88/</link>
+    <description>Recent content in BIP提案 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 18 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bip%E6%8F%90%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fbl-site/tags/bip%E6%8F%90%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ビットコイン開発者、量子コンピューター脅威に対する段階的な暗号移行を提案</title>
-      <link>http://localhost:1313/posts/epoch570/bitcoin_quantum_bip_proposal_analysis-1/</link>
+      <link>http://localhost:1313/fbl-site/posts/epoch570/bitcoin_quantum_bip_proposal_analysis-1/</link>
       <pubDate>Fri, 18 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/epoch570/bitcoin_quantum_bip_proposal_analysis-1/</guid>
+      <guid>http://localhost:1313/fbl-site/posts/epoch570/bitcoin_quantum_bip_proposal_analysis-1/</guid>
       <description>ビットコインが直面する量子コンピューターの脅威に対応するための段階的な移行提案（フェーズA〜C）とその技術的背景を解説。CGTAによる5段階シナリオ分析も掲載。</description>
     </item>
   </channel>

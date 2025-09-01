@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Staking Baskets GitHub解析レポート（完全版） | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <title>Staking Baskets GitHub解析レポート（完全版） | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="概要
 Atma DAO が Project Catalyst 採択案件の成果物として開発した「Staking Baskets」の GitHub リポジトリを解析した。本プロトコルは、ADA ステーキングの分散化とリスク管理を目的としており、単一SPO依存を減らし、複数プールや複数戦略への委任を可能にするオープンソース実装である。Catalyst資金による部分的な開発支援を受けており、リポジトリは Apache-2.0 ライセンスで公開されている。
@@ -133,11 +133,9 @@ DRep視点でのリスク・留意点
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
 
 
-
-  
 
 
     
@@ -151,11 +149,11 @@ DRep視点でのリスク・留意点
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/epoch576/atrium-staking-baskets-github%E8%A7%A3%E6%9E%90%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch576/atrium-staking-baskets-github%E8%A7%A3%E6%9E%90%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/epoch576/atrium-staking-baskets-github%E8%A7%A3%E6%9E%90%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">
-  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch576/atrium-staking-baskets-github%E8%A7%A3%E6%9E%90%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
   <meta property="og:title" content="Staking Baskets GitHub解析レポート（完全版）">
   <meta property="og:description" content="概要 Atma DAO が Project Catalyst 採択案件の成果物として開発した「Staking Baskets」の GitHub リポジトリを解析した。本プロトコルは、ADA ステーキングの分散化とリスク管理を目的としており、単一SPO依存を減らし、複数プールや複数戦略への委任を可能にするオープンソース実装である。Catalyst資金による部分的な開発支援を受けており、リポジトリは Apache-2.0 ライセンスで公開されている。
 リポジトリ構造と役割 パス/ファイル 役割 補足 /onchain/ スマートコントラクト本体（Haskell/Plutarch） 入金・引出・トークン発行、ロック/アンロック、再配分のバリデータやミンティングポリシー等 /docs/ 技術文書・設計資料 設計仕様や統合ガイド、Catalyst納品資料を含む想定 /nix/ flake.nix default.nix shell.nix Nixによる開発環境構築 依存の固定化・再現可能ビルドを保証 README.md プロトコル概要・仕様説明 バスケット構造、ロック機構、監査、ライセンス等の記載あり LICENSE Apache-2.0 商用利用可、改変可、クレジット表記義務あり READMEから読み取れる仕様の要点 分散ステーキング
@@ -244,9 +242,9 @@ Apache-2.0（商用含め再利用可、条件あり）
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
       
-        未来サイバー生命体研究所（Future BioCybernetics Lab）
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
       
     </a>
     <div class="flex-l items-center">
@@ -256,25 +254,25 @@ Apache-2.0（商用含め再利用可、条件あり）
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
               FBL
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
               所長紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
               CGTA紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
               観測ノート
             </a>
           </li>
@@ -458,23 +456,23 @@ Apache-2.0（商用含め再利用可、条件あり）</p>
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
+     <a href="http://localhost:1313/fbl-site/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/project-catalyst/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Project-Catalyst</a>
+     <a href="http://localhost:1313/fbl-site/tags/project-catalyst/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Project-Catalyst</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/staking/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Staking</a>
+     <a href="http://localhost:1313/fbl-site/tags/staking/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Staking</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/drep/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DRep</a>
+     <a href="http://localhost:1313/fbl-site/tags/drep/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DRep</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/atma-dao/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Atma-DAO</a>
+     <a href="http://localhost:1313/fbl-site/tags/atma-dao/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Atma-DAO</a>
    </li>
   
 </ul>
@@ -494,63 +492,63 @@ Apache-2.0（商用含め再利用可、条件あり）</p>
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/epoch572/-cardano-weekly-development-report--2025-07-25/">Cardano Weekly Development Report – 2025-07-25</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/-cardano-weekly-development-report--2025-07-25/">Cardano Weekly Development Report – 2025-07-25</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch576/midnight%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8Bcharles-hoskinson%E7%99%BA%E8%A8%80%E5%88%86%E6%9E%90/">Midnightマーケティングに関するCharles Hoskinson発言分析</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/midnight%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8Bcharles-hoskinson%E7%99%BA%E8%A8%80%E5%88%86%E6%9E%90/">Midnightマーケティングに関するCharles Hoskinson発言分析</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch574/rare-evo-2024-%E5%8D%94%E8%B3%9B%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E5%8F%96%E3%82%8C%E3%82%8Bcardano%E3%81%AE%E6%88%A6%E7%95%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91/">Rare Evo 2024 協賛企業から読み取れるCardanoの戦略的位置づけ</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/rare-evo-2024-%E5%8D%94%E8%B3%9B%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E5%8F%96%E3%82%8C%E3%82%8Bcardano%E3%81%AE%E6%88%A6%E7%95%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91/">Rare Evo 2024 協賛企業から読み取れるCardanoの戦略的位置づけ</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch574/bwtake_cgta_drep_criteria_epoch366/">BWtake &amp; CGTAチームのDRep判断基準（2025年8月改訂）</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/bwtake_cgta_drep_criteria_epoch366/">BWtake &amp; CGTAチームのDRep判断基準（2025年8月改訂）</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch572/2025%E5%B9%B47%E6%9C%88%E3%81%AEada%E5%A4%A7%E5%8F%A3%E7%A7%BB%E5%8B%95coinbase%E7%B5%8C%E7%94%B1%E3%81%AE%E5%A3%B2%E5%8D%B4%E3%81%8B%E5%86%8D%E9%85%8D%E7%BD%AE%E3%81%8B/">2025年7月のADA大口移動──Coinbase経由の売却か？再配置か？</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/2025%E5%B9%B47%E6%9C%88%E3%81%AEada%E5%A4%A7%E5%8F%A3%E7%A7%BB%E5%8B%95coinbase%E7%B5%8C%E7%94%B1%E3%81%AE%E5%A3%B2%E5%8D%B4%E3%81%8B%E5%86%8D%E9%85%8D%E7%BD%AE%E3%81%8B/">2025年7月のADA大口移動──Coinbase経由の売却か？再配置か？</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch571/whale%E5%8B%95%E7%94%BB%E8%A7%A3%E8%AA%AC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E3%81%8C%E8%AA%9E%E3%82%8B%E5%88%86%E6%95%A3%E5%9E%8B%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E8%A9%A6%E7%B7%B4%E3%81%A8%E6%88%90%E7%86%9F/">Whale動画解説：チャールズ・ホスキンソンが語る分散型ガバナンスの試練と成熟</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/whale%E5%8B%95%E7%94%BB%E8%A7%A3%E8%AA%AC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E3%81%8C%E8%AA%9E%E3%82%8B%E5%88%86%E6%95%A3%E5%9E%8B%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E8%A9%A6%E7%B7%B4%E3%81%A8%E6%88%90%E7%86%9F/">Whale動画解説：チャールズ・ホスキンソンが語る分散型ガバナンスの試練と成熟</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch576/hosky%E3%81%AE%E8%A8%AD%E8%A8%88%E7%9A%84%E5%88%B6%E7%B4%84%E3%81%A8snek%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83%E5%88%86%E6%9E%90/">Hoskyの設計的制約とSnekとの比較分析</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/hosky%E3%81%AE%E8%A8%AD%E8%A8%88%E7%9A%84%E5%88%B6%E7%B4%84%E3%81%A8snek%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83%E5%88%86%E6%9E%90/">Hoskyの設計的制約とSnekとの比較分析</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch575/midnight_crosschain/">Midnight（計算型プライバシー）におけるSolana／Polkadot統合の深掘り分析</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/midnight_crosschain/">Midnight（計算型プライバシー）におけるSolana／Polkadot統合の深掘り分析</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch575/rare-evo-2025bitcoin-defi%E6%A7%8B%E6%83%B3%E3%81%A8%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E%E3%81%AE%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E5%8D%94%E8%AA%BF%E6%88%A6%E7%95%A5/">Rare Evo 2025｜Bitcoin DeFi構想とカルダノのマルチチェーン協調戦略</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/rare-evo-2025bitcoin-defi%E6%A7%8B%E6%83%B3%E3%81%A8%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E%E3%81%AE%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E5%8D%94%E8%AA%BF%E6%88%A6%E7%95%A5/">Rare Evo 2025｜Bitcoin DeFi構想とカルダノのマルチチェーン協調戦略</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch575/cardano%E5%9F%BA%E7%9B%A4%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%B3%E3%82%A4%E3%83%B3djed%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E5%8C%96%E3%81%A8private%E7%89%88%E5%B1%95%E9%96%8B/">Cardano基盤ステーブルコインDJEDのオープンソース化とPrivate版展開</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/cardano%E5%9F%BA%E7%9B%A4%E3%82%B9%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%82%B3%E3%82%A4%E3%83%B3djed%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E5%8C%96%E3%81%A8private%E7%89%88%E5%B1%95%E9%96%8B/">Cardano基盤ステーブルコインDJEDのオープンソース化とPrivate版展開</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch575/midnight%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8night%E4%BE%A1%E5%80%A4%E5%BD%A2%E6%88%90%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC/">MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/midnight%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8night%E4%BE%A1%E5%80%A4%E5%BD%A2%E6%88%90%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC/">MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">Midnightトークン請求における署名・公開鍵・秘密鍵の解説</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">Midnightトークン請求における署名・公開鍵・秘密鍵の解説</a>
         </li>
 	    
     </ul>
@@ -563,8 +561,8 @@ Apache-2.0（商用含め再利用可、条件あり）</p>
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
   </a>
     <div><div class="ananke-socials"></div>
 </div>

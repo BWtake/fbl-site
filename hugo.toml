@@ -1,35 +1,32 @@
 baseURL = "https://bwtake.github.io/fbl-site/"
 languageCode = "ja-jp"
-title = "未来サイバー生命体研究所（Future BioCybernetics Lab）"
+title = "未来サイバー生命体研究所 (Future BioCybernetics Lab)"
 theme = "ananke"
-canonifyURLs = true        # ← これを追加
-# relativeURLs = true      # 併用は基本不要。必要になったらONに
+canonifyURLs = true
 
 [menu]
   [[menu.main]]
     name = "所長紹介"
-    url = "/bwtake/"
+    pageRef = "bwtake/_index.md"
     weight = 10
 
   [[menu.main]]
     name = "CGTA紹介"
-    url = "/cgta/"
+    pageRef = "cgta/_index.md"
     weight = 20
 
   [[menu.main]]
     name = "観測ノート"
-    url = "/posts/"
+    pageRef = "posts/_index.md"
     weight = 30
 
-[[menu.main]]
-  name = "FBL"
-  url = "/fbl-central-question/"
-  weight = 5
-
+  [[menu.main]]
+    name = "FBL"
+    pageRef = "fbl-central-question/_index.md"
+    weight = 5
 
 [params]
   mainSections = ["posts"]
   recentPostsLimit = 3
   customCSS = ["css/custom.css"]
   googleAnalytics = "G-XTDDG90VL1"
-  custom_css = ["custom.css"]

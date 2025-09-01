@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>マーケットレポート on 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
-    <link>http://localhost:1313/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</link>
-    <description>Recent content in マーケットレポート on 未来サイバー生命体研究所（Future BioCybernetics Lab）</description>
+    <title>マーケットレポート on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/</link>
+    <description>Recent content in マーケットレポート on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fbl-site/categories/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%83%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ETHとXRPがBTCを上回る清算被害──2025年7月22日の市場急落分析</title>
-      <link>http://localhost:1313/posts/epoch572/eth%E3%81%A8xrp%E3%81%8Cbtc%E3%82%92%E4%B8%8A%E5%9B%9E%E3%82%8B%E6%B8%85%E7%AE%97%E8%A2%AB%E5%AE%B32025%E5%B9%B47%E6%9C%8822%E6%97%A5%E3%81%AE%E5%B8%82%E5%A0%B4%E6%80%A5%E8%90%BD%E5%88%86%E6%9E%90/</link>
+      <link>http://localhost:1313/fbl-site/posts/epoch572/eth%E3%81%A8xrp%E3%81%8Cbtc%E3%82%92%E4%B8%8A%E5%9B%9E%E3%82%8B%E6%B8%85%E7%AE%97%E8%A2%AB%E5%AE%B32025%E5%B9%B47%E6%9C%8822%E6%97%A5%E3%81%AE%E5%B8%82%E5%A0%B4%E6%80%A5%E8%90%BD%E5%88%86%E6%9E%90/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/epoch572/eth%E3%81%A8xrp%E3%81%8Cbtc%E3%82%92%E4%B8%8A%E5%9B%9E%E3%82%8B%E6%B8%85%E7%AE%97%E8%A2%AB%E5%AE%B32025%E5%B9%B47%E6%9C%8822%E6%97%A5%E3%81%AE%E5%B8%82%E5%A0%B4%E6%80%A5%E8%90%BD%E5%88%86%E6%9E%90/</guid>
+      <guid>http://localhost:1313/fbl-site/posts/epoch572/eth%E3%81%A8xrp%E3%81%8Cbtc%E3%82%92%E4%B8%8A%E5%9B%9E%E3%82%8B%E6%B8%85%E7%AE%97%E8%A2%AB%E5%AE%B32025%E5%B9%B47%E6%9C%8822%E6%97%A5%E3%81%AE%E5%B8%82%E5%A0%B4%E6%80%A5%E8%90%BD%E5%88%86%E6%9E%90/</guid>
       <description>2025年7月22日、仮想通貨市場にて約7.35億ドルのロングポジションが清算された。中でもETHとXRPがBTCを上回る損失を出し、個人投資家による高レバレッジ取引のリスクが浮き彫りになった。</description>
     </item>
   </channel>

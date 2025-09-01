@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>ethereum_cardano_token_address_comparison | 未来サイバー生命体研究所（Future BioCybernetics Lab）</title>
+    <title>ethereum_cardano_token_address_comparison | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Ethereum vs Cardano：トークン仕様とアドレス仕様の比較
 
@@ -124,11 +124,9 @@
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
 
 
-
-  
 
 
     
@@ -142,11 +140,11 @@
     
 
     
-      <link rel="canonical" href="http://localhost:1313/posts/epoch555/ethereum_cardano_token_address_comparison/">
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_cardano_token_address_comparison/">
     
 
-    <meta property="og:url" content="http://localhost:1313/posts/epoch555/ethereum_cardano_token_address_comparison/">
-  <meta property="og:site_name" content="未来サイバー生命体研究所（Future BioCybernetics Lab）">
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch555/ethereum_cardano_token_address_comparison/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
   <meta property="og:title" content="ethereum_cardano_token_address_comparison">
   <meta property="og:description" content="Ethereum vs Cardano：トークン仕様とアドレス仕様の比較 ① ERC-20とCardanoのネイティブトークン（Multi-Asset UTxO）の比較 項目 Ethereum（ERC-20） Cardano（ネイティブトークン / Multi-Asset UTxO） トークン実装方法 スマートコントラクトによる記述 L1レベルでネイティブ対応（スマコン不要） 残高管理方式 コントラクト内部のマッピングで管理 各UTxOがトークンとADAの組を直接持つ 基本操作 transfer, approve, transferFrom などの関数が必要 UTxOの入出力でトークンの移動を記述 ガスコスト 操作ごとにガス（ETH）が必要 処理が軽量で、ネットワーク使用料（最小ADA）で済む スマコン依存性 高い ほぼなし（Plutusを使う場合のみ依存） 標準の柔軟性 カスタムロジックを追加しやすい シンプルだが制約あり、代わりにセキュア 相互運用性 他チェーンにはブリッジ必須（L2含む） CIP-68等でNFT/メタデータ表現の互換性向上中 セキュリティリスク スマコンのバグ、詐欺コントラクト スマコンに依存しないため原理的に堅牢 ② ERC-7828/7930とCardanoのアドレス仕様（Bech32, Stake Address, CIP-68）の比較 項目 Ethereum（ERC-7828 / ERC-7930） Cardano（Bech32 / Stake Address / CIP-68） 目的 クロスチェーンで人間可読・バイナリ統一されたアドレス管理 チェーン内での安全かつ機械可読なアドレス体系 表記例 alice.eth@polygon などの可読形式、バイナリアドレス addr1...（支払い）, stake1...（ステーキング）, asset1...（CIP-68） クロスチェーン対応 マルチチェーンアドレスの共通化を目指す 原則単一チェーン内完結（Rosen Bridgeなどで補完） 名前解決 ENSと連携可能（.ethなど） CIP-68でNFTに付随する命名規則などを追加可能 UI/UX 覚えやすく誤送信防止を狙う 高セキュリティで一定の可読性あり 導入形態 開発者がSDKで導入（任意） ネイティブ（全アドレスがこの形式） セキュリティ向上 アドレス形式の誤解・詐欺を防止 Bech32のチェックサムで誤入力検出 標準化状況 2025年提案中（ERC段階） 既に広く実装（Cardano全体） 作成日時：2025年05月02日">
   <meta property="og:locale" content="ja_jp">
@@ -182,9 +180,9 @@
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l center items-center justify-between">
-    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
       
-        未来サイバー生命体研究所（Future BioCybernetics Lab）
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
       
     </a>
     <div class="flex-l items-center">
@@ -194,25 +192,25 @@
         <ul class="pl0 mr3">
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/fbl-central-question/" title="FBL page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
               FBL
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/bwtake/" title="所長紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
               所長紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/cgta/" title="CGTA紹介 page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
               CGTA紹介
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white-90 no-underline" href="/posts/" title="観測ノート page">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
               観測ノート
             </a>
           </li>
@@ -362,35 +360,35 @@
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+     <a href="http://localhost:1313/fbl-site/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+     <a href="http://localhost:1313/fbl-site/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+     <a href="http://localhost:1313/fbl-site/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+     <a href="http://localhost:1313/fbl-site/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
    </li>
   
 </ul>
@@ -410,63 +408,63 @@
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/epoch555/leios_blockchain_scalability_comparison/">Leios_Blockchain_Scalability_Comparison</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/leios_blockchain_scalability_comparison/">Leios_Blockchain_Scalability_Comparison</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/minotaur_cardano_consensus/">Minotaur_Cardano_Consensus</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/minotaur_cardano_consensus/">Minotaur_Cardano_Consensus</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/ethereum_cardano_2025_roadmap_analysis/">ethereum_cardano_2025_roadmap_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_cardano_2025_roadmap_analysis/">ethereum_cardano_2025_roadmap_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/cardano_ripple_rlusd_scenario_20250430/">Cardano_Ripple_RLUSD_Scenario_20250430</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/cardano_ripple_rlusd_scenario_20250430/">Cardano_Ripple_RLUSD_Scenario_20250430</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/ethereum_vs_midnight_architecture_analysis/">ethereum_vs_midnight_architecture_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_vs_midnight_architecture_analysis/">ethereum_vs_midnight_architecture_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/governance_models_comparison/">governance_models_comparison</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/governance_models_comparison/">governance_models_comparison</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/minotaur_mechanism_explained/">minotaur_mechanism_explained</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/minotaur_mechanism_explained-1/">minotaur_mechanism_explained</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/minotaur_mechanism_explained-1/">minotaur_mechanism_explained</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/minotaur_mechanism_explained/">minotaur_mechanism_explained</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/recursive_snark_scenario_analysis-1/">recursive_snark_scenario_analysis (1)</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/recursive_snark_scenario_analysis-1/">recursive_snark_scenario_analysis (1)</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/rlusd_cardano_ripple_analysis/">rlusd_cardano_ripple_analysis</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/rlusd_cardano_ripple_analysis/">rlusd_cardano_ripple_analysis</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/rwa_scenario_analysis_20250430/">RWA_Scenario_Analysis_20250430</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/rwa_scenario_analysis_20250430/">RWA_Scenario_Analysis_20250430</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch555/ripple_vs_cardano_rwa_20250430/">Ripple_vs_Cardano_RWA_20250430</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ripple_vs_cardano_rwa_20250430/">Ripple_vs_Cardano_RWA_20250430</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch554/cardano_bitcoin_defi_projects/">cardano_bitcoin_defi_projects</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/cardano_bitcoin_defi_projects/">cardano_bitcoin_defi_projects</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch554/project_review_luna_eos_iota_nxt/">🚀Project_Review_LUNA_EOS_IOTA_NXT</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/project_review_luna_eos_iota_nxt/">🚀Project_Review_LUNA_EOS_IOTA_NXT</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/epoch554/atala_prism_hyperledger_review/">🚀atala_prism_hyperledger_review</a>
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/atala_prism_hyperledger_review/">🚀atala_prism_hyperledger_review</a>
         </li>
 	    
     </ul>
@@ -479,8 +477,8 @@
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
-    &copy;  未来サイバー生命体研究所（Future BioCybernetics Lab） 2025 
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
   </a>
     <div><div class="ananke-socials"></div>
 </div>
