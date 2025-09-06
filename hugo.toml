@@ -30,3 +30,9 @@ canonifyURLs = true
   recentPostsLimit = 3
   customCSS = ["css/custom.css"]
   googleAnalytics = "G-XTDDG90VL1"
+
+[outputs]
+home     = ["HTML","RSS"]
+section  = ["HTML","RSS"]
+taxonomy = ["HTML","RSS"]
+term     = ["HTML","RSS"]
