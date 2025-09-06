@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <main class="pa3 pa4-ns w-100">
+    {{ .Content }}
+    {{ range where .Site.RegularPages "Type" "in" site.Params.mainSections }}
+      <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+      </article>
+    {{ end }}
+  </main>
+{{ end }}
