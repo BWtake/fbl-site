@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Leios_Blockchain_Scalability_Comparison | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ブロックチェーン拡張性比較：Cardano / Ethereum / Solana / Bitcoin
+📊 比較表：主要ブロックチェーンの拡張性
+
+  
+      
+          チェーン
+          拡張戦略の主軸
+          TPS（目安）
+          並列処理
+          ロールアップ対応
+          ノード軽量性
+          フォールバック性
+          将来展望
+      
+  
+  
+      
+          Cardano
+          Leios（Input Block/Tick-Tock）
+          最大11,000&#43;（理論）
+          ◎
+          ◎ Hydra / Midgard
+          ◎ ラズパイ可
+          ◎ Prowse互換
+          スケーラビリティと安全性の両立
+      
+      
+          Ethereum
+          Rollup中心（Optimistic/ZK）
+          数千（L2込み）
+          △
+          ◎ フル対応
+          △ 要L2支援
+          ×（L1-L2分離）
+          L2依存型のスケーリング進行
+      
+      
+          Solana
+          並列VM（Sealevel） &#43; Firedancer
+          数千～最大65,000
+          ◎
+          △ ZK進行中
+          △ 高性能PC要
+          ×（ノード再起動が必要）
+          超高速＋高帯域が前提の設計
+      
+      
+          Bitcoin
+          L1は固定、L2で拡張（Lightning）
+          7（L1）／数千（L2）
+          ×
+          △（ZK検討中）
+          ◎（SPV軽量可）
+          ◎（単純構造）
+          トランザクションはL2前提に進化中
+      
+  
+
+
+🔍 解説：それぞれのアプローチの特徴
+🐢 Cardano（カルダノ）
+
+戦略：LeiosによるInput Block数の柔軟制御＋HydraなどのL2
+特徴：
+
+ブロックサイズを固定したままTPSを動的調整できる
+ノード軽量化と後方互換性も併存
+
+
+将来性：
+
+UTXOと証明指向設計で、ZKロールアップやリカーシブSNARKとも相性◎
+高負荷下でも壊れないインフラ設計（トリレンマ克服志向）
+
+
+
+🔷 Ethereum（イーサリアム）
+
+戦略：L1は単機能・低速、ロールアップ（L2）による機能分散
+特徴：
+
+全体的に処理をL2に逃がす設計（分離主義）
+OptimisticとZKの両方式が並行開発中
+
+
+将来性：
+
+多様なL2が拡張しているが、L1に戻る処理が複雑化する傾向
+Rollup中心の運用管理が標準になっていく
+
+
+
+🔶 Solana（ソラナ）
+
+戦略：単一チェーン内での超並列処理（Sealevel）＋超高速バリデータ（Firedancer）
+特徴：
+
+処理は高速だが、高性能ノード前提／クラッシュ時の復旧が重い
+ブロック生成と並列処理を同時に行う設計は革新的
+
+
+将来性：
+
+Firedancerで複数クライアント化し安定性向上中
+将来のZK-Rollup組み込みも議論中だが、未完成
+
+
+
+🟠 Bitcoin（ビットコイン）
+
+戦略：L1は堅牢に保ち、L2（Lightningなど）で拡張
+特徴：
+
+L1は最大7TPS。L2（Instant Payment）で処理を補う構造
+シンプル構造ゆえにフォールバック性が高い
+
+
+将来性：
+
+ZKによるプライバシー拡張やDeFi連携（Bitcoin L2）の実験が進行
+MidnightやInterchain技術との接続も視野に入りつつある
+
+
+
+
+🏁 総合評価（拡張性に限る）
+
+  
+      
+          項目
+          最も優れているチェーン
+      
+  
+  
+      
+          柔軟な拡張性
+          ✅ Cardano（IB/Tick-Tockモデル）
+      
+      
+          高速処理能力
+          ✅ Solana（Sealevel＋Firedancer）
+      
+      
+          実用的なL2展開
+          ✅ Ethereum（Rollup実装が進行）
+      
+      
+          保守性と信頼性
+          ✅ Bitcoin（L1堅牢＋L2選択式）
+      
+  
+
+
+✅ まとめ：Leiosの優位性とは？
+CardanoのLeiosは、">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch555/leios_blockchain_scalability_comparison/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch555/leios_blockchain_scalability_comparison/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="Leios_Blockchain_Scalability_Comparison">
+  <meta property="og:description" content="ブロックチェーン拡張性比較：Cardano / Ethereum / Solana / Bitcoin 📊 比較表：主要ブロックチェーンの拡張性 チェーン 拡張戦略の主軸 TPS（目安） 並列処理 ロールアップ対応 ノード軽量性 フォールバック性 将来展望 Cardano Leios（Input Block/Tick-Tock） 最大11,000&#43;（理論） ◎ ◎ Hydra / Midgard ◎ ラズパイ可 ◎ Prowse互換 スケーラビリティと安全性の両立 Ethereum Rollup中心（Optimistic/ZK） 数千（L2込み） △ ◎ フル対応 △ 要L2支援 ×（L1-L2分離） L2依存型のスケーリング進行 Solana 並列VM（Sealevel） &#43; Firedancer 数千～最大65,000 ◎ △ ZK進行中 △ 高性能PC要 ×（ノード再起動が必要） 超高速＋高帯域が前提の設計 Bitcoin L1は固定、L2で拡張（Lightning） 7（L1）／数千（L2） × △（ZK検討中） ◎（SPV軽量可） ◎（単純構造） トランザクションはL2前提に進化中 🔍 解説：それぞれのアプローチの特徴 🐢 Cardano（カルダノ） 戦略：LeiosによるInput Block数の柔軟制御＋HydraなどのL2 特徴： ブロックサイズを固定したままTPSを動的調整できる ノード軽量化と後方互換性も併存 将来性： UTXOと証明指向設計で、ZKロールアップやリカーシブSNARKとも相性◎ 高負荷下でも壊れないインフラ設計（トリレンマ克服志向） 🔷 Ethereum（イーサリアム） 戦略：L1は単機能・低速、ロールアップ（L2）による機能分散 特徴： 全体的に処理をL2に逃がす設計（分離主義） OptimisticとZKの両方式が並行開発中 将来性： 多様なL2が拡張しているが、L1に戻る処理が複雑化する傾向 Rollup中心の運用管理が標準になっていく 🔶 Solana（ソラナ） 戦略：単一チェーン内での超並列処理（Sealevel）＋超高速バリデータ（Firedancer） 特徴： 処理は高速だが、高性能ノード前提／クラッシュ時の復旧が重い ブロック生成と並列処理を同時に行う設計は革新的 将来性： Firedancerで複数クライアント化し安定性向上中 将来のZK-Rollup組み込みも議論中だが、未完成 🟠 Bitcoin（ビットコイン） 戦略：L1は堅牢に保ち、L2（Lightningなど）で拡張 特徴： L1は最大7TPS。L2（Instant Payment）で処理を補う構造 シンプル構造ゆえにフォールバック性が高い 将来性： ZKによるプライバシー拡張やDeFi連携（Bitcoin L2）の実験が進行 MidnightやInterchain技術との接続も視野に入りつつある 🏁 総合評価（拡張性に限る） 項目 最も優れているチェーン 柔軟な拡張性 ✅ Cardano（IB/Tick-Tockモデル） 高速処理能力 ✅ Solana（Sealevel＋Firedancer） 実用的なL2展開 ✅ Ethereum（Rollup実装が進行） 保守性と信頼性 ✅ Bitcoin（L1堅牢＋L2選択式） ✅ まとめ：Leiosの優位性とは？ CardanoのLeiosは、">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-02T00:00:00+00:00">
+    <meta property="article:tag" content="観測記録">
+    <meta property="article:tag" content="カルダノ">
+    <meta property="article:tag" content="FBL">
+    <meta property="article:tag" content="ADA">
+    <meta property="article:tag" content="BTC">
+    <meta property="article:tag" content="ETH">
+
+  <meta itemprop="name" content="Leios_Blockchain_Scalability_Comparison">
+  <meta itemprop="description" content="ブロックチェーン拡張性比較：Cardano / Ethereum / Solana / Bitcoin 📊 比較表：主要ブロックチェーンの拡張性 チェーン 拡張戦略の主軸 TPS（目安） 並列処理 ロールアップ対応 ノード軽量性 フォールバック性 将来展望 Cardano Leios（Input Block/Tick-Tock） 最大11,000&#43;（理論） ◎ ◎ Hydra / Midgard ◎ ラズパイ可 ◎ Prowse互換 スケーラビリティと安全性の両立 Ethereum Rollup中心（Optimistic/ZK） 数千（L2込み） △ ◎ フル対応 △ 要L2支援 ×（L1-L2分離） L2依存型のスケーリング進行 Solana 並列VM（Sealevel） &#43; Firedancer 数千～最大65,000 ◎ △ ZK進行中 △ 高性能PC要 ×（ノード再起動が必要） 超高速＋高帯域が前提の設計 Bitcoin L1は固定、L2で拡張（Lightning） 7（L1）／数千（L2） × △（ZK検討中） ◎（SPV軽量可） ◎（単純構造） トランザクションはL2前提に進化中 🔍 解説：それぞれのアプローチの特徴 🐢 Cardano（カルダノ） 戦略：LeiosによるInput Block数の柔軟制御＋HydraなどのL2 特徴： ブロックサイズを固定したままTPSを動的調整できる ノード軽量化と後方互換性も併存 将来性： UTXOと証明指向設計で、ZKロールアップやリカーシブSNARKとも相性◎ 高負荷下でも壊れないインフラ設計（トリレンマ克服志向） 🔷 Ethereum（イーサリアム） 戦略：L1は単機能・低速、ロールアップ（L2）による機能分散 特徴： 全体的に処理をL2に逃がす設計（分離主義） OptimisticとZKの両方式が並行開発中 将来性： 多様なL2が拡張しているが、L1に戻る処理が複雑化する傾向 Rollup中心の運用管理が標準になっていく 🔶 Solana（ソラナ） 戦略：単一チェーン内での超並列処理（Sealevel）＋超高速バリデータ（Firedancer） 特徴： 処理は高速だが、高性能ノード前提／クラッシュ時の復旧が重い ブロック生成と並列処理を同時に行う設計は革新的 将来性： Firedancerで複数クライアント化し安定性向上中 将来のZK-Rollup組み込みも議論中だが、未完成 🟠 Bitcoin（ビットコイン） 戦略：L1は堅牢に保ち、L2（Lightningなど）で拡張 特徴： L1は最大7TPS。L2（Instant Payment）で処理を補う構造 シンプル構造ゆえにフォールバック性が高い 将来性： ZKによるプライバシー拡張やDeFi連携（Bitcoin L2）の実験が進行 MidnightやInterchain技術との接続も視野に入りつつある 🏁 総合評価（拡張性に限る） 項目 最も優れているチェーン 柔軟な拡張性 ✅ Cardano（IB/Tick-Tockモデル） 高速処理能力 ✅ Solana（Sealevel＋Firedancer） 実用的なL2展開 ✅ Ethereum（Rollup実装が進行） 保守性と信頼性 ✅ Bitcoin（L1堅牢＋L2選択式） ✅ まとめ：Leiosの優位性とは？ CardanoのLeiosは、">
+  <meta itemprop="datePublished" content="2025-05-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-02T00:00:00+00:00">
+  <meta itemprop="wordCount" content="126">
+  <meta itemprop="keywords" content="観測記録,カルダノ,FBL,ADA,BTC,ETH,SOL,比較">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Leios_Blockchain_Scalability_Comparison">
+  <meta name="twitter:description" content="ブロックチェーン拡張性比較：Cardano / Ethereum / Solana / Bitcoin 📊 比較表：主要ブロックチェーンの拡張性 チェーン 拡張戦略の主軸 TPS（目安） 並列処理 ロールアップ対応 ノード軽量性 フォールバック性 将来展望 Cardano Leios（Input Block/Tick-Tock） 最大11,000&#43;（理論） ◎ ◎ Hydra / Midgard ◎ ラズパイ可 ◎ Prowse互換 スケーラビリティと安全性の両立 Ethereum Rollup中心（Optimistic/ZK） 数千（L2込み） △ ◎ フル対応 △ 要L2支援 ×（L1-L2分離） L2依存型のスケーリング進行 Solana 並列VM（Sealevel） &#43; Firedancer 数千～最大65,000 ◎ △ ZK進行中 △ 高性能PC要 ×（ノード再起動が必要） 超高速＋高帯域が前提の設計 Bitcoin L1は固定、L2で拡張（Lightning） 7（L1）／数千（L2） × △（ZK検討中） ◎（SPV軽量可） ◎（単純構造） トランザクションはL2前提に進化中 🔍 解説：それぞれのアプローチの特徴 🐢 Cardano（カルダノ） 戦略：LeiosによるInput Block数の柔軟制御＋HydraなどのL2 特徴： ブロックサイズを固定したままTPSを動的調整できる ノード軽量化と後方互換性も併存 将来性： UTXOと証明指向設計で、ZKロールアップやリカーシブSNARKとも相性◎ 高負荷下でも壊れないインフラ設計（トリレンマ克服志向） 🔷 Ethereum（イーサリアム） 戦略：L1は単機能・低速、ロールアップ（L2）による機能分散 特徴： 全体的に処理をL2に逃がす設計（分離主義） OptimisticとZKの両方式が並行開発中 将来性： 多様なL2が拡張しているが、L1に戻る処理が複雑化する傾向 Rollup中心の運用管理が標準になっていく 🔶 Solana（ソラナ） 戦略：単一チェーン内での超並列処理（Sealevel）＋超高速バリデータ（Firedancer） 特徴： 処理は高速だが、高性能ノード前提／クラッシュ時の復旧が重い ブロック生成と並列処理を同時に行う設計は革新的 将来性： Firedancerで複数クライアント化し安定性向上中 将来のZK-Rollup組み込みも議論中だが、未完成 🟠 Bitcoin（ビットコイン） 戦略：L1は堅牢に保ち、L2（Lightningなど）で拡張 特徴： L1は最大7TPS。L2（Instant Payment）で処理を補う構造 シンプル構造ゆえにフォールバック性が高い 将来性： ZKによるプライバシー拡張やDeFi連携（Bitcoin L2）の実験が進行 MidnightやInterchain技術との接続も視野に入りつつある 🏁 総合評価（拡張性に限る） 項目 最も優れているチェーン 柔軟な拡張性 ✅ Cardano（IB/Tick-Tockモデル） 高速処理能力 ✅ Solana（Sealevel＋Firedancer） 実用的なL2展開 ✅ Ethereum（Rollup実装が進行） 保守性と信頼性 ✅ Bitcoin（L1堅牢＋L2選択式） ✅ まとめ：Leiosの優位性とは？ CardanoのLeiosは、">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 555 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Leios_Blockchain_Scalability_Comparison</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-05-02T00:00:00Z">May 2, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="ブロックチェーン拡張性比較cardano--ethereum--solana--bitcoin">ブロックチェーン拡張性比較：Cardano / Ethereum / Solana / Bitcoin</h1>
+<h2 id="-比較表主要ブロックチェーンの拡張性">📊 比較表：主要ブロックチェーンの拡張性</h2>
+<table>
+  <thead>
+      <tr>
+          <th>チェーン</th>
+          <th>拡張戦略の主軸</th>
+          <th>TPS（目安）</th>
+          <th>並列処理</th>
+          <th>ロールアップ対応</th>
+          <th>ノード軽量性</th>
+          <th>フォールバック性</th>
+          <th>将来展望</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Cardano</strong></td>
+          <td>Leios（Input Block/Tick-Tock）</td>
+          <td>最大11,000+（理論）</td>
+          <td>◎</td>
+          <td>◎ Hydra / Midgard</td>
+          <td>◎ ラズパイ可</td>
+          <td>◎ Prowse互換</td>
+          <td><strong>スケーラビリティと安全性の両立</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Ethereum</strong></td>
+          <td>Rollup中心（Optimistic/ZK）</td>
+          <td>数千（L2込み）</td>
+          <td>△</td>
+          <td>◎ フル対応</td>
+          <td>△ 要L2支援</td>
+          <td>×（L1-L2分離）</td>
+          <td>L2依存型のスケーリング進行</td>
+      </tr>
+      <tr>
+          <td><strong>Solana</strong></td>
+          <td>並列VM（Sealevel） + Firedancer</td>
+          <td>数千～最大65,000</td>
+          <td>◎</td>
+          <td>△ ZK進行中</td>
+          <td>△ 高性能PC要</td>
+          <td>×（ノード再起動が必要）</td>
+          <td><strong>超高速＋高帯域が前提の設計</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Bitcoin</strong></td>
+          <td>L1は固定、L2で拡張（Lightning）</td>
+          <td>7（L1）／数千（L2）</td>
+          <td>×</td>
+          <td>△（ZK検討中）</td>
+          <td>◎（SPV軽量可）</td>
+          <td>◎（単純構造）</td>
+          <td>トランザクションはL2前提に進化中</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-解説それぞれのアプローチの特徴">🔍 解説：それぞれのアプローチの特徴</h2>
+<h3 id="-cardanoカルダノ">🐢 Cardano（カルダノ）</h3>
+<ul>
+<li><strong>戦略</strong>：LeiosによるInput Block数の柔軟制御＋HydraなどのL2</li>
+<li><strong>特徴</strong>：
+<ul>
+<li>ブロックサイズを固定したままTPSを動的調整できる</li>
+<li>ノード軽量化と後方互換性も併存</li>
+</ul>
+</li>
+<li><strong>将来性</strong>：
+<ul>
+<li>UTXOと証明指向設計で、ZKロールアップやリカーシブSNARKとも相性◎</li>
+<li>高負荷下でも壊れないインフラ設計（トリレンマ克服志向）</li>
+</ul>
+</li>
+</ul>
+<h3 id="-ethereumイーサリアム">🔷 Ethereum（イーサリアム）</h3>
+<ul>
+<li><strong>戦略</strong>：L1は単機能・低速、ロールアップ（L2）による機能分散</li>
+<li><strong>特徴</strong>：
+<ul>
+<li>全体的に処理をL2に逃がす設計（分離主義）</li>
+<li>OptimisticとZKの両方式が並行開発中</li>
+</ul>
+</li>
+<li><strong>将来性</strong>：
+<ul>
+<li>多様なL2が拡張しているが、L1に戻る処理が複雑化する傾向</li>
+<li>Rollup中心の運用管理が標準になっていく</li>
+</ul>
+</li>
+</ul>
+<h3 id="-solanaソラナ">🔶 Solana（ソラナ）</h3>
+<ul>
+<li><strong>戦略</strong>：単一チェーン内での超並列処理（Sealevel）＋超高速バリデータ（Firedancer）</li>
+<li><strong>特徴</strong>：
+<ul>
+<li>処理は高速だが、高性能ノード前提／クラッシュ時の復旧が重い</li>
+<li>ブロック生成と並列処理を同時に行う設計は革新的</li>
+</ul>
+</li>
+<li><strong>将来性</strong>：
+<ul>
+<li>Firedancerで複数クライアント化し安定性向上中</li>
+<li>将来のZK-Rollup組み込みも議論中だが、未完成</li>
+</ul>
+</li>
+</ul>
+<h3 id="-bitcoinビットコイン">🟠 Bitcoin（ビットコイン）</h3>
+<ul>
+<li><strong>戦略</strong>：L1は堅牢に保ち、L2（Lightningなど）で拡張</li>
+<li><strong>特徴</strong>：
+<ul>
+<li>L1は最大7TPS。L2（Instant Payment）で処理を補う構造</li>
+<li>シンプル構造ゆえにフォールバック性が高い</li>
+</ul>
+</li>
+<li><strong>将来性</strong>：
+<ul>
+<li>ZKによるプライバシー拡張やDeFi連携（Bitcoin L2）の実験が進行</li>
+<li>MidnightやInterchain技術との接続も視野に入りつつある</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="-総合評価拡張性に限る">🏁 総合評価（拡張性に限る）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>最も優れているチェーン</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>柔軟な拡張性</td>
+          <td>✅ Cardano（IB/Tick-Tockモデル）</td>
+      </tr>
+      <tr>
+          <td>高速処理能力</td>
+          <td>✅ Solana（Sealevel＋Firedancer）</td>
+      </tr>
+      <tr>
+          <td>実用的なL2展開</td>
+          <td>✅ Ethereum（Rollup実装が進行）</td>
+      </tr>
+      <tr>
+          <td>保守性と信頼性</td>
+          <td>✅ Bitcoin（L1堅牢＋L2選択式）</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-まとめleiosの優位性とは">✅ まとめ：Leiosの優位性とは？</h2>
+<p>CardanoのLeiosは、</p>
+<ul>
+<li>Solana並の処理能力を</li>
+<li>Ethereum並のロールアップ対応力を持ちつつ、</li>
+<li>Bitcoin並の信頼性も保とうとしているプロトコル。</li>
+</ul>
+<p>まさに、<strong>ブロックチェーン・トリレンマの克服に最も近い存在</strong>です。</p>
+<hr>
+<p><strong>作成日時：2025年05月02日</strong></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/minotaur_cardano_consensus/">Minotaur_Cardano_Consensus</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_cardano_2025_roadmap_analysis/">ethereum_cardano_2025_roadmap_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_cardano_token_address_comparison/">ethereum_cardano_token_address_comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/cardano_ripple_rlusd_scenario_20250430/">Cardano_Ripple_RLUSD_Scenario_20250430</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_vs_midnight_architecture_analysis/">ethereum_vs_midnight_architecture_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/governance_models_comparison/">governance_models_comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/minotaur_mechanism_explained-1/">minotaur_mechanism_explained</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/minotaur_mechanism_explained/">minotaur_mechanism_explained</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/recursive_snark_scenario_analysis-1/">recursive_snark_scenario_analysis (1)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/rlusd_cardano_ripple_analysis/">rlusd_cardano_ripple_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/rwa_scenario_analysis_20250430/">RWA_Scenario_Analysis_20250430</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ripple_vs_cardano_rwa_20250430/">Ripple_vs_Cardano_RWA_20250430</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/cardano_bitcoin_defi_projects/">cardano_bitcoin_defi_projects</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/project_review_luna_eos_iota_nxt/">🚀Project_Review_LUNA_EOS_IOTA_NXT</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch554/atala_prism_hyperledger_review/">🚀atala_prism_hyperledger_review</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説 | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="1. 会話の背景
+LINEコミュニティでの質問：
+
+「NIGHTの価値は、使われるほどに上がる設計なのか？
+エアドロはすぐ売られる印象があるが、実際どうか知りたい」
+それに対して提示された説明は「Midnightを使うにはDUSTが必要で、DUSTはNIGHT保有によってしか得られず譲渡不可」という保有インセンティブ設計の概要でした。
+
+2. NIGHTとDUSTの基本構造
+
+  
+      
+          項目
+          NIGHT
+          DUST
+      
+  
+  
+      
+          性質
+          Midnightネイティブのユーティリティトークン（Cardanoにもミラー存在）
+          トランザクション実行用のシールド型リソース
+      
+      
+          譲渡可否
+          ✅ 可
+          ❌ 不可
+      
+      
+          生成方法
+          初期配布 &#43; ブロック報酬
+          NIGHT保有量に応じて自動生成
+      
+      
+          消費
+          消費されない（保持でDUST発生）
+          取引ごとに消費・焼却される
+      
+      
+          主用途
+          DUST生成源・ガバナンス・ブロック報酬
+          取引手数料・ネットワーク容量の確保
+      
+      
+          その他特徴
+          デフレ的発行曲線（報酬減少）
+          保有者以外への「貸与」は可能（生成先指定）
+      
+  
+
+
+3. 価格上昇メカニズム（設計意図）
+Midnight公式ホワイトペーパーによれば、価格上昇の論理は以下の通り：
+
+
+利用必須性
+
+Midnightチェーンでのあらゆる操作にはDUSTが必要
+DUSTはNIGHT保有でしか得られない
+
+
+
+DUST非譲渡性 → レンディング需要
+
+DUSTは売買できないため、DUSTを必要とする第三者はNIGHT保有者に依存
+将来的に「DUST生成権の貸与市場」が成立する可能性
+
+
+
+長期保有インセンティブ
+
+保有期間が長いほどDUST蓄積が進み、取引回数上限が拡大
+売却するとDUST残高は減衰しゼロに
+
+
+
+ADA需要への波及
+
+NIGHTはCardano上でのみ購入可能
+需要増はADA買い圧力につながる
+
+
+
+
+4. 想定シナリオ分析（価格形成）
+
+  
+      
+          シナリオ
+          説明
+          出現確率（推定）
+      
+  
+  
+      
+          S5（非常に好ましい）
+          Midnightユーザー数が急増、DUSTレンディング市場活発化、NIGHT価格中長期上昇
+          25%
+      
+      
+          S4（好ましい）
+          ユーザー増は緩やかだが、開発者支援とDApp多様化で堅調にNIGHT需要増
+          30%
+      
+      
+          S3（中立）
+          利用者層限定、保有者はADAホルダー中心で横ばい推移
+          25%
+      
+      
+          S2（やや悪い）
+          ユーザー伸び悩み、エアドロ売却圧が長期残存
+          15%
+      
+      
+          S1（悪い）
+          規制・競合チェーン台頭で利用縮小、価格長期低迷
+          5%
+      
+  
+
+
+5. 実需と投機性のバランス
+
+  
+      
+          要素
+          投機性
+          実需性
+      
+  
+  
+      
+          エアドロ初期
+          高
+          低
+      
+      
+          DUST利用必須構造
+          低
+          高
+      
+      
+          レンディング市場
+          中
+          高
+      
+      
+          Cardano依存
+          中
+          中
+      
+  
+
+
+6. まとめ
+
+価格上昇は保証されないが、設計思想としては使えば使うほど需給が引き締まる方向
+特に「非譲渡型利用リソース（DUST）＋生成源トークン（NIGHT）」というモデルは、ガス代直接支払い型のチェーンとは大きく異なり、長期保有を促す
+ADA需要との連動もあり、Cardanoエコシステム全体への波及効果が見込まれる
+
+
+📚 出典
+
+Midnight Tokenomics and Incentives Whitepaper, June 2025:contentReference[oaicite:0]{index=0}
+Midnight公式サイト https://www.midnight.network/
+Cardano Foundationリリース情報
+
+
+作成日時: 2025-08-08">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch575/midnight%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8night%E4%BE%A1%E5%80%A4%E5%BD%A2%E6%88%90%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch575/midnight%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8night%E4%BE%A1%E5%80%A4%E5%BD%A2%E6%88%90%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説">
+  <meta property="og:description" content="1. 会話の背景 LINEコミュニティでの質問：
+「NIGHTの価値は、使われるほどに上がる設計なのか？
+エアドロはすぐ売られる印象があるが、実際どうか知りたい」
+それに対して提示された説明は「Midnightを使うにはDUSTが必要で、DUSTはNIGHT保有によってしか得られず譲渡不可」という保有インセンティブ設計の概要でした。
+2. NIGHTとDUSTの基本構造 項目 NIGHT DUST 性質 Midnightネイティブのユーティリティトークン（Cardanoにもミラー存在） トランザクション実行用のシールド型リソース 譲渡可否 ✅ 可 ❌ 不可 生成方法 初期配布 &#43; ブロック報酬 NIGHT保有量に応じて自動生成 消費 消費されない（保持でDUST発生） 取引ごとに消費・焼却される 主用途 DUST生成源・ガバナンス・ブロック報酬 取引手数料・ネットワーク容量の確保 その他特徴 デフレ的発行曲線（報酬減少） 保有者以外への「貸与」は可能（生成先指定） 3. 価格上昇メカニズム（設計意図） Midnight公式ホワイトペーパーによれば、価格上昇の論理は以下の通り：
+利用必須性
+Midnightチェーンでのあらゆる操作にはDUSTが必要 DUSTはNIGHT保有でしか得られない DUST非譲渡性 → レンディング需要
+DUSTは売買できないため、DUSTを必要とする第三者はNIGHT保有者に依存 将来的に「DUST生成権の貸与市場」が成立する可能性 長期保有インセンティブ
+保有期間が長いほどDUST蓄積が進み、取引回数上限が拡大 売却するとDUST残高は減衰しゼロに ADA需要への波及
+NIGHTはCardano上でのみ購入可能 需要増はADA買い圧力につながる 4. 想定シナリオ分析（価格形成） シナリオ 説明 出現確率（推定） S5（非常に好ましい） Midnightユーザー数が急増、DUSTレンディング市場活発化、NIGHT価格中長期上昇 25% S4（好ましい） ユーザー増は緩やかだが、開発者支援とDApp多様化で堅調にNIGHT需要増 30% S3（中立） 利用者層限定、保有者はADAホルダー中心で横ばい推移 25% S2（やや悪い） ユーザー伸び悩み、エアドロ売却圧が長期残存 15% S1（悪い） 規制・競合チェーン台頭で利用縮小、価格長期低迷 5% 5. 実需と投機性のバランス 要素 投機性 実需性 エアドロ初期 高 低 DUST利用必須構造 低 高 レンディング市場 中 高 Cardano依存 中 中 6. まとめ 価格上昇は保証されないが、設計思想としては使えば使うほど需給が引き締まる方向 特に「非譲渡型利用リソース（DUST）＋生成源トークン（NIGHT）」というモデルは、ガス代直接支払い型のチェーンとは大きく異なり、長期保有を促す ADA需要との連動もあり、Cardanoエコシステム全体への波及効果が見込まれる 📚 出典 Midnight Tokenomics and Incentives Whitepaper, June 2025:contentReference[oaicite:0]{index=0} Midnight公式サイト https://www.midnight.network/ Cardano Foundationリリース情報 作成日時: 2025-08-08">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-08T00:00:00+00:00">
+    <meta property="article:tag" content="Midnight">
+    <meta property="article:tag" content="Tokenomics">
+    <meta property="article:tag" content="NIGHT">
+    <meta property="article:tag" content="DUST">
+    <meta property="article:tag" content="Cardano">
+    <meta property="article:tag" content="PartnerChain">
+
+  <meta itemprop="name" content="MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説">
+  <meta itemprop="description" content="1. 会話の背景 LINEコミュニティでの質問：
+「NIGHTの価値は、使われるほどに上がる設計なのか？
+エアドロはすぐ売られる印象があるが、実際どうか知りたい」
+それに対して提示された説明は「Midnightを使うにはDUSTが必要で、DUSTはNIGHT保有によってしか得られず譲渡不可」という保有インセンティブ設計の概要でした。
+2. NIGHTとDUSTの基本構造 項目 NIGHT DUST 性質 Midnightネイティブのユーティリティトークン（Cardanoにもミラー存在） トランザクション実行用のシールド型リソース 譲渡可否 ✅ 可 ❌ 不可 生成方法 初期配布 &#43; ブロック報酬 NIGHT保有量に応じて自動生成 消費 消費されない（保持でDUST発生） 取引ごとに消費・焼却される 主用途 DUST生成源・ガバナンス・ブロック報酬 取引手数料・ネットワーク容量の確保 その他特徴 デフレ的発行曲線（報酬減少） 保有者以外への「貸与」は可能（生成先指定） 3. 価格上昇メカニズム（設計意図） Midnight公式ホワイトペーパーによれば、価格上昇の論理は以下の通り：
+利用必須性
+Midnightチェーンでのあらゆる操作にはDUSTが必要 DUSTはNIGHT保有でしか得られない DUST非譲渡性 → レンディング需要
+DUSTは売買できないため、DUSTを必要とする第三者はNIGHT保有者に依存 将来的に「DUST生成権の貸与市場」が成立する可能性 長期保有インセンティブ
+保有期間が長いほどDUST蓄積が進み、取引回数上限が拡大 売却するとDUST残高は減衰しゼロに ADA需要への波及
+NIGHTはCardano上でのみ購入可能 需要増はADA買い圧力につながる 4. 想定シナリオ分析（価格形成） シナリオ 説明 出現確率（推定） S5（非常に好ましい） Midnightユーザー数が急増、DUSTレンディング市場活発化、NIGHT価格中長期上昇 25% S4（好ましい） ユーザー増は緩やかだが、開発者支援とDApp多様化で堅調にNIGHT需要増 30% S3（中立） 利用者層限定、保有者はADAホルダー中心で横ばい推移 25% S2（やや悪い） ユーザー伸び悩み、エアドロ売却圧が長期残存 15% S1（悪い） 規制・競合チェーン台頭で利用縮小、価格長期低迷 5% 5. 実需と投機性のバランス 要素 投機性 実需性 エアドロ初期 高 低 DUST利用必須構造 低 高 レンディング市場 中 高 Cardano依存 中 中 6. まとめ 価格上昇は保証されないが、設計思想としては使えば使うほど需給が引き締まる方向 特に「非譲渡型利用リソース（DUST）＋生成源トークン（NIGHT）」というモデルは、ガス代直接支払い型のチェーンとは大きく異なり、長期保有を促す ADA需要との連動もあり、Cardanoエコシステム全体への波及効果が見込まれる 📚 出典 Midnight Tokenomics and Incentives Whitepaper, June 2025:contentReference[oaicite:0]{index=0} Midnight公式サイト https://www.midnight.network/ Cardano Foundationリリース情報 作成日時: 2025-08-08">
+  <meta itemprop="datePublished" content="2025-08-08T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-08-08T00:00:00+00:00">
+  <meta itemprop="wordCount" content="107">
+  <meta itemprop="keywords" content="Midnight,Tokenomics,NIGHT,DUST,Cardano,PartnerChain">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説">
+  <meta name="twitter:description" content="1. 会話の背景 LINEコミュニティでの質問：
+「NIGHTの価値は、使われるほどに上がる設計なのか？
+エアドロはすぐ売られる印象があるが、実際どうか知りたい」
+それに対して提示された説明は「Midnightを使うにはDUSTが必要で、DUSTはNIGHT保有によってしか得られず譲渡不可」という保有インセンティブ設計の概要でした。
+2. NIGHTとDUSTの基本構造 項目 NIGHT DUST 性質 Midnightネイティブのユーティリティトークン（Cardanoにもミラー存在） トランザクション実行用のシールド型リソース 譲渡可否 ✅ 可 ❌ 不可 生成方法 初期配布 &#43; ブロック報酬 NIGHT保有量に応じて自動生成 消費 消費されない（保持でDUST発生） 取引ごとに消費・焼却される 主用途 DUST生成源・ガバナンス・ブロック報酬 取引手数料・ネットワーク容量の確保 その他特徴 デフレ的発行曲線（報酬減少） 保有者以外への「貸与」は可能（生成先指定） 3. 価格上昇メカニズム（設計意図） Midnight公式ホワイトペーパーによれば、価格上昇の論理は以下の通り：
+利用必須性
+Midnightチェーンでのあらゆる操作にはDUSTが必要 DUSTはNIGHT保有でしか得られない DUST非譲渡性 → レンディング需要
+DUSTは売買できないため、DUSTを必要とする第三者はNIGHT保有者に依存 将来的に「DUST生成権の貸与市場」が成立する可能性 長期保有インセンティブ
+保有期間が長いほどDUST蓄積が進み、取引回数上限が拡大 売却するとDUST残高は減衰しゼロに ADA需要への波及
+NIGHTはCardano上でのみ購入可能 需要増はADA買い圧力につながる 4. 想定シナリオ分析（価格形成） シナリオ 説明 出現確率（推定） S5（非常に好ましい） Midnightユーザー数が急増、DUSTレンディング市場活発化、NIGHT価格中長期上昇 25% S4（好ましい） ユーザー増は緩やかだが、開発者支援とDApp多様化で堅調にNIGHT需要増 30% S3（中立） 利用者層限定、保有者はADAホルダー中心で横ばい推移 25% S2（やや悪い） ユーザー伸び悩み、エアドロ売却圧が長期残存 15% S1（悪い） 規制・競合チェーン台頭で利用縮小、価格長期低迷 5% 5. 実需と投機性のバランス 要素 投機性 実需性 エアドロ初期 高 低 DUST利用必須構造 低 高 レンディング市場 中 高 Cardano依存 中 中 6. まとめ 価格上昇は保証されないが、設計思想としては使えば使うほど需給が引き締まる方向 特に「非譲渡型利用リソース（DUST）＋生成源トークン（NIGHT）」というモデルは、ガス代直接支払い型のチェーンとは大きく異なり、長期保有を促す ADA需要との連動もあり、Cardanoエコシステム全体への波及効果が見込まれる 📚 出典 Midnight Tokenomics and Incentives Whitepaper, June 2025:contentReference[oaicite:0]{index=0} Midnight公式サイト https://www.midnight.network/ Cardano Foundationリリース情報 作成日時: 2025-08-08">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 575 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-08-08T00:00:00Z">August 8, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="1-会話の背景">1. 会話の背景</h2>
+<p>LINEコミュニティでの質問：</p>
+<blockquote>
+<p>「NIGHTの価値は、使われるほどに上がる設計なのか？<br>
+エアドロはすぐ売られる印象があるが、実際どうか知りたい」</p></blockquote>
+<p>それに対して提示された説明は「Midnightを使うにはDUSTが必要で、DUSTはNIGHT保有によってしか得られず譲渡不可」という<strong>保有インセンティブ設計</strong>の概要でした。</p>
+<hr>
+<h2 id="2-nightとdustの基本構造">2. NIGHTとDUSTの基本構造</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>NIGHT</th>
+          <th>DUST</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>性質</td>
+          <td>Midnightネイティブのユーティリティトークン（Cardanoにもミラー存在）</td>
+          <td>トランザクション実行用のシールド型リソース</td>
+      </tr>
+      <tr>
+          <td>譲渡可否</td>
+          <td>✅ 可</td>
+          <td>❌ 不可</td>
+      </tr>
+      <tr>
+          <td>生成方法</td>
+          <td>初期配布 + ブロック報酬</td>
+          <td>NIGHT保有量に応じて自動生成</td>
+      </tr>
+      <tr>
+          <td>消費</td>
+          <td>消費されない（保持でDUST発生）</td>
+          <td>取引ごとに消費・焼却される</td>
+      </tr>
+      <tr>
+          <td>主用途</td>
+          <td>DUST生成源・ガバナンス・ブロック報酬</td>
+          <td>取引手数料・ネットワーク容量の確保</td>
+      </tr>
+      <tr>
+          <td>その他特徴</td>
+          <td>デフレ的発行曲線（報酬減少）</td>
+          <td>保有者以外への「貸与」は可能（生成先指定）</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="3-価格上昇メカニズム設計意図">3. 価格上昇メカニズム（設計意図）</h2>
+<p>Midnight公式ホワイトペーパーによれば、価格上昇の論理は以下の通り：</p>
+<ol>
+<li>
+<p><strong>利用必須性</strong></p>
+<ul>
+<li>Midnightチェーンでのあらゆる操作にはDUSTが必要</li>
+<li>DUSTはNIGHT保有でしか得られない</li>
+</ul>
+</li>
+<li>
+<p><strong>DUST非譲渡性 → レンディング需要</strong></p>
+<ul>
+<li>DUSTは売買できないため、DUSTを必要とする第三者はNIGHT保有者に依存</li>
+<li>将来的に「DUST生成権の貸与市場」が成立する可能性</li>
+</ul>
+</li>
+<li>
+<p><strong>長期保有インセンティブ</strong></p>
+<ul>
+<li>保有期間が長いほどDUST蓄積が進み、取引回数上限が拡大</li>
+<li>売却するとDUST残高は減衰しゼロに</li>
+</ul>
+</li>
+<li>
+<p><strong>ADA需要への波及</strong></p>
+<ul>
+<li>NIGHTはCardano上でのみ購入可能</li>
+<li>需要増はADA買い圧力につながる</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="4-想定シナリオ分析価格形成">4. 想定シナリオ分析（価格形成）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>シナリオ</th>
+          <th>説明</th>
+          <th>出現確率（推定）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S5（非常に好ましい）</td>
+          <td>Midnightユーザー数が急増、DUSTレンディング市場活発化、NIGHT価格中長期上昇</td>
+          <td>25%</td>
+      </tr>
+      <tr>
+          <td>S4（好ましい）</td>
+          <td>ユーザー増は緩やかだが、開発者支援とDApp多様化で堅調にNIGHT需要増</td>
+          <td>30%</td>
+      </tr>
+      <tr>
+          <td>S3（中立）</td>
+          <td>利用者層限定、保有者はADAホルダー中心で横ばい推移</td>
+          <td>25%</td>
+      </tr>
+      <tr>
+          <td>S2（やや悪い）</td>
+          <td>ユーザー伸び悩み、エアドロ売却圧が長期残存</td>
+          <td>15%</td>
+      </tr>
+      <tr>
+          <td>S1（悪い）</td>
+          <td>規制・競合チェーン台頭で利用縮小、価格長期低迷</td>
+          <td>5%</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="5-実需と投機性のバランス">5. 実需と投機性のバランス</h2>
+<table>
+  <thead>
+      <tr>
+          <th>要素</th>
+          <th>投機性</th>
+          <th>実需性</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>エアドロ初期</td>
+          <td>高</td>
+          <td>低</td>
+      </tr>
+      <tr>
+          <td>DUST利用必須構造</td>
+          <td>低</td>
+          <td>高</td>
+      </tr>
+      <tr>
+          <td>レンディング市場</td>
+          <td>中</td>
+          <td>高</td>
+      </tr>
+      <tr>
+          <td>Cardano依存</td>
+          <td>中</td>
+          <td>中</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="6-まとめ">6. まとめ</h2>
+<ul>
+<li><strong>価格上昇は保証されない</strong>が、<strong>設計思想としては使えば使うほど需給が引き締まる方向</strong></li>
+<li>特に「非譲渡型利用リソース（DUST）＋生成源トークン（NIGHT）」というモデルは、ガス代直接支払い型のチェーンとは大きく異なり、長期保有を促す</li>
+<li>ADA需要との連動もあり、Cardanoエコシステム全体への波及効果が見込まれる</li>
+</ul>
+<hr>
+<h3 id="-出典">📚 出典</h3>
+<ul>
+<li><em>Midnight Tokenomics and Incentives Whitepaper</em>, June 2025:contentReference[oaicite:0]{index=0}</li>
+<li>Midnight公式サイト <a href="https://www.midnight.network/">https://www.midnight.network/</a></li>
+<li>Cardano Foundationリリース情報</li>
+</ul>
+<hr>
+<p>作成日時: 2025-08-08</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/tokenomics/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Tokenomics</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/night/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">NIGHT</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/dust/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DUST</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/partnerchain/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">PartnerChain</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch573/midnight_glacier_drop/">Midnight NIGHTトークン: Glacier Drop詳細解説（2025年8月最新版）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/rare-evo-2024-%E5%8D%94%E8%B3%9B%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E5%8F%96%E3%82%8C%E3%82%8Bcardano%E3%81%AE%E6%88%A6%E7%95%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91/">Rare Evo 2024 協賛企業から読み取れるCardanoの戦略的位置づけ</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">Midnightトークン請求における署名・公開鍵・秘密鍵の解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch573/xrp%E4%BF%9D%E6%9C%89%E8%80%85%E3%81%B8%E9%81%8E%E5%8E%BB%E6%9C%80%E5%A4%A7%E7%B4%9A%E3%81%AEnight%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E9%85%8D%E5%B8%83midnight%E3%81%A8cardano%E5%89%B5%E8%A8%AD%E8%80%85%E3%81%AE%E6%88%A6%E7%95%A5/">XRP保有者へ過去最大級のNIGHTトークン配布｜MidnightとCardano創設者の戦略</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/lace-walletdid%E7%B5%B1%E5%90%88%E3%81%A8bitcoin-defi%E8%A8%88%E7%94%BB/">Lace Wallet：DID統合とBitcoin DeFi計画</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/-cardano-weekly-development-report--2025-07-25/">Cardano Weekly Development Report – 2025-07-25</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/iog%E3%81%AEbitvmx%E6%A7%8B%E6%83%B3%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%E3%81%AB%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99%E6%9C%AA%E6%9D%A5%E5%9B%B3/">IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/midnight-awesome-dapps-update/">Midnight Awesome dApps リポジトリアップデート</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/cardano%E3%81%8C%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E6%88%A6%E7%95%A5%E3%81%B8%E7%A7%BB%E8%A1%8Crare-evo%E3%81%A7%E3%81%AE%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%99%BA%E8%A1%A8%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3%E6%9E%90/">Cardanoがマルチチェーン戦略へ移行｜Rare Evoでのホスキンソン発表を徹底解析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/utxo%E9%99%A3%E5%96%B6%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E4%B8%BB%E8%A6%81%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A8%E3%81%9D%E3%81%AE%E6%80%9D%E6%83%B3%E7%9A%84%E6%8A%80%E8%A1%93%E7%9A%84%E7%AB%8B%E3%81%A1%E4%BD%8D%E7%BD%AE/">UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/%C3%A2tma-dao-%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8%E5%A7%94%E4%BB%BB%E5%A0%B1%E9%85%AC%E6%A7%8B%E9%80%A0%E3%81%AE%E8%A7%A3%E8%AA%AC/">ÂTMA DAO トークノミクスと委任報酬構造の解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/bwtake_cgta_drep_criteria_epoch366/">BWtake &amp; CGTAチームのDRep判断基準（2025年8月改訂）</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

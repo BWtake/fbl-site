@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>AdaStat.net 使い方完全ガイド | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="独立系Cardanoブロックチェーン・エクスプローラー AdaStat.net の特徴と実務フロー。トランザクション確認、ステーキング報酬追跡、プール比較、トークン調査、オンチェーン・ガバナンス監視、API活用まで。">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch577/-adastat.net-%E4%BD%BF%E3%81%84%E6%96%B9%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch577/-adastat.net-%E4%BD%BF%E3%81%84%E6%96%B9%E5%AE%8C%E5%85%A8%E3%82%AC%E3%82%A4%E3%83%89/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="AdaStat.net 使い方完全ガイド">
+  <meta property="og:description" content="独立系Cardanoブロックチェーン・エクスプローラー AdaStat.net の特徴と実務フロー。トランザクション確認、ステーキング報酬追跡、プール比較、トークン調査、オンチェーン・ガバナンス監視、API活用まで。">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-22T13:00:00+09:00">
+    <meta property="article:modified_time" content="2025-08-22T13:00:00+09:00">
+    <meta property="article:tag" content="Cardano">
+    <meta property="article:tag" content="Explorer">
+    <meta property="article:tag" content="AdaStat">
+    <meta property="article:tag" content="SPO">
+    <meta property="article:tag" content="DRep">
+    <meta property="article:tag" content="FBL-Tools">
+
+  <meta itemprop="name" content="AdaStat.net 使い方完全ガイド">
+  <meta itemprop="description" content="独立系Cardanoブロックチェーン・エクスプローラー AdaStat.net の特徴と実務フロー。トランザクション確認、ステーキング報酬追跡、プール比較、トークン調査、オンチェーン・ガバナンス監視、API活用まで。">
+  <meta itemprop="datePublished" content="2025-08-22T13:00:00+09:00">
+  <meta itemprop="dateModified" content="2025-08-22T13:00:00+09:00">
+  <meta itemprop="wordCount" content="249">
+  <meta itemprop="keywords" content="Cardano,Explorer,AdaStat,SPO,DRep,FBL-Tools">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AdaStat.net 使い方完全ガイド">
+  <meta name="twitter:description" content="独立系Cardanoブロックチェーン・エクスプローラー AdaStat.net の特徴と実務フロー。トランザクション確認、ステーキング報酬追跡、プール比較、トークン調査、オンチェーン・ガバナンス監視、API活用まで。">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 577 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">AdaStat.net 使い方完全ガイド</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-08-22T13:00:00+09:00">August 22, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="0-要約3行">0. 要約（3行）</h2>
+<ul>
+<li><strong>AdaStat.net</strong> は、ブロック／TX／アカウント（ステーク鍵）／プール／トークン／エポック／スロット／ガバナンスを横断して追跡できる独立系エクスプローラー。APIも公開。 :contentReference[oaicite:0]{index=0}</li>
+<li><strong>強み</strong>：履歴の深掘り（報酬・デリゲーション・作成ブロック等）、強力な<strong>プール・フィルタ</strong>、<strong>カスタム・チャートメーカー</strong>。 :contentReference[oaicite:1]{index=1}</li>
+<li><strong>FBL実務</strong>：①TX確認→②報酬追跡→③プール比較→④トークン調査→⑤ガバナンス監視→⑥API導入の順で定着させる。</li>
+</ul>
+<hr>
+<h2 id="1-adastat-とは何ができるか">1. AdaStat とは？（何ができるか）</h2>
+<ul>
+<li><strong>総合エクスプローラー</strong>：ブロック、トランザクション、プール、アドレス／アカウント（stake key）、エポック、スロット、トークン等を提供。トップの検索から横断検索が可能。 :contentReference[oaicite:2]{index=2}</li>
+<li><strong>差別化ポイント</strong>
+<ul>
+<li>アカウント／プールの<strong>履歴</strong>（アクティブ・エポック、作成ブロック、デリゲーション、<strong>ステーキング報酬</strong>など）を一望。 :contentReference[oaicite:3]{index=3}</li>
+<li><strong>プール絞り込み</strong>（プレッジ、デリゲータ数、ステーク量 など）と<strong>チャート作成</strong>ツール。 :contentReference[oaicite:4]{index=4}</li>
+<li><strong>無料API</strong>で主要データにアクセス（エポック／ブロック／TX／アカウント／プール／トークン等）。 :contentReference[oaicite:5]{index=5}</li>
+<li><strong>ガバナンスアクション</strong>（提出・批准・施行・失効など）専用ページ。 :contentReference[oaicite:6]{index=6}</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-画面ナビクイックリンク">2. 画面ナビ（クイックリンク）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>セクション</th>
+          <th>URL</th>
+          <th>主な用途</th>
+          <th>典型シーン</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Blocks</td>
+          <td>/blocks</td>
+          <td>最新・過去ブロックの確認</td>
+          <td>TXがどのブロックに入ったか追う :contentReference[oaicite:7]{index=7}</td>
+      </tr>
+      <tr>
+          <td>Stake Pools</td>
+          <td>/pools</td>
+          <td>プール一覧と詳細、各種フィルタ</td>
+          <td>委任先の選定、SPOの自己監視 :contentReference[oaicite:8]{index=8}</td>
+      </tr>
+      <tr>
+          <td>Accounts</td>
+          <td>/accounts</td>
+          <td>ステーキングアカウント（stake key）情報</td>
+          <td>ライブステーク、報酬履歴の確認 :contentReference[oaicite:9]{index=9}</td>
+      </tr>
+      <tr>
+          <td>Tokens</td>
+          <td>/tokens</td>
+          <td>ネイティブトークンの一覧・詳細</td>
+          <td>Policy確認・資産調査 :contentReference[oaicite:10]{index=10}</td>
+      </tr>
+      <tr>
+          <td>Governances</td>
+          <td>/governances</td>
+          <td>オンチェーン・ガバナンス一覧</td>
+          <td>提出→批准→施行のトラッキング :contentReference[oaicite:11]{index=11}</td>
+      </tr>
+      <tr>
+          <td>About</td>
+          <td>/about</td>
+          <td>概要・特徴</td>
+          <td>機能把握、履歴閲覧の考え方 :contentReference[oaicite:12]{index=12}</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>例：Accountsページのサンプルでは、Live stake/Tx回数/最終活動日時などが確認できる。 :contentReference[oaicite:13]{index=13}</p></blockquote>
+<hr>
+<h2 id="3-実務フロー手順書">3. 実務フロー（手順書）</h2>
+<h3 id="31-トランザクションtxを確認する">3.1 トランザクション（TX）を確認する</h3>
+<ol>
+<li>画面上部の検索に<strong>TXハッシュ</strong>を貼り付け → TX詳細へ遷移。</li>
+<li><strong>ブロック番号／エポック／入出力</strong>を確認し、転送完了を検証。</li>
+<li>必要に応じて関連アドレスやアカウントを辿る（階層ナビ）。<br>
+<em>根拠：TX/ブロック横断閲覧の提供。</em> :contentReference[oaicite:14]{index=14}</li>
+</ol>
+<h3 id="32-ステーキング報酬委任履歴を追う">3.2 ステーキング報酬／委任履歴を追う</h3>
+<ol>
+<li><strong>stake key</strong>（<code>stake1...</code>）または<strong>アドレス</strong>を検索。</li>
+<li>Accounts詳細で<strong>Live stake</strong>、過去の<strong>報酬／委任</strong>などを確認。</li>
+<li>エポック推移で「委任切替」「報酬日の前後」を把握。<br>
+<em>根拠：アカウント履歴（デリゲーション・報酬等）閲覧に対応。</em> :contentReference[oaicite:15]{index=15}</li>
+</ol>
+<h3 id="33-プールを比較し最適な委任先を選ぶ">3.3 プールを比較し、最適な委任先を選ぶ</h3>
+<ol>
+<li><strong>Stake Pools</strong>へ → 右側の<strong>フィルタ</strong>で「プレッジ」「デリゲータ数」「ステーク量」など条件を入力。</li>
+<li>プール詳細で**稼働履歴（作成ブロック等）**や手数料設定を確認。</li>
+<li>ウォッチ用途には<strong>Telegram通知ボット</strong>も利用可能（報酬・作成ブロック・パラメータ変更など）。<br>
+<em>根拠：強力なプールフィルタ／通知ボットの存在。</em> :contentReference[oaicite:16]{index=16}</li>
+</ol>
+<h3 id="34-トークンネイティブ資産を調査する">3.4 トークン（ネイティブ資産）を調査する</h3>
+<ol>
+<li><strong>Tokens</strong>で銘柄名や<strong>Policy ID</strong>から検索。</li>
+<li>作成日時、流通状況など<strong>個別ページ</strong>で把握。<br>
+<em>根拠：トークン一覧・個別詳細提供。</em> :contentReference[oaicite:17]{index=17}</li>
+</ol>
+<h3 id="35-オンチェーンガバナンスを監視するdrep向け">3.5 オンチェーン・ガバナンスを監視する（DRep向け）</h3>
+<ol>
+<li><strong>Governances</strong>でアクション一覧（提出・批准・施行 ほか）を俯瞰。</li>
+<li>重要案件は<strong>Cardanoscanの GovActions</strong>等と<strong>相互参照</strong>して投票状況を確認。<br>
+<em>根拠：AdaStatのガバナンス一覧、CardanoscanのGovActions提供。</em> :contentReference[oaicite:18]{index=18}</li>
+</ol>
+<h3 id="36-apiで自動化研究分析向け">3.6 APIで自動化（研究・分析向け）</h3>
+<ul>
+<li>入口：<strong><a href="https://api.adastat.net/">https://api.adastat.net/</a></strong>（ブロック／TX／アカウント／プール／トークン等）。自前のダッシュボードやFBLデータパイプラインに接続可能。 :contentReference[oaicite:19]{index=19}</li>
+<li>テストネット対応やオープンソース化に関する提案・進捗は<strong>Project Catalyst</strong>の公開ページで確認。 :contentReference[oaicite:20]{index=20}</li>
+</ul>
+<hr>
+<h2 id="4-使いどころ早見表fbl視点">4. 使いどころ早見表（FBL視点）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>ユースケース</th>
+          <th>AdaStat が得意な理由</th>
+          <th>代替・補完</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>TX完了確認</strong></td>
+          <td>ブロックとTXの横断が早い</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><strong>委任・報酬の時系列チェック</strong></td>
+          <td>アカウント履歴の可視化（報酬・委任）</td>
+          <td>— :contentReference[oaicite:21]{index=21}</td>
+      </tr>
+      <tr>
+          <td><strong>委任先の選定（SPO比較）</strong></td>
+          <td>強力なプール絞り込みと詳細ページ</td>
+          <td>Pool.pmの<strong>ビジュアル把握</strong>と併用すると直感的（リアルタイム可視化に強み） :contentReference[oaicite:22]{index=22}</td>
+      </tr>
+      <tr>
+          <td><strong>トークン調査</strong></td>
+          <td>トークン一覧・個別詳細ページが豊富</td>
+          <td>Cardanoscanのトークン一覧も参考に補完 :contentReference[oaicite:23]{index=23}</td>
+      </tr>
+      <tr>
+          <td><strong>ガバナンス監視</strong></td>
+          <td>ガバナンス専用リスト（提出→施行）</td>
+          <td>CardanoscanのGovActionsで投票内訳を比較 :contentReference[oaicite:24]{index=24}</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="5-5段階シナリオ分析導入高度活用">5. 5段階シナリオ分析（導入→高度活用）</h2>
+<ol>
+<li><strong>S1: ビギナー</strong> — 送金の着金確認をTXページで行う。</li>
+<li><strong>S2: デリゲータ</strong> — Accountsで報酬サイクルを把握し、Poolsで手数料や稼働状況を比較。</li>
+<li><strong>S3: SPO</strong> — プール詳細＋フィルタで自プールと競合を継続監視。重要イベントは<strong>Telegram通知</strong>を設定。 :contentReference[oaicite:25]{index=25}</li>
+<li><strong>S4: DRep/ガバナンス担当</strong> — Governancesで案件を常時トラッキングし、投票状況を外部（Cardanoscan）でクロスチェック。 :contentReference[oaicite:26]{index=26}</li>
+<li><strong>S5: リサーチャ／データ担当</strong> — <strong>AdaStat API</strong>で時系列データを吸い上げ、独自の可視化・検証を行う。 :contentReference[oaicite:27]{index=27}</li>
+</ol>
+<hr>
+<h2 id="6-将来展望road-to-open--testnet対応">6. 将来展望（Road-to-Open &amp; Testnet対応）</h2>
+<ul>
+<li>AdaStatは<strong>オープンソース化やテストネット対応</strong>を進める提案を複数回提出・実装しており、<strong>APIの可用性拡大</strong>や<strong>UI/UX改善</strong>を継続。FBLの長期的なデータ基盤として相性が良い。 :contentReference[oaicite:28]{index=28}</li>
+</ul>
+<hr>
+<h2 id="7-付録競合補完ツールとの簡易比較">7. 付録：競合／補完ツールとの簡易比較</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>AdaStat</th>
+          <th>Cardanoscan</th>
+          <th>Pool.pm</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>総合探索（ブロック/Tx/アカウント/プール/トークン）</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>部分（可視化特化） :contentReference[oaicite:29]{index=29}</td>
+      </tr>
+      <tr>
+          <td>プール<strong>高度フィルタ</strong></td>
+          <td>✅（プレッジ/デリゲータ/ステーク等） :contentReference[oaicite:30]{index=30}</td>
+          <td>✅（一覧・諸指標） :contentReference[oaicite:31]{index=31}</td>
+          <td>ビジュアル重視（直感探索） :contentReference[oaicite:32]{index=32}</td>
+      </tr>
+      <tr>
+          <td><strong>ガバナンス</strong>ページ</td>
+          <td>✅（一覧） :contentReference[oaicite:33]{index=33}</td>
+          <td>✅（GovActions/投票内訳） :contentReference[oaicite:34]{index=34}</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><strong>API公開</strong></td>
+          <td>✅（無料API） :contentReference[oaicite:35]{index=35}</td>
+          <td>（公知UIは充実）</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><strong>チャートメーカー</strong></td>
+          <td>✅（独自機能） :contentReference[oaicite:36]{index=36}</td>
+          <td>—</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><strong>通知</strong></td>
+          <td>Telegramボット（報酬/ブロック/変更） :contentReference[oaicite:37]{index=37}</td>
+          <td>—</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td>強みまとめ</td>
+          <td>横断・履歴深掘りとAPI</td>
+          <td>豊富なUIと広いカバレッジ</td>
+          <td>リアルタイム可視化・NFTに強み :contentReference[oaicite:38]{index=38}</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="8-よくある質問faq">8. よくある質問（FAQ）</h2>
+<p><strong>Q1. DaedalusやLaceの履歴と数値がわずかに違う？</strong><br>
+→ 同期タイミングや集計条件で差が出る場合あり。複数ソースで相互参照を。</p>
+<p><strong>Q2. トークンの危険判定はしてくれる？</strong><br>
+→ エクスプローラーは<strong>事実の表示</strong>が中心。銘柄の正当性は<strong>公式発表やコミュニティ情報</strong>で確認を。</p>
+<p><strong>Q3. テストネットも見たい</strong><br>
+→ AdaStatは<strong>Pre-prod/Preview</strong>対応とAPI公開を進めた提案あり。稼働状況は提案ページで最新を確認。 :contentReference[oaicite:39]{index=39}</p>
+<hr>
+<h2 id="9-参考資料公式一次情報">9. 参考資料（公式・一次情報）</h2>
+<ul>
+<li>AdaStat.net トップ／概要／主要ページ：トップ、About、Blocks、Pools、Accounts、Tokens、Governances、API。 :contentReference[oaicite:40]{index=40}</li>
+<li>Cardano.org 開発者ポータルの<strong>Adastatインタビュー</strong>（チャートメーカー・プールフィルタの言及）。 :contentReference[oaicite:41]{index=41}</li>
+<li>プール・ビジュアル補完：<strong>pool.pm</strong>（リアルタイム可視化）。 :contentReference[oaicite:42]{index=42}</li>
+<li>Cardanoscan の<strong>GovActions</strong>（投票内訳など）。 :contentReference[oaicite:43]{index=43}</li>
+<li>Catalyst提案（テストネット対応、オープンソース化、再起動プロジェクト等）。 :contentReference[oaicite:44]{index=44}</li>
+</ul>
+<hr>
+<p><strong>作成日時</strong>：2025-08-22</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/explorer/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Explorer</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/adastat/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">AdaStat</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/spo/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SPO</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/drep/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DRep</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/fbl-tools/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL-Tools</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/-cardano-weekly-development-report--2025-07-25/">Cardano Weekly Development Report – 2025-07-25</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/glacier-drop-claim-estimates-epoch577/">Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/weekly-development-report-%E8%A7%A3%E8%AA%AC2025-08-15/">Weekly Development Report 解説（2025-08-15）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/-taptools%E8%AA%AC%E6%98%8E%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%BE%E3%81%A8%E3%82%81/">TapToolsの説明と使い方まとめ</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/weekly-development-report-%E8%A7%A3%E8%AA%AC2025-08-08/">Weekly Development Report 解説（2025-08-08）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E%E4%BA%88%E7%AE%97%E8%B2%A1%E5%8B%99%E3%83%91%E3%83%8D%E3%83%AB%E3%81%A8%E7%84%A1%E5%84%9F%E5%8A%B4%E5%83%8D%E3%82%B3%E3%82%B9%E3%83%88%E6%A7%8B%E9%80%A0%E6%8E%A8%E5%AE%9A/">カルダノ予算＆財務パネルと無償労働コスト構造（推定）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/midnight%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8Bcharles-hoskinson%E7%99%BA%E8%A8%80%E5%88%86%E6%9E%90/">Midnightマーケティングに関するCharles Hoskinson発言分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/atrium-staking-baskets-github%E8%A7%A3%E6%9E%90%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">Staking Baskets GitHub解析レポート（完全版）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/rare-evo-2024-%E5%8D%94%E8%B3%9B%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E5%8F%96%E3%82%8C%E3%82%8Bcardano%E3%81%AE%E6%88%A6%E7%95%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91/">Rare Evo 2024 協賛企業から読み取れるCardanoの戦略的位置づけ</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/%C3%A2tma-dao-%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8%E5%A7%94%E4%BB%BB%E5%A0%B1%E9%85%AC%E6%A7%8B%E9%80%A0%E3%81%AE%E8%A7%A3%E8%AA%AC/">ÂTMA DAO トークノミクスと委任報酬構造の解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/bwtake_cgta_drep_criteria_epoch366/">BWtake &amp; CGTAチームのDRep判断基準（2025年8月改訂）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/2025%E5%B9%B47%E6%9C%88%E3%81%AEada%E5%A4%A7%E5%8F%A3%E7%A7%BB%E5%8B%95coinbase%E7%B5%8C%E7%94%B1%E3%81%AE%E5%A3%B2%E5%8D%B4%E3%81%8B%E5%86%8D%E9%85%8D%E7%BD%AE%E3%81%8B/">2025年7月のADA大口移動──Coinbase経由の売却か？再配置か？</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

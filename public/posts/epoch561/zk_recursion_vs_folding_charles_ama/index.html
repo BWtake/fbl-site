@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>zk_recursion_vs_folding_charles_ama | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="再帰（Recursion）と折りたたみ（Folding）を巡る技術的競争：チャールズAMA発言の深掘り
+🧠 発言の背景
+
+「再帰（recursion）と折りたたみ（folding）の間で競い合いが進んでいて、どちらも前進しています」
+この発言は、ゼロ知識証明（ZKP）領域における2つのアーキテクチャ的アプローチを指している。両者は、スケーラビリティ、セキュリティ、柔軟性という観点で今後の分散型システムの構築に大きな影響を及ぼす。
+
+📘 技術用語の整理
+
+  
+      
+          用語
+          意味
+          主なプロジェクト
+      
+  
+  
+      
+          再帰（Recursive Proofs）
+          証明の上に証明を重ねることで、複数のZK証明をまとめて圧縮。階層的に構成可能。
+          Mina, Halo2, Midnight
+      
+      
+          折りたたみ（Folding）
+          複数のZK証明を1つにまとめてバッチ処理。非階層で効率性を追求。
+          Polygon zkEVM, zkSync, Risc0
+      
+  
+
+
+🔍 それぞれの特徴と用途
+
+  
+      
+          特徴
+          再帰（Recursion）
+          折りたたみ（Folding）
+      
+  
+  
+      
+          設計の柔軟性
+          高い（階層型設計に適す）
+          中〜高（用途特化）
+      
+      
+          スケーラビリティ
+          理論上無限（深い積み重ね）
+          高いが設計依存あり
+      
+      
+          検証コスト
+          最小化可能
+          一括処理で効率化
+      
+      
+          ユースケース
+          分散ID、ZK-VM、プライバシー保護
+          zkEVM、AIロギング検証、バッチ決済
+      
+  
+
+
+🧩 Cardanoとの関係性
+チャールズがこの話題に触れた背景には、CardanoのMidnightが再帰型ZKPを核にしていることがある。
+
+Midnight：再帰構造とaggregated proofで構成
+HydraやMidgardとの統合も想定される
+
+
+🔮 今後の展開シナリオ（Cardano視点）
+
+  
+      
+          シナリオ
+          概要
+          出現確率（推定）
+      
+  
+  
+      
+          S5
+          Recursive優位。CardanoがZK標準化に躍進
+          15%
+      
+      
+          S4
+          両者共存し、用途ごとに選択される構造
+          40%
+      
+      
+          S3
+          Folding主流化。Cardanoは適応策を検討
+          25%
+      
+      
+          S2
+          他技術（FHEなど）に分散し競争鈍化
+          10%
+      
+      
+          S1
+          ZK全体が限定利用へと収束
+          10%
+      
+  
+
+
+🧭 結論
+この発言は、ZK技術の進化における設計思想の対立と融合の可能性を示唆している。
+
+チャールズは「Recursive ZK」をCardanoの中核設計としつつ、folding技術の前進も評価
+今後は両者の統合的展開（ハイブリッド構造）が重要になる可能性が高い
+
+
+作成日時：2025年6月1日">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch561/zk_recursion_vs_folding_charles_ama/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch561/zk_recursion_vs_folding_charles_ama/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="zk_recursion_vs_folding_charles_ama">
+  <meta property="og:description" content="再帰（Recursion）と折りたたみ（Folding）を巡る技術的競争：チャールズAMA発言の深掘り 🧠 発言の背景 「再帰（recursion）と折りたたみ（folding）の間で競い合いが進んでいて、どちらも前進しています」
+この発言は、ゼロ知識証明（ZKP）領域における2つのアーキテクチャ的アプローチを指している。両者は、スケーラビリティ、セキュリティ、柔軟性という観点で今後の分散型システムの構築に大きな影響を及ぼす。
+📘 技術用語の整理 用語 意味 主なプロジェクト 再帰（Recursive Proofs） 証明の上に証明を重ねることで、複数のZK証明をまとめて圧縮。階層的に構成可能。 Mina, Halo2, Midnight 折りたたみ（Folding） 複数のZK証明を1つにまとめてバッチ処理。非階層で効率性を追求。 Polygon zkEVM, zkSync, Risc0 🔍 それぞれの特徴と用途 特徴 再帰（Recursion） 折りたたみ（Folding） 設計の柔軟性 高い（階層型設計に適す） 中〜高（用途特化） スケーラビリティ 理論上無限（深い積み重ね） 高いが設計依存あり 検証コスト 最小化可能 一括処理で効率化 ユースケース 分散ID、ZK-VM、プライバシー保護 zkEVM、AIロギング検証、バッチ決済 🧩 Cardanoとの関係性 チャールズがこの話題に触れた背景には、CardanoのMidnightが再帰型ZKPを核にしていることがある。
+Midnight：再帰構造とaggregated proofで構成 HydraやMidgardとの統合も想定される 🔮 今後の展開シナリオ（Cardano視点） シナリオ 概要 出現確率（推定） S5 Recursive優位。CardanoがZK標準化に躍進 15% S4 両者共存し、用途ごとに選択される構造 40% S3 Folding主流化。Cardanoは適応策を検討 25% S2 他技術（FHEなど）に分散し競争鈍化 10% S1 ZK全体が限定利用へと収束 10% 🧭 結論 この発言は、ZK技術の進化における設計思想の対立と融合の可能性を示唆している。
+チャールズは「Recursive ZK」をCardanoの中核設計としつつ、folding技術の前進も評価 今後は両者の統合的展開（ハイブリッド構造）が重要になる可能性が高い 作成日時：2025年6月1日">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-06-01T00:00:00+00:00">
+    <meta property="article:tag" content="観測記録">
+    <meta property="article:tag" content="カルダノ">
+    <meta property="article:tag" content="FBL">
+    <meta property="article:tag" content="ADA">
+    <meta property="article:tag" content="BTC">
+    <meta property="article:tag" content="ETH">
+
+  <meta itemprop="name" content="zk_recursion_vs_folding_charles_ama">
+  <meta itemprop="description" content="再帰（Recursion）と折りたたみ（Folding）を巡る技術的競争：チャールズAMA発言の深掘り 🧠 発言の背景 「再帰（recursion）と折りたたみ（folding）の間で競い合いが進んでいて、どちらも前進しています」
+この発言は、ゼロ知識証明（ZKP）領域における2つのアーキテクチャ的アプローチを指している。両者は、スケーラビリティ、セキュリティ、柔軟性という観点で今後の分散型システムの構築に大きな影響を及ぼす。
+📘 技術用語の整理 用語 意味 主なプロジェクト 再帰（Recursive Proofs） 証明の上に証明を重ねることで、複数のZK証明をまとめて圧縮。階層的に構成可能。 Mina, Halo2, Midnight 折りたたみ（Folding） 複数のZK証明を1つにまとめてバッチ処理。非階層で効率性を追求。 Polygon zkEVM, zkSync, Risc0 🔍 それぞれの特徴と用途 特徴 再帰（Recursion） 折りたたみ（Folding） 設計の柔軟性 高い（階層型設計に適す） 中〜高（用途特化） スケーラビリティ 理論上無限（深い積み重ね） 高いが設計依存あり 検証コスト 最小化可能 一括処理で効率化 ユースケース 分散ID、ZK-VM、プライバシー保護 zkEVM、AIロギング検証、バッチ決済 🧩 Cardanoとの関係性 チャールズがこの話題に触れた背景には、CardanoのMidnightが再帰型ZKPを核にしていることがある。
+Midnight：再帰構造とaggregated proofで構成 HydraやMidgardとの統合も想定される 🔮 今後の展開シナリオ（Cardano視点） シナリオ 概要 出現確率（推定） S5 Recursive優位。CardanoがZK標準化に躍進 15% S4 両者共存し、用途ごとに選択される構造 40% S3 Folding主流化。Cardanoは適応策を検討 25% S2 他技術（FHEなど）に分散し競争鈍化 10% S1 ZK全体が限定利用へと収束 10% 🧭 結論 この発言は、ZK技術の進化における設計思想の対立と融合の可能性を示唆している。
+チャールズは「Recursive ZK」をCardanoの中核設計としつつ、folding技術の前進も評価 今後は両者の統合的展開（ハイブリッド構造）が重要になる可能性が高い 作成日時：2025年6月1日">
+  <meta itemprop="datePublished" content="2025-06-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-01T00:00:00+00:00">
+  <meta itemprop="wordCount" content="72">
+  <meta itemprop="keywords" content="観測記録,カルダノ,FBL,ADA,BTC,ETH,SOL,比較">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="zk_recursion_vs_folding_charles_ama">
+  <meta name="twitter:description" content="再帰（Recursion）と折りたたみ（Folding）を巡る技術的競争：チャールズAMA発言の深掘り 🧠 発言の背景 「再帰（recursion）と折りたたみ（folding）の間で競い合いが進んでいて、どちらも前進しています」
+この発言は、ゼロ知識証明（ZKP）領域における2つのアーキテクチャ的アプローチを指している。両者は、スケーラビリティ、セキュリティ、柔軟性という観点で今後の分散型システムの構築に大きな影響を及ぼす。
+📘 技術用語の整理 用語 意味 主なプロジェクト 再帰（Recursive Proofs） 証明の上に証明を重ねることで、複数のZK証明をまとめて圧縮。階層的に構成可能。 Mina, Halo2, Midnight 折りたたみ（Folding） 複数のZK証明を1つにまとめてバッチ処理。非階層で効率性を追求。 Polygon zkEVM, zkSync, Risc0 🔍 それぞれの特徴と用途 特徴 再帰（Recursion） 折りたたみ（Folding） 設計の柔軟性 高い（階層型設計に適す） 中〜高（用途特化） スケーラビリティ 理論上無限（深い積み重ね） 高いが設計依存あり 検証コスト 最小化可能 一括処理で効率化 ユースケース 分散ID、ZK-VM、プライバシー保護 zkEVM、AIロギング検証、バッチ決済 🧩 Cardanoとの関係性 チャールズがこの話題に触れた背景には、CardanoのMidnightが再帰型ZKPを核にしていることがある。
+Midnight：再帰構造とaggregated proofで構成 HydraやMidgardとの統合も想定される 🔮 今後の展開シナリオ（Cardano視点） シナリオ 概要 出現確率（推定） S5 Recursive優位。CardanoがZK標準化に躍進 15% S4 両者共存し、用途ごとに選択される構造 40% S3 Folding主流化。Cardanoは適応策を検討 25% S2 他技術（FHEなど）に分散し競争鈍化 10% S1 ZK全体が限定利用へと収束 10% 🧭 結論 この発言は、ZK技術の進化における設計思想の対立と融合の可能性を示唆している。
+チャールズは「Recursive ZK」をCardanoの中核設計としつつ、folding技術の前進も評価 今後は両者の統合的展開（ハイブリッド構造）が重要になる可能性が高い 作成日時：2025年6月1日">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 561 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">zk_recursion_vs_folding_charles_ama</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-06-01T00:00:00Z">June 1, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="再帰recursionと折りたたみfoldingを巡る技術的競争チャールズama発言の深掘り">再帰（Recursion）と折りたたみ（Folding）を巡る技術的競争：チャールズAMA発言の深掘り</h1>
+<h2 id="-発言の背景">🧠 発言の背景</h2>
+<blockquote>
+<p>「再帰（recursion）と折りたたみ（folding）の間で競い合いが進んでいて、どちらも前進しています」</p></blockquote>
+<p>この発言は、ゼロ知識証明（ZKP）領域における2つのアーキテクチャ的アプローチを指している。両者は、スケーラビリティ、セキュリティ、柔軟性という観点で今後の分散型システムの構築に大きな影響を及ぼす。</p>
+<hr>
+<h2 id="-技術用語の整理">📘 技術用語の整理</h2>
+<table>
+  <thead>
+      <tr>
+          <th>用語</th>
+          <th>意味</th>
+          <th>主なプロジェクト</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>再帰（Recursive Proofs）</strong></td>
+          <td>証明の上に証明を重ねることで、複数のZK証明をまとめて圧縮。階層的に構成可能。</td>
+          <td>Mina, Halo2, Midnight</td>
+      </tr>
+      <tr>
+          <td><strong>折りたたみ（Folding）</strong></td>
+          <td>複数のZK証明を1つにまとめてバッチ処理。非階層で効率性を追求。</td>
+          <td>Polygon zkEVM, zkSync, Risc0</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-それぞれの特徴と用途">🔍 それぞれの特徴と用途</h2>
+<table>
+  <thead>
+      <tr>
+          <th>特徴</th>
+          <th>再帰（Recursion）</th>
+          <th>折りたたみ（Folding）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>設計の柔軟性</td>
+          <td>高い（階層型設計に適す）</td>
+          <td>中〜高（用途特化）</td>
+      </tr>
+      <tr>
+          <td>スケーラビリティ</td>
+          <td>理論上無限（深い積み重ね）</td>
+          <td>高いが設計依存あり</td>
+      </tr>
+      <tr>
+          <td>検証コスト</td>
+          <td>最小化可能</td>
+          <td>一括処理で効率化</td>
+      </tr>
+      <tr>
+          <td>ユースケース</td>
+          <td>分散ID、ZK-VM、プライバシー保護</td>
+          <td>zkEVM、AIロギング検証、バッチ決済</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-cardanoとの関係性">🧩 Cardanoとの関係性</h2>
+<p>チャールズがこの話題に触れた背景には、<strong>CardanoのMidnightが再帰型ZKPを核にしている</strong>ことがある。</p>
+<ul>
+<li><strong>Midnight</strong>：再帰構造とaggregated proofで構成</li>
+<li><strong>HydraやMidgardとの統合</strong>も想定される</li>
+</ul>
+<hr>
+<h2 id="-今後の展開シナリオcardano視点">🔮 今後の展開シナリオ（Cardano視点）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>シナリオ</th>
+          <th>概要</th>
+          <th>出現確率（推定）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S5</td>
+          <td>Recursive優位。CardanoがZK標準化に躍進</td>
+          <td>15%</td>
+      </tr>
+      <tr>
+          <td>S4</td>
+          <td>両者共存し、用途ごとに選択される構造</td>
+          <td>40%</td>
+      </tr>
+      <tr>
+          <td>S3</td>
+          <td>Folding主流化。Cardanoは適応策を検討</td>
+          <td>25%</td>
+      </tr>
+      <tr>
+          <td>S2</td>
+          <td>他技術（FHEなど）に分散し競争鈍化</td>
+          <td>10%</td>
+      </tr>
+      <tr>
+          <td>S1</td>
+          <td>ZK全体が限定利用へと収束</td>
+          <td>10%</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-結論">🧭 結論</h2>
+<p>この発言は、ZK技術の進化における<strong>設計思想の対立と融合の可能性</strong>を示唆している。</p>
+<ul>
+<li>チャールズは「Recursive ZK」をCardanoの中核設計としつつ、folding技術の前進も評価</li>
+<li>今後は<strong>両者の統合的展開</strong>（ハイブリッド構造）が重要になる可能性が高い</li>
+</ul>
+<hr>
+<p><em>作成日時：2025年6月1日</em></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/charles_virtual_city_ama_analysis/">charles_virtual_city_ama_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/homo_deus_scenario_analysis/">homo_deus_scenario_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/midnight_cardano_leak_report_2025/">Midnight_Cardano_Leak_Report_2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/ethereum_killer_top10_2025/">ethereum_killer_top10_2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch561/solana_standard_chartered_report_analysis/">solana_standard_chartered_report_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch560/charms_cardinal_synergy_analysis/">Charms_Cardinal_Synergy_Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch559/charms_utxo_analysis/">charms_utxo_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch559/cardano_japan_scenario_20250523/">Cardano_Japan_Scenario_20250523</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch559/charms_full_analysis/">charms_full_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch559/cardano_interface_scenario_analysis/">Cardano_Interface_Scenario_Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch558/solana_memecoins_mind_vc_ponzi_analysis/">Solana_MemeCoins_MIND_VC_Ponzi_Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch558/top10_cryptos_vc_influence/">Top10_Cryptos_VC_Influence</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch558/cardano_opposition_analysis_full/">Cardano_Opposition_Analysis_Full</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch557/nuvola_micro_wallet/">nuvola_micro_wallet</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch557/developer_activity_analysis_2025_dated/">Developer_Activity_Analysis_2025_dated</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

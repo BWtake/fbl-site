@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>BitcoinOS_Cardano_Bridgeless_Transfer_Report | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="ブリッジレスBTC転送（Bitcoin → Cardano）実現報告：BitcoinOSによる実証実験
+出典：BitcoinOS公式ポスト (2025年5月4日)
+
+概要：何が起きたか？
+2025年5月4日、BitcoinOS（@BTC_OS）は、BitcoinとCardano間における初のブリッジレス（bridge-less）なBTC転送の成功を報告しました。この技術は、従来の中央集権的ブリッジやラップトークンを使わずに、ZK（ゼロ知識）証明を用いたトラストレスな転送を可能にします。
+
+技術構成とフロー図の解説
+関係するプレイヤー
+
+  
+      
+          名前
+          説明
+      
+  
+  
+      
+          BitcoinOS
+          BTCロックとZK証明（BitSNARK）を提供する中核プロトコル
+      
+      
+          Sundial Protocol
+          Cardanoチェーン上でxBTCを受け取る処理を担当
+      
+      
+          ADAHandle (@adahandle)
+          ユーザーのCardanoアドレス名（例：@fujimoto）管理
+      
+      
+          BitSNARK
+          BTCがロックされたことをZKで証明する仕組み
+      
+  
+
+
+処理フロー
+graph TD
+  A[1 BTC (Bitcoin)] --&gt; B(BitcoinOS)
+  B --&gt; C[ZK証明(BitSNARK)]
+  C --&gt; D[1 xBTC 発行 (Cardano)]
+  D --&gt; E[Sundial受領]
+  E --&gt; F[@Handleへ送金]
+または画像の図を参考：
+
+
+特徴と意義
+
+  
+      
+          特徴
+          内容
+      
+  
+  
+      
+          完全ブリッジレス
+          信頼できる第三者不要、ZKによる自己証明
+      
+      
+          Unchained Token Standard
+          クロスチェーンで使える新しいxBTC規格
+      
+      
+          アドレスではなくハンドルへ送金
+          ユーザー名（@name）へ直接転送可能
+      
+      
+          セキュアな相互運用性
+          CardanoとBitcoinの安全な接続手段
+      
+  
+
+
+情報源とリンク
+
+BitcoinOS公式ポスト: @BTC_OS
+Sundial Protocol: @SundialProtocol
+ADA Handle: adahandle.com
+
+
+作成日時: 2025-05-05 15:08:15
+[[cardano_bitcoin_defi_projects]]">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch556/bitcoinos_cardano_bridgeless_transfer_report/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch556/bitcoinos_cardano_bridgeless_transfer_report/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="BitcoinOS_Cardano_Bridgeless_Transfer_Report">
+  <meta property="og:description" content="ブリッジレスBTC転送（Bitcoin → Cardano）実現報告：BitcoinOSによる実証実験 出典：BitcoinOS公式ポスト (2025年5月4日)
+概要：何が起きたか？ 2025年5月4日、BitcoinOS（@BTC_OS）は、BitcoinとCardano間における初のブリッジレス（bridge-less）なBTC転送の成功を報告しました。この技術は、従来の中央集権的ブリッジやラップトークンを使わずに、ZK（ゼロ知識）証明を用いたトラストレスな転送を可能にします。
+技術構成とフロー図の解説 関係するプレイヤー 名前 説明 BitcoinOS BTCロックとZK証明（BitSNARK）を提供する中核プロトコル Sundial Protocol Cardanoチェーン上でxBTCを受け取る処理を担当 ADAHandle (@adahandle) ユーザーのCardanoアドレス名（例：@fujimoto）管理 BitSNARK BTCがロックされたことをZKで証明する仕組み 処理フロー graph TD A[1 BTC (Bitcoin)] --&gt; B(BitcoinOS) B --&gt; C[ZK証明(BitSNARK)] C --&gt; D[1 xBTC 発行 (Cardano)] D --&gt; E[Sundial受領] E --&gt; F[@Handleへ送金] または画像の図を参考：
+特徴と意義 特徴 内容 完全ブリッジレス 信頼できる第三者不要、ZKによる自己証明 Unchained Token Standard クロスチェーンで使える新しいxBTC規格 アドレスではなくハンドルへ送金 ユーザー名（@name）へ直接転送可能 セキュアな相互運用性 CardanoとBitcoinの安全な接続手段 情報源とリンク BitcoinOS公式ポスト: @BTC_OS Sundial Protocol: @SundialProtocol ADA Handle: adahandle.com 作成日時: 2025-05-05 15:08:15
+[[cardano_bitcoin_defi_projects]]">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-06T00:00:00+00:00">
+    <meta property="article:tag" content="観測記録">
+    <meta property="article:tag" content="カルダノ">
+    <meta property="article:tag" content="FBL">
+    <meta property="article:tag" content="ADA">
+    <meta property="article:tag" content="BTC">
+    <meta property="article:tag" content="ETH">
+
+  <meta itemprop="name" content="BitcoinOS_Cardano_Bridgeless_Transfer_Report">
+  <meta itemprop="description" content="ブリッジレスBTC転送（Bitcoin → Cardano）実現報告：BitcoinOSによる実証実験 出典：BitcoinOS公式ポスト (2025年5月4日)
+概要：何が起きたか？ 2025年5月4日、BitcoinOS（@BTC_OS）は、BitcoinとCardano間における初のブリッジレス（bridge-less）なBTC転送の成功を報告しました。この技術は、従来の中央集権的ブリッジやラップトークンを使わずに、ZK（ゼロ知識）証明を用いたトラストレスな転送を可能にします。
+技術構成とフロー図の解説 関係するプレイヤー 名前 説明 BitcoinOS BTCロックとZK証明（BitSNARK）を提供する中核プロトコル Sundial Protocol Cardanoチェーン上でxBTCを受け取る処理を担当 ADAHandle (@adahandle) ユーザーのCardanoアドレス名（例：@fujimoto）管理 BitSNARK BTCがロックされたことをZKで証明する仕組み 処理フロー graph TD A[1 BTC (Bitcoin)] --&gt; B(BitcoinOS) B --&gt; C[ZK証明(BitSNARK)] C --&gt; D[1 xBTC 発行 (Cardano)] D --&gt; E[Sundial受領] E --&gt; F[@Handleへ送金] または画像の図を参考：
+特徴と意義 特徴 内容 完全ブリッジレス 信頼できる第三者不要、ZKによる自己証明 Unchained Token Standard クロスチェーンで使える新しいxBTC規格 アドレスではなくハンドルへ送金 ユーザー名（@name）へ直接転送可能 セキュアな相互運用性 CardanoとBitcoinの安全な接続手段 情報源とリンク BitcoinOS公式ポスト: @BTC_OS Sundial Protocol: @SundialProtocol ADA Handle: adahandle.com 作成日時: 2025-05-05 15:08:15
+[[cardano_bitcoin_defi_projects]]">
+  <meta itemprop="datePublished" content="2025-05-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="71">
+  <meta itemprop="keywords" content="観測記録,カルダノ,FBL,ADA,BTC,ETH,SOL,比較">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BitcoinOS_Cardano_Bridgeless_Transfer_Report">
+  <meta name="twitter:description" content="ブリッジレスBTC転送（Bitcoin → Cardano）実現報告：BitcoinOSによる実証実験 出典：BitcoinOS公式ポスト (2025年5月4日)
+概要：何が起きたか？ 2025年5月4日、BitcoinOS（@BTC_OS）は、BitcoinとCardano間における初のブリッジレス（bridge-less）なBTC転送の成功を報告しました。この技術は、従来の中央集権的ブリッジやラップトークンを使わずに、ZK（ゼロ知識）証明を用いたトラストレスな転送を可能にします。
+技術構成とフロー図の解説 関係するプレイヤー 名前 説明 BitcoinOS BTCロックとZK証明（BitSNARK）を提供する中核プロトコル Sundial Protocol Cardanoチェーン上でxBTCを受け取る処理を担当 ADAHandle (@adahandle) ユーザーのCardanoアドレス名（例：@fujimoto）管理 BitSNARK BTCがロックされたことをZKで証明する仕組み 処理フロー graph TD A[1 BTC (Bitcoin)] --&gt; B(BitcoinOS) B --&gt; C[ZK証明(BitSNARK)] C --&gt; D[1 xBTC 発行 (Cardano)] D --&gt; E[Sundial受領] E --&gt; F[@Handleへ送金] または画像の図を参考：
+特徴と意義 特徴 内容 完全ブリッジレス 信頼できる第三者不要、ZKによる自己証明 Unchained Token Standard クロスチェーンで使える新しいxBTC規格 アドレスではなくハンドルへ送金 ユーザー名（@name）へ直接転送可能 セキュアな相互運用性 CardanoとBitcoinの安全な接続手段 情報源とリンク BitcoinOS公式ポスト: @BTC_OS Sundial Protocol: @SundialProtocol ADA Handle: adahandle.com 作成日時: 2025-05-05 15:08:15
+[[cardano_bitcoin_defi_projects]]">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 556 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">BitcoinOS_Cardano_Bridgeless_Transfer_Report</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-05-06T00:00:00Z">May 6, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="ブリッジレスbtc転送bitcoin--cardano実現報告bitcoinosによる実証実験">ブリッジレスBTC転送（Bitcoin → Cardano）実現報告：BitcoinOSによる実証実験</h1>
+<p><strong>出典：<a href="https://twitter.com/BTC_OS">BitcoinOS公式ポスト (2025年5月4日)</a></strong></p>
+<hr>
+<h2 id="概要何が起きたか">概要：何が起きたか？</h2>
+<p>2025年5月4日、<strong>BitcoinOS（@BTC_OS）<strong>は、BitcoinとCardano間における初の</strong>ブリッジレス（bridge-less）なBTC転送の成功</strong>を報告しました。この技術は、従来の中央集権的ブリッジやラップトークンを使わずに、<strong>ZK（ゼロ知識）証明</strong>を用いたトラストレスな転送を可能にします。</p>
+<hr>
+<h2 id="技術構成とフロー図の解説">技術構成とフロー図の解説</h2>
+<h3 id="関係するプレイヤー">関係するプレイヤー</h3>
+<table>
+  <thead>
+      <tr>
+          <th>名前</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>BitcoinOS</strong></td>
+          <td>BTCロックとZK証明（BitSNARK）を提供する中核プロトコル</td>
+      </tr>
+      <tr>
+          <td><strong>Sundial Protocol</strong></td>
+          <td>Cardanoチェーン上でxBTCを受け取る処理を担当</td>
+      </tr>
+      <tr>
+          <td><strong>ADAHandle (@adahandle)</strong></td>
+          <td>ユーザーのCardanoアドレス名（例：@fujimoto）管理</td>
+      </tr>
+      <tr>
+          <td><strong>BitSNARK</strong></td>
+          <td>BTCがロックされたことをZKで証明する仕組み</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="処理フロー">処理フロー</h3>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+  A[1 BTC (Bitcoin)] --&gt; B(BitcoinOS)
+  B --&gt; C[ZK証明(BitSNARK)]
+  C --&gt; D[1 xBTC 発行 (Cardano)]
+  D --&gt; E[Sundial受領]
+  E --&gt; F[@Handleへ送金]
+</code></pre><p>または画像の図を参考：</p>
+<p><img src="EBF1AC41-CD30-4737-B16E-2A2CB9D44EF0.png" alt="ブリッジレス転送図"></p>
+<hr>
+<h2 id="特徴と意義">特徴と意義</h2>
+<table>
+  <thead>
+      <tr>
+          <th>特徴</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>完全ブリッジレス</strong></td>
+          <td>信頼できる第三者不要、ZKによる自己証明</td>
+      </tr>
+      <tr>
+          <td><strong>Unchained Token Standard</strong></td>
+          <td>クロスチェーンで使える新しいxBTC規格</td>
+      </tr>
+      <tr>
+          <td><strong>アドレスではなくハンドルへ送金</strong></td>
+          <td>ユーザー名（@name）へ直接転送可能</td>
+      </tr>
+      <tr>
+          <td><strong>セキュアな相互運用性</strong></td>
+          <td>CardanoとBitcoinの安全な接続手段</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="情報源とリンク">情報源とリンク</h2>
+<ul>
+<li>BitcoinOS公式ポスト: <a href="https://twitter.com/BTC_OS">@BTC_OS</a></li>
+<li>Sundial Protocol: <a href="https://twitter.com/SundialProtocol">@SundialProtocol</a></li>
+<li>ADA Handle: <a href="https://adahandle.com">adahandle.com</a></li>
+</ul>
+<hr>
+<p>作成日時: 2025-05-05 15:08:15</p>
+<p>[[cardano_bitcoin_defi_projects]]</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/fbl/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">FBL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/ada/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ADA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/btc/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BTC</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/sol/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">SOL</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch556/how_important_is_bridgeless_btc_to_cardano/">How_Important_Is_Bridgeless_BTC_to_Cardano</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch556/eth_cardano_stage_comparison/">eth_cardano_stage_comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch556/ethereum_pectra_cardano_comparison_full/">ethereum_pectra_cardano_comparison_full</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch556/ethereum_pectra_upgrade/">ethereum_pectra_upgrade</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch556/xbtc_in_cardano_governance_voting/">xBTC_in_Cardano_Governance_Voting</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch556/cardanoethereumsolana%E3%81%AE%E3%82%BC%E3%83%AD%E3%83%87%E3%82%A4%E8%84%86%E5%BC%B1%E6%80%A7%E5%AF%BE%E5%BF%9C%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC%E6%AF%94%E8%BC%832025%E5%B9%B4%E6%99%82%E7%82%B9/">Cardano・Ethereum・Solanaのゼロデイ脆弱性対応ポリシー比較（2025年時点）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/dex_comparison_uniswap_pancakeswap_minswap_sundaeswap/">DEX_comparison_Uniswap_PancakeSwap_Minswap_SundaeSwap</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/google_wallet_zkp_midnight_analysis/">google_wallet_zkp_midnight_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/wallet_web3_comparison_analysis/">wallet_web3_comparison_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/cardano_ethereum_sui_comparison/">Cardano_Ethereum_Sui_Comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/chain_model_size_comparison/">Chain_Model_Size_Comparison</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/ethereum_vs_cardano_ama13/">Ethereum_vs_Cardano_AMA13</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/l1_blockchain_technical_comparison_sui_aptos_solana_cardano-1/">L1_Blockchain_Technical_Comparison_Sui_Aptos_Solana_Cardano (1)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/zk_project_comparison_2025/">zk_project_comparison_2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch555/leios_blockchain_scalability_comparison/">Leios_Blockchain_Scalability_Comparison</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

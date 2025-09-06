@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置 | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="✅ UTxO陣営とは？
+UTxO（Unspent Transaction Output）とは、ビットコインに採用されたトランザクションベースの残高管理方式であり、後にCardanoが拡張して「EUTxO（Extended UTxO）」を実現。
+この構造を基盤とするブロックチェーンを「UTxO陣営」と定義し、その技術的思想・利点・適用領域を以下にまとめる。
+
+🧩 UTxO陣営の代表プロジェクト一覧（2025年時点）
+
+  
+      
+          プロジェクト名
+          採用モデル
+          特徴
+          技術思想・応用分野
+          備考
+      
+  
+  
+      
+          Bitcoin（BTC）
+          UTxO
+          最初のUTxOモデル。簡素・安全・確定性高い
+          通貨・価値保存手段・L2でのDeFi展開
+          Taproot・Ordinals・RGBなどで拡張進行中
+      
+      
+          Cardano（ADA）
+          EUTxO
+          スクリプト・状態情報付きUTxO。並列処理・検証性
+          スマートコントラクト・DID・DeFi・CSWF・ステーブル構想
+          Plutus、Aiken、Mithril、Midnightなど複数技術が連携
+      
+      
+          Midnight
+          EUTxO＋ZK
+          機密性を重視したZK対応型EUTxO
+          秘密選挙・匿名決済・政府利用型DID
+          Cardanoサイドチェーン。ZK-Rollup系とも接続可能
+      
+      
+          Ergo（ERG）
+          EUTxO
+          宣言型スマコン（ErgoScript）。状態文脈が扱える
+          AI連携、分散オラクル、金担保トークンなど
+          Sigma Protocolなど独自拡張多数
+      
+      
+          Nautilus（旧:ErgoDEX）
+          EUTxO準拠
+          Ergo/Cardano対応DEX。クロスチェーンの架け橋
+          AMM、貸付、DEX、ステーキング
+          Hydraなどと今後連携予定
+      
+      
+          Anoma
+          独自UTxO風モデル
+          Intentベース構造でユーザー操作性重視
+          プライバシー、コンセンサス再設計
+          Namada/ZEXEと連携しZK活用へ
+      
+      
+          Alephium
+          UTxO＋DAG
+          DAG構造を持つUTxOベース。並列実行志向
+          シャーディング・スケーラブル金融Dapps
+          新興プロジェクト。独自スマコンあり
+      
+  
+
+
+🔍 UTxOとEUTxOの違いと技術進化
+
+  
+      
+          比較項目
+          UTxO（BTC型）
+          EUTxO（Cardano型）
+          コメント
+      
+  
+  
+      
+          状態管理
+          単純な入出力記録
+          スクリプトとデータ（Datum）付き出力
+          プログラム可能な資産管理が実現
+      
+      
+          スマートコントラクト
+          不可 or 非効率
+          可能（Plutus、ErgoScriptなど）
+          決定論的スマコンで安全
+      
+      
+          並列処理性
+          難しい
+          容易（依存関係明示のため）
+          高スケーラビリティ対応可能
+      
+      
+          フォーマル検証
+          困難
+          可能（モデル構造が静的）
+          ハッキング耐性・国家導入にも適合
+      
+      
+          主な代表
+          BTC
+          ADA、ERG、Midnight
+          EUTxOはUTxO思想の進化系
+      
+  
+
+
+🧭 CGTA総評：UTxO陣営の哲学と未来性
+
+UTxO陣営は、ブロックチェーンを数学的に安全で分散的な公共インフラにすることを目指している。
+EUTxOの進化により、スマートコントラクトの安全性・決定性・検証可能性を保ちつつ、自由主義的価値を守る技術基盤が整いつつある。
+Cardano（ADA）とMidnightはその先鋒であり、今後の金融・ID・国家基盤の再設計において中核を担う可能性が高い。">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch570/utxo%E9%99%A3%E5%96%B6%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E4%B8%BB%E8%A6%81%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A8%E3%81%9D%E3%81%AE%E6%80%9D%E6%83%B3%E7%9A%84%E6%8A%80%E8%A1%93%E7%9A%84%E7%AB%8B%E3%81%A1%E4%BD%8D%E7%BD%AE/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch570/utxo%E9%99%A3%E5%96%B6%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E4%B8%BB%E8%A6%81%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A8%E3%81%9D%E3%81%AE%E6%80%9D%E6%83%B3%E7%9A%84%E6%8A%80%E8%A1%93%E7%9A%84%E7%AB%8B%E3%81%A1%E4%BD%8D%E7%BD%AE/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置">
+  <meta property="og:description" content="✅ UTxO陣営とは？ UTxO（Unspent Transaction Output）とは、ビットコインに採用されたトランザクションベースの残高管理方式であり、後にCardanoが拡張して「EUTxO（Extended UTxO）」を実現。
+この構造を基盤とするブロックチェーンを「UTxO陣営」と定義し、その技術的思想・利点・適用領域を以下にまとめる。
+🧩 UTxO陣営の代表プロジェクト一覧（2025年時点） プロジェクト名 採用モデル 特徴 技術思想・応用分野 備考 Bitcoin（BTC） UTxO 最初のUTxOモデル。簡素・安全・確定性高い 通貨・価値保存手段・L2でのDeFi展開 Taproot・Ordinals・RGBなどで拡張進行中 Cardano（ADA） EUTxO スクリプト・状態情報付きUTxO。並列処理・検証性 スマートコントラクト・DID・DeFi・CSWF・ステーブル構想 Plutus、Aiken、Mithril、Midnightなど複数技術が連携 Midnight EUTxO＋ZK 機密性を重視したZK対応型EUTxO 秘密選挙・匿名決済・政府利用型DID Cardanoサイドチェーン。ZK-Rollup系とも接続可能 Ergo（ERG） EUTxO 宣言型スマコン（ErgoScript）。状態文脈が扱える AI連携、分散オラクル、金担保トークンなど Sigma Protocolなど独自拡張多数 Nautilus（旧:ErgoDEX） EUTxO準拠 Ergo/Cardano対応DEX。クロスチェーンの架け橋 AMM、貸付、DEX、ステーキング Hydraなどと今後連携予定 Anoma 独自UTxO風モデル Intentベース構造でユーザー操作性重視 プライバシー、コンセンサス再設計 Namada/ZEXEと連携しZK活用へ Alephium UTxO＋DAG DAG構造を持つUTxOベース。並列実行志向 シャーディング・スケーラブル金融Dapps 新興プロジェクト。独自スマコンあり 🔍 UTxOとEUTxOの違いと技術進化 比較項目 UTxO（BTC型） EUTxO（Cardano型） コメント 状態管理 単純な入出力記録 スクリプトとデータ（Datum）付き出力 プログラム可能な資産管理が実現 スマートコントラクト 不可 or 非効率 可能（Plutus、ErgoScriptなど） 決定論的スマコンで安全 並列処理性 難しい 容易（依存関係明示のため） 高スケーラビリティ対応可能 フォーマル検証 困難 可能（モデル構造が静的） ハッキング耐性・国家導入にも適合 主な代表 BTC ADA、ERG、Midnight EUTxOはUTxO思想の進化系 🧭 CGTA総評：UTxO陣営の哲学と未来性 UTxO陣営は、ブロックチェーンを数学的に安全で分散的な公共インフラにすることを目指している。
+EUTxOの進化により、スマートコントラクトの安全性・決定性・検証可能性を保ちつつ、自由主義的価値を守る技術基盤が整いつつある。
+Cardano（ADA）とMidnightはその先鋒であり、今後の金融・ID・国家基盤の再設計において中核を担う可能性が高い。">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:tag" content="UTxO">
+    <meta property="article:tag" content="EUTxO">
+    <meta property="article:tag" content="Cardano">
+    <meta property="article:tag" content="Bitcoin">
+    <meta property="article:tag" content="Midnight">
+    <meta property="article:tag" content="Ergo">
+
+  <meta itemprop="name" content="UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置">
+  <meta itemprop="description" content="✅ UTxO陣営とは？ UTxO（Unspent Transaction Output）とは、ビットコインに採用されたトランザクションベースの残高管理方式であり、後にCardanoが拡張して「EUTxO（Extended UTxO）」を実現。
+この構造を基盤とするブロックチェーンを「UTxO陣営」と定義し、その技術的思想・利点・適用領域を以下にまとめる。
+🧩 UTxO陣営の代表プロジェクト一覧（2025年時点） プロジェクト名 採用モデル 特徴 技術思想・応用分野 備考 Bitcoin（BTC） UTxO 最初のUTxOモデル。簡素・安全・確定性高い 通貨・価値保存手段・L2でのDeFi展開 Taproot・Ordinals・RGBなどで拡張進行中 Cardano（ADA） EUTxO スクリプト・状態情報付きUTxO。並列処理・検証性 スマートコントラクト・DID・DeFi・CSWF・ステーブル構想 Plutus、Aiken、Mithril、Midnightなど複数技術が連携 Midnight EUTxO＋ZK 機密性を重視したZK対応型EUTxO 秘密選挙・匿名決済・政府利用型DID Cardanoサイドチェーン。ZK-Rollup系とも接続可能 Ergo（ERG） EUTxO 宣言型スマコン（ErgoScript）。状態文脈が扱える AI連携、分散オラクル、金担保トークンなど Sigma Protocolなど独自拡張多数 Nautilus（旧:ErgoDEX） EUTxO準拠 Ergo/Cardano対応DEX。クロスチェーンの架け橋 AMM、貸付、DEX、ステーキング Hydraなどと今後連携予定 Anoma 独自UTxO風モデル Intentベース構造でユーザー操作性重視 プライバシー、コンセンサス再設計 Namada/ZEXEと連携しZK活用へ Alephium UTxO＋DAG DAG構造を持つUTxOベース。並列実行志向 シャーディング・スケーラブル金融Dapps 新興プロジェクト。独自スマコンあり 🔍 UTxOとEUTxOの違いと技術進化 比較項目 UTxO（BTC型） EUTxO（Cardano型） コメント 状態管理 単純な入出力記録 スクリプトとデータ（Datum）付き出力 プログラム可能な資産管理が実現 スマートコントラクト 不可 or 非効率 可能（Plutus、ErgoScriptなど） 決定論的スマコンで安全 並列処理性 難しい 容易（依存関係明示のため） 高スケーラビリティ対応可能 フォーマル検証 困難 可能（モデル構造が静的） ハッキング耐性・国家導入にも適合 主な代表 BTC ADA、ERG、Midnight EUTxOはUTxO思想の進化系 🧭 CGTA総評：UTxO陣営の哲学と未来性 UTxO陣営は、ブロックチェーンを数学的に安全で分散的な公共インフラにすることを目指している。
+EUTxOの進化により、スマートコントラクトの安全性・決定性・検証可能性を保ちつつ、自由主義的価値を守る技術基盤が整いつつある。
+Cardano（ADA）とMidnightはその先鋒であり、今後の金融・ID・国家基盤の再設計において中核を担う可能性が高い。">
+  <meta itemprop="wordCount" content="322">
+  <meta itemprop="keywords" content="UTxO,EUTxO,Cardano,Bitcoin,Midnight,Ergo,ブロックチェーン構造,分散型哲学,比較">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置">
+  <meta name="twitter:description" content="✅ UTxO陣営とは？ UTxO（Unspent Transaction Output）とは、ビットコインに採用されたトランザクションベースの残高管理方式であり、後にCardanoが拡張して「EUTxO（Extended UTxO）」を実現。
+この構造を基盤とするブロックチェーンを「UTxO陣営」と定義し、その技術的思想・利点・適用領域を以下にまとめる。
+🧩 UTxO陣営の代表プロジェクト一覧（2025年時点） プロジェクト名 採用モデル 特徴 技術思想・応用分野 備考 Bitcoin（BTC） UTxO 最初のUTxOモデル。簡素・安全・確定性高い 通貨・価値保存手段・L2でのDeFi展開 Taproot・Ordinals・RGBなどで拡張進行中 Cardano（ADA） EUTxO スクリプト・状態情報付きUTxO。並列処理・検証性 スマートコントラクト・DID・DeFi・CSWF・ステーブル構想 Plutus、Aiken、Mithril、Midnightなど複数技術が連携 Midnight EUTxO＋ZK 機密性を重視したZK対応型EUTxO 秘密選挙・匿名決済・政府利用型DID Cardanoサイドチェーン。ZK-Rollup系とも接続可能 Ergo（ERG） EUTxO 宣言型スマコン（ErgoScript）。状態文脈が扱える AI連携、分散オラクル、金担保トークンなど Sigma Protocolなど独自拡張多数 Nautilus（旧:ErgoDEX） EUTxO準拠 Ergo/Cardano対応DEX。クロスチェーンの架け橋 AMM、貸付、DEX、ステーキング Hydraなどと今後連携予定 Anoma 独自UTxO風モデル Intentベース構造でユーザー操作性重視 プライバシー、コンセンサス再設計 Namada/ZEXEと連携しZK活用へ Alephium UTxO＋DAG DAG構造を持つUTxOベース。並列実行志向 シャーディング・スケーラブル金融Dapps 新興プロジェクト。独自スマコンあり 🔍 UTxOとEUTxOの違いと技術進化 比較項目 UTxO（BTC型） EUTxO（Cardano型） コメント 状態管理 単純な入出力記録 スクリプトとデータ（Datum）付き出力 プログラム可能な資産管理が実現 スマートコントラクト 不可 or 非効率 可能（Plutus、ErgoScriptなど） 決定論的スマコンで安全 並列処理性 難しい 容易（依存関係明示のため） 高スケーラビリティ対応可能 フォーマル検証 困難 可能（モデル構造が静的） ハッキング耐性・国家導入にも適合 主な代表 BTC ADA、ERG、Midnight EUTxOはUTxO思想の進化系 🧭 CGTA総評：UTxO陣営の哲学と未来性 UTxO陣営は、ブロックチェーンを数学的に安全で分散的な公共インフラにすることを目指している。
+EUTxOの進化により、スマートコントラクトの安全性・決定性・検証可能性を保ちつつ、自由主義的価値を守る技術基盤が整いつつある。
+Cardano（ADA）とMidnightはその先鋒であり、今後の金融・ID・国家基盤の再設計において中核を担う可能性が高い。">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 570 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置</h1>
+      
+      
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="-utxo陣営とは">✅ UTxO陣営とは？</h2>
+<p><strong>UTxO（Unspent Transaction Output）<strong>とは、ビットコインに採用された</strong>トランザクションベースの残高管理方式</strong>であり、後にCardanoが拡張して「EUTxO（Extended UTxO）」を実現。</p>
+<p>この構造を基盤とするブロックチェーンを「UTxO陣営」と定義し、その技術的思想・利点・適用領域を以下にまとめる。</p>
+<hr>
+<h2 id="-utxo陣営の代表プロジェクト一覧2025年時点">🧩 UTxO陣営の代表プロジェクト一覧（2025年時点）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>プロジェクト名</th>
+          <th>採用モデル</th>
+          <th>特徴</th>
+          <th>技術思想・応用分野</th>
+          <th>備考</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Bitcoin（BTC）</strong></td>
+          <td>UTxO</td>
+          <td>最初のUTxOモデル。簡素・安全・確定性高い</td>
+          <td>通貨・価値保存手段・L2でのDeFi展開</td>
+          <td>Taproot・Ordinals・RGBなどで拡張進行中</td>
+      </tr>
+      <tr>
+          <td><strong>Cardano（ADA）</strong></td>
+          <td><strong>EUTxO</strong></td>
+          <td>スクリプト・状態情報付きUTxO。並列処理・検証性</td>
+          <td>スマートコントラクト・DID・DeFi・CSWF・ステーブル構想</td>
+          <td>Plutus、Aiken、Mithril、Midnightなど複数技術が連携</td>
+      </tr>
+      <tr>
+          <td><strong>Midnight</strong></td>
+          <td><strong>EUTxO＋ZK</strong></td>
+          <td>機密性を重視した<strong>ZK対応型EUTxO</strong></td>
+          <td>秘密選挙・匿名決済・政府利用型DID</td>
+          <td>Cardanoサイドチェーン。ZK-Rollup系とも接続可能</td>
+      </tr>
+      <tr>
+          <td><strong>Ergo（ERG）</strong></td>
+          <td>EUTxO</td>
+          <td>宣言型スマコン（ErgoScript）。<strong>状態文脈</strong>が扱える</td>
+          <td>AI連携、分散オラクル、金担保トークンなど</td>
+          <td>Sigma Protocolなど独自拡張多数</td>
+      </tr>
+      <tr>
+          <td><strong>Nautilus（旧:ErgoDEX）</strong></td>
+          <td>EUTxO準拠</td>
+          <td>Ergo/Cardano対応DEX。クロスチェーンの架け橋</td>
+          <td>AMM、貸付、DEX、ステーキング</td>
+          <td>Hydraなどと今後連携予定</td>
+      </tr>
+      <tr>
+          <td><strong>Anoma</strong></td>
+          <td>独自UTxO風モデル</td>
+          <td>Intentベース構造でユーザー操作性重視</td>
+          <td>プライバシー、コンセンサス再設計</td>
+          <td>Namada/ZEXEと連携しZK活用へ</td>
+      </tr>
+      <tr>
+          <td><strong>Alephium</strong></td>
+          <td>UTxO＋DAG</td>
+          <td>DAG構造を持つUTxOベース。並列実行志向</td>
+          <td>シャーディング・スケーラブル金融Dapps</td>
+          <td>新興プロジェクト。独自スマコンあり</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-utxoとeutxoの違いと技術進化">🔍 UTxOとEUTxOの違いと技術進化</h2>
+<table>
+  <thead>
+      <tr>
+          <th>比較項目</th>
+          <th>UTxO（BTC型）</th>
+          <th>EUTxO（Cardano型）</th>
+          <th>コメント</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>状態管理</td>
+          <td>単純な入出力記録</td>
+          <td>スクリプトとデータ（Datum）付き出力</td>
+          <td><strong>プログラム可能な資産管理</strong>が実現</td>
+      </tr>
+      <tr>
+          <td>スマートコントラクト</td>
+          <td>不可 or 非効率</td>
+          <td>可能（Plutus、ErgoScriptなど）</td>
+          <td><strong>決定論的スマコン</strong>で安全</td>
+      </tr>
+      <tr>
+          <td>並列処理性</td>
+          <td>難しい</td>
+          <td>容易（依存関係明示のため）</td>
+          <td>高スケーラビリティ対応可能</td>
+      </tr>
+      <tr>
+          <td>フォーマル検証</td>
+          <td>困難</td>
+          <td>可能（モデル構造が静的）</td>
+          <td>ハッキング耐性・国家導入にも適合</td>
+      </tr>
+      <tr>
+          <td>主な代表</td>
+          <td>BTC</td>
+          <td>ADA、ERG、Midnight</td>
+          <td>EUTxOは<strong>UTxO思想の進化系</strong></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-cgta総評utxo陣営の哲学と未来性">🧭 CGTA総評：UTxO陣営の哲学と未来性</h2>
+<blockquote>
+<p>UTxO陣営は、<strong>ブロックチェーンを数学的に安全で分散的な公共インフラにする</strong>ことを目指している。<br>
+EUTxOの進化により、<strong>スマートコントラクトの安全性・決定性・検証可能性を保ちつつ、自由主義的価値を守る技術基盤</strong>が整いつつある。<br>
+<strong>Cardano（ADA）とMidnightはその先鋒</strong>であり、今後の<strong>金融・ID・国家基盤の再設計</strong>において中核を担う可能性が高い。</p></blockquote>
+<hr>
+<p>出典：<br>
+・Cardano Docs / Plutus &amp; Aiken Whitepapers<br>
+・Ergo Platform Whitepaper<br>
+・Anoma・Namada公式ドキュメント<br>
+・CGTA独自分類・分析（2025年7月時点）</p>
+<hr>
+<h1 id="ergoergを深掘るutxo陣営の異端にして礎">&ldquo;Ergo（ERG）を深掘る｜UTxO陣営の異端にして礎&rdquo;</h1>
+<hr>
+<h2 id="-概要ergoとは">✅ 概要：Ergoとは？</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>名称</td>
+          <td><strong>Ergo（ERG）</strong></td>
+      </tr>
+      <tr>
+          <td>創設者</td>
+          <td>Alexander Chepurnoy（元IOHK、Nxt開発）</td>
+      </tr>
+      <tr>
+          <td>メインネット開始</td>
+          <td>2019年5月</td>
+      </tr>
+      <tr>
+          <td>採用モデル</td>
+          <td><strong>EUTxO（Extended UTxO）</strong></td>
+      </tr>
+      <tr>
+          <td>コンセンサス</td>
+          <td>PoW（Autolykos：ASIC耐性あり）</td>
+      </tr>
+      <tr>
+          <td>スマートコントラクト</td>
+          <td>宣言型言語「<strong>ErgoScript</strong>」</td>
+      </tr>
+      <tr>
+          <td>特徴</td>
+          <td>状態保存・プライバシー・ZK対応・オラクル統合型・軽量ノード設計</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-技術的特長">🧠 技術的特長</h2>
+<table>
+  <thead>
+      <tr>
+          <th>技術項目</th>
+          <th>解説</th>
+          <th>備考</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>ErgoScript</strong></td>
+          <td>宣言型スマートコントラクト。<strong>決定論的で形式検証が容易</strong></td>
+          <td>Solidityとは真逆の安全志向設計</td>
+      </tr>
+      <tr>
+          <td><strong>State Context</strong></td>
+          <td><strong>UTxOに状態履歴を保持</strong>可能。ステートフルな構造実現</td>
+          <td>ローンや保険などに有効</td>
+      </tr>
+      <tr>
+          <td><strong>Sigma Protocols</strong></td>
+          <td>ゼロ知識証明プリミティブ組込済。<strong>ZK対応の強固な基盤</strong></td>
+          <td>Midnightとの親和性も高い</td>
+      </tr>
+      <tr>
+          <td><strong>Storage Rent</strong></td>
+          <td>使用されないUTxOに**保管料（rent）**課金</td>
+          <td>ブロート抑制と経済合理性を両立</td>
+      </tr>
+      <tr>
+          <td><strong>Autolykos PoW</strong></td>
+          <td>ASIC耐性・VRFベースPoWで<strong>分散化優先</strong></td>
+          <td>個人マイナー参入設計</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-主なユースケースとプロジェクト">⚒️ 主なユースケースとプロジェクト</h2>
+<table>
+  <thead>
+      <tr>
+          <th>カテゴリ</th>
+          <th>名称</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ステーブルコイン</td>
+          <td><strong>SigUSD / SigRSV</strong></td>
+          <td><strong>準備資産担保型ステーブル（USDAの先駆）</strong></td>
+      </tr>
+      <tr>
+          <td>分散型取引所</td>
+          <td><strong>Nautilus DEX</strong></td>
+          <td>CardanoとErgoを橋渡しする<strong>EUTxO DEX</strong></td>
+      </tr>
+      <tr>
+          <td>オラクル</td>
+          <td><strong>Oracle Pools</strong></td>
+          <td>ネイティブで分散化された<strong>ブロックチェーン組込型オラクル</strong></td>
+      </tr>
+      <tr>
+          <td>DAO設計</td>
+          <td><strong>Paideia</strong></td>
+          <td>自己改良型トークノミクス。<strong>AIとの接続も視野</strong></td>
+      </tr>
+      <tr>
+          <td>DID/プライバシー</td>
+          <td><strong>SigmaRust / ErgoNames</strong></td>
+          <td>ZKとEUTxO融合による<strong>匿名ID基盤の実験場</strong></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-cardanoとの比較">📊 Cardanoとの比較</h2>
+<table>
+  <thead>
+      <tr>
+          <th>比較項目</th>
+          <th>Cardano</th>
+          <th>Ergo</th>
+          <th>コメント</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>コンセンサス</td>
+          <td>PoS（Ouroboros）</td>
+          <td>PoW（Autolykos）</td>
+          <td>エネルギー効率 vs 完全分散志向</td>
+      </tr>
+      <tr>
+          <td>スマコン</td>
+          <td>Plutus / Aiken</td>
+          <td>ErgoScript（宣言型）</td>
+          <td>プログラムパラダイムが異なる</td>
+      </tr>
+      <tr>
+          <td>ネイティブZK</td>
+          <td>Midnightとして別チェーン</td>
+          <td>Sigma Protocolで標準実装</td>
+          <td>プライバシー方向性の違い</td>
+      </tr>
+      <tr>
+          <td>ガバナンス</td>
+          <td>Voltaire、DRep制度へ</td>
+          <td>PaideiaによるオフチェーンDAO設計</td>
+          <td>中央管理なしの試行錯誤中</td>
+      </tr>
+      <tr>
+          <td>コミュニティ規模</td>
+          <td>グローバル・大規模</td>
+          <td>小規模・サイファーパンク的</td>
+          <td>理念主導の草の根開発文化</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-cgta評価2025年">🧭 CGTA評価（2025年）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>評価項目</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>思想的独自性</strong></td>
+          <td>⭐️⭐️⭐️⭐️⭐️（匿名性・自由主義を基底に）</td>
+      </tr>
+      <tr>
+          <td><strong>技術革新性</strong></td>
+          <td>⭐️⭐️⭐️⭐️（Sigma + EUTxOの融合）</td>
+      </tr>
+      <tr>
+          <td><strong>相互運用性</strong></td>
+          <td>⭐️⭐️⭐️⭐️（Cardanoとの橋渡し進行中）</td>
+      </tr>
+      <tr>
+          <td><strong>市場浸透性</strong></td>
+          <td>⭐️⭐️（CEX少・主流志向ではない）</td>
+      </tr>
+      <tr>
+          <td><strong>今後の影響力</strong></td>
+          <td>⭐️⭐️⭐️⭐️（Midnight・ZK系DeFiに波及可能）</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-結論ergoの位置づけ">📌 結論：Ergoの位置づけ</h2>
+<blockquote>
+<p>Ergoは、<strong>EUTxOモデルにプライバシーと暗号的自由主義思想を融合</strong>した、UTxO陣営の“異端であり礎”となる存在である。<br>
+CardanoやMidnightとの思想的・技術的補完関係を深めることで、<strong>分散型金融と個人主権社会の両立に資する革新拠点</strong>になりうる。</p></blockquote>
+<hr>
+<p>出典：<br>
+・Ergo Platform Whitepaper<br>
+・ErgoScript Documentation<br>
+・Paideia Docs / Sigma Protocol Papers<br>
+・CGTA独自調査・解析（2025年7月現在）</p>
+<hr>
+<h1 id="ergoにとっての米国3法案可決の意味思想的勝利と今後の波及効果">&ldquo;Ergoにとっての米国3法案可決の意味｜思想的勝利と今後の波及効果&rdquo;</h1>
+<hr>
+<h2 id="-総括ergoにとって直接的恩恵は限定的だが思想的勝利と波及効果は大きい">✅ 総括：Ergoにとって「直接的恩恵は限定的だが、思想的勝利と波及効果は大きい」</h2>
+<table>
+  <thead>
+      <tr>
+          <th>法案</th>
+          <th>直接的影響</th>
+          <th>間接的影響</th>
+          <th>総合評価</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GENIUS法案</td>
+          <td>⚠️ 米規制圏外で直接影響は少ない</td>
+          <td>技術的信頼性が高まり、評価の後押しに</td>
+          <td>⭕️ SigUSD構造が合法ステーブル設計と整合</td>
+      </tr>
+      <tr>
+          <td>CLARITY法案</td>
+          <td>⭕️ SEC証券認定のリスク低減</td>
+          <td>「商品」扱いの可能性が高まり合法DeFiに繋がる</td>
+          <td>✅ 法的明確化によりDeFi基盤として再評価の兆し</td>
+      </tr>
+      <tr>
+          <td>反CBDC法案</td>
+          <td>✅ 思想的に完全一致</td>
+          <td>プライバシー保護設計（Sigma/ZK）が合法的意義を持つ</td>
+          <td>✅✅ <strong>最大の思想的勝利</strong></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-genius法案とergo">🟩 GENIUS法案とErgo</h2>
+<ul>
+<li><strong>内容</strong>：ステーブルコインの完全担保・米ドル等流動資産に裏付け・年次監査を義務化</li>
+<li><strong>ErgoのSigUSD/SigRSV</strong>：
+<ul>
+<li>オンチェーンで構造的に準備資産による担保を行う「<strong>準備資産型ステーブル設計</strong>」。</li>
+<li>米国居住者KYCや監査には非対応で、<strong>直接的適用外</strong>。</li>
+</ul>
+</li>
+<li><strong>意義</strong>：
+<ul>
+<li>米国で合法的にステーブルのあり方が定義されたことで、Ergo型設計が正当化される可能性あり。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>🌱「設計思想の正統性が再評価される機運が高まる」</p></blockquote>
+<hr>
+<h2 id="-clarity法案とergo">🟨 CLARITY法案とErgo</h2>
+<ul>
+<li><strong>内容</strong>：仮想通貨をSECの証券とCFTCの商品のどちらかに明確分類</li>
+<li><strong>Ergoの分散性と非ICO性</strong>：
+<ul>
+<li>中央発行主体がなく、ICO形式での販売実績もない。</li>
+<li>初期フェーズから<strong>小規模ノードと個人参加者で構成</strong>。</li>
+</ul>
+</li>
+<li><strong>展望</strong>：
+<ul>
+<li>「証券」ではなく「商品」扱いされることで、<strong>合法DeFiプラットフォームとして評価される可能性</strong>が出てくる。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚖️「米規制に巻き込まれにくい構造が、合法性という文脈で逆に強みへ」</p></blockquote>
+<hr>
+<h2 id="-反cbdc法案とergo">🟦 反CBDC法案とErgo</h2>
+<ul>
+<li><strong>内容</strong>：米FRBによる個人向け中央銀行デジタル通貨の発行を禁じる</li>
+<li><strong>Ergoとの親和性</strong>：
+<ul>
+<li>Sigma Protocolによる<strong>匿名性とプライバシー保護</strong></li>
+<li>完全な分散型PoW＋UTxO構造</li>
+</ul>
+</li>
+<li><strong>思想的勝利</strong>：
+<ul>
+<li>Ergoが掲げる「<strong>脱中央集権・反監視・サイファーパンク的通貨思想</strong>」が米政策においても正当性を帯び始めた。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>🔐「思想の勝利であり、Ergoの存在意義が裏付けられた瞬間」</p></blockquote>
+<hr>
+<h2 id="-cgta最終評価ergoは規制ではなく思想と構造で勝った">🧭 CGTA最終評価：Ergoは「規制ではなく思想と構造で勝った」</h2>
+<table>
+  <thead>
+      <tr>
+          <th>評価項目</th>
+          <th>評価</th>
+          <th>理由</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>制度的恩恵</strong></td>
+          <td>⭐️⭐️</td>
+          <td>米国市場からの直接影響は限定的</td>
+      </tr>
+      <tr>
+          <td><strong>思想的正当化</strong></td>
+          <td>⭐️⭐️⭐️⭐️⭐️</td>
+          <td>脱監視・非証券・準ステーブル思想の正統性が強化された</td>
+      </tr>
+      <tr>
+          <td><strong>波及的効果</strong></td>
+          <td>⭐️⭐️⭐️⭐️</td>
+          <td>CardanoやMidnightとのZK連携・UTxO再評価に繋がる</td>
+      </tr>
+      <tr>
+          <td><strong>戦略的価値</strong></td>
+          <td>⭐️⭐️⭐️⭐️</td>
+          <td>法制度よりも<strong>社会哲学と暗号設計</strong>に基づく生存戦略が機能している</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-結論">📌 結論</h2>
+<blockquote>
+<p>米国の3法案可決は、Ergoにとって直接的な規制恩恵こそ限定的だが、<strong>「合法DeFiの思想的道筋」を照らす歴史的転換点</strong>である。<br>
+分散型設計・PoW志向・Sigma Protocolによる匿名性は、いまや**「反CBDC時代」の本命技術基盤**として再評価されうる。</p></blockquote>
+<hr>
+<p>出典：<br>
+・米国下院議会法案データベース（GENIUS / CLARITY / 反CBDC）<br>
+・Ergo Whitepaper / Sigma Protocol<br>
+・CoinPost / CGTA解析（2025年7月）</p>
+<hr>
+<p><em>作成日時：2025-07-18</em></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/utxo/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">UTxO</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/eutxo/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">EUTxO</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/bitcoin/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Bitcoin</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/ergo/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Ergo</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E6%A7%8B%E9%80%A0/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ブロックチェーン構造</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E5%88%86%E6%95%A3%E5%9E%8B%E5%93%B2%E5%AD%A6/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">分散型哲学</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/rare-evo-2025bitcoin-defi%E6%A7%8B%E6%83%B3%E3%81%A8%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E%E3%81%AE%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E5%8D%94%E8%AA%BF%E6%88%A6%E7%95%A5/">Rare Evo 2025｜Bitcoin DeFi構想とカルダノのマルチチェーン協調戦略</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/iog%E3%81%AEbitvmx%E6%A7%8B%E6%83%B3%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%E3%81%AB%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99%E6%9C%AA%E6%9D%A5%E5%9B%B3/">IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/cardano%E3%81%8C%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E6%88%A6%E7%95%A5%E3%81%B8%E7%A7%BB%E8%A1%8Crare-evo%E3%81%A7%E3%81%AE%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%99%BA%E8%A1%A8%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3%E6%9E%90/">Cardanoがマルチチェーン戦略へ移行｜Rare Evoでのホスキンソン発表を徹底解析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/%E7%B1%B3%E4%B8%8B%E9%99%A2%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8%E8%A6%8F%E5%88%B6%E3%81%AB%E6%AD%B4%E5%8F%B2%E7%9A%84%E9%80%B2%E5%B1%953%E6%B3%95%E6%A1%88%E5%8F%AF%E6%B1%BAgeniusclarity%E5%8F%8Dcbdc/">米下院、仮想通貨規制に歴史的進展｜3法案可決（GENIUS・CLARITY・反CBDC）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch579/%EF%B8%8Fsipo_eo14178_summary/">SIPO投稿要約：ホワイトハウス新金融戦略（EO14178）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch578/cardano--ripple-%E5%8D%94%E6%A5%AD%E3%81%A8midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%81%AE%E6%88%A6%E7%95%A5%E7%9A%84%E6%84%8F%E5%91%B3/">Cardano × Ripple 協業とMidnightエアドロップの戦略的意味</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch578/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E%E3%81%AF%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%9B%BD%E5%AE%B6%E3%81%B8sipo%E6%8A%95%E7%A8%BF%E8%A7%A3%E8%AA%AC%E3%81%A8%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%E5%88%86%E6%9E%90/">カルダノは『デジタル国家』へ──SIPO投稿解説とシナリオ分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch578/glacier-drop_lasvegas-message_drep-explainer/">ラスベガスからのメッセージ──Glacier Dropが開くカルダノの新章（DRep要点解説）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch578/surprise_ama_0822_2025/">Surprise AMA 08/22/2025 全問回答まとめ</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch578/midnight-glacier-drop-%E3%81%AB%E8%A6%8B%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E5%B1%95%E9%96%8B/">Midnight Glacier Drop に見るマルチチェーン展開</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/glacier-drop-claim-estimates-epoch577/">Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/cardano%E3%81%8Cgpt-oss%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%80%E6%9C%AA%E6%9D%A5%E5%AE%9F%E8%A3%85%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3--%E8%A9%B3%E7%B4%B0%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%E5%88%86%E6%9E%90/">Cardanoがgpt-ossを取り込む未来：実装アーキテクチャ &amp; 詳細シナリオ分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/grayscale_cardano_etf_and_midnight_impact/">GrayscaleのカルダノETF動向とMidnight/NIGHTトークン需要への波及分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/midnight_glacierdrop_%E8%A7%A3%E8%AA%AC/">Midnight Glacier Drop 解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/rare-evo-2025-partnerchains%E7%99%BA%E8%A1%A8%E3%81%A8midnight%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%E6%95%B4%E5%90%88%E6%80%A7%E5%88%86%E6%9E%90/">Rare Evo 2025 PartnerChains発表とMidnightホワイトペーパー整合性分析</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

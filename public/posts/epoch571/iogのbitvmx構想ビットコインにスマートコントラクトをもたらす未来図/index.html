@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図 | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="🧠 概要：IOGが描くBitVMXの未来図とは？
+2025年7月19日、Input Output（IOG）は、**ビットコイン上でスマートコントラクトを動作させる新アーキテクチャ「BitVMX」**を発表。EthereumやCardanoのような表現力のあるスマートコントラクトが、Bitcoinで実行可能になる画期的構想。
+
+🧩 BitVMXの技術構造：4層の実行スタック
+
+  
+      
+          層
+          説明
+      
+  
+  
+      
+          ハイレベル言語
+          Python, TypeScript, Aiken など
+      
+      
+          UPLC
+          Untyped Plutus Core（Cardanoで使用）
+      
+      
+          CEKマシン
+          軽量・決定論的な仮想マシン（UPLC実行）
+      
+      
+          RISC-V
+          現代的な命令セットアーキテクチャ
+      
+      
+          BitVMX
+          RISC-Vトレースを「楽観的検証」するBitcoin上のシステム
+      
+  
+
+
+🔐 BitVMXのコア原理：「異議が出るまで沈黙するビットコイン」
+
+実行はオフチェーン、検証はオンチェーン
+チャレンジゲーム方式によるゼロ知識証明で誤り検出
+不正時は**担保金（デポジット）**が没収される経済的抑止力
+
+
+⚙ なぜRISC-Vなのか？なぜBitVMXなのか？
+
+  
+      
+          項目
+          理由
+      
+  
+  
+      
+          RISC-V
+          オープン・簡潔・豊富な開発ツール
+      
+      
+          CEKマシン
+          UPLC解釈に最適で変換容易
+      
+      
+          BitVMX
+          Bitcoin本体の変更なしでプログラム可能性を実現
+      
+  
+
+
+🪐 BitVMXで可能になる世界
+
+  
+      
+          分野
+          解説
+      
+  
+  
+      
+          Bitcoin DeFi
+          DEX・ステーブルコイン・エスクローなど本格展開
+      
+      
+          クロスチェーン
+          Cardano↔Bitcoin 間の安全な資産移動
+      
+      
+          ZKセキュリティ基盤
+          ブロックチェーンの肥大化なしに信頼を構築
+      
+  
+
+
+🤝 BitVMX FORCE：IOGの多元連携体制
+
+Fairgate Labs、Rootstock Labsと共に「BitVMX FORCE」結成
+Bitcoin 2025カンファレンスでデモ実施済
+目的は「決済レイヤーとしてのビットコイン」へ進化させること
+
+
+📍 開発者・ユーザーの参加方法
+
+🛠 AikenでUPLCスマコンを記述
+🧵 X（旧Twitter）で @InputOutputHK と @BitVMX をフォロー
+🎓 ZK/異議システム/RISC-V系ハッカソンへ参加
+👥 TelegramでBitVMXコミュニティに参加
+
+
+🔮 シナリオ分析（BitVMXの展開予測）
+
+  
+      
+          シナリオ
+          状況
+          確率
+      
+  
+  
+      
+          S5
+          Bitcoin DeFi普及、TVL激増、クロスチェーンHub化
+          25%
+      
+      
+          S4
+          Cardano連携を中心に一部活用
+          35%
+      
+      
+          S3
+          技術的成功も利用者少なく限定的活用
+          25%
+      
+      
+          S2
+          導入困難・複雑すぎて停滞
+          10%
+      
+      
+          S1
+          実装失敗・セキュリティ事故が頻発
+          5%
+      
+  
+
+
+✨ まとめ
+
+BitVMXは「Cardano資産 × Bitcoinセキュリティ」の象徴
+Cardano DAppのコード資産をビットコインで活用可能に
+MidnightやBabel Feesの構想と哲学的に接続される流れ
+ZK技術を活用した持続的セキュリティモデルとしても注目
+
+
+作成日時：2025-07-23">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch571/iog%E3%81%AEbitvmx%E6%A7%8B%E6%83%B3%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%E3%81%AB%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99%E6%9C%AA%E6%9D%A5%E5%9B%B3/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch571/iog%E3%81%AEbitvmx%E6%A7%8B%E6%83%B3%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%E3%81%AB%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%82%92%E3%82%82%E3%81%9F%E3%82%89%E3%81%99%E6%9C%AA%E6%9D%A5%E5%9B%B3/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図">
+  <meta property="og:description" content="🧠 概要：IOGが描くBitVMXの未来図とは？ 2025年7月19日、Input Output（IOG）は、**ビットコイン上でスマートコントラクトを動作させる新アーキテクチャ「BitVMX」**を発表。EthereumやCardanoのような表現力のあるスマートコントラクトが、Bitcoinで実行可能になる画期的構想。
+🧩 BitVMXの技術構造：4層の実行スタック 層 説明 ハイレベル言語 Python, TypeScript, Aiken など UPLC Untyped Plutus Core（Cardanoで使用） CEKマシン 軽量・決定論的な仮想マシン（UPLC実行） RISC-V 現代的な命令セットアーキテクチャ BitVMX RISC-Vトレースを「楽観的検証」するBitcoin上のシステム 🔐 BitVMXのコア原理：「異議が出るまで沈黙するビットコイン」 実行はオフチェーン、検証はオンチェーン チャレンジゲーム方式によるゼロ知識証明で誤り検出 不正時は**担保金（デポジット）**が没収される経済的抑止力 ⚙ なぜRISC-Vなのか？なぜBitVMXなのか？ 項目 理由 RISC-V オープン・簡潔・豊富な開発ツール CEKマシン UPLC解釈に最適で変換容易 BitVMX Bitcoin本体の変更なしでプログラム可能性を実現 🪐 BitVMXで可能になる世界 分野 解説 Bitcoin DeFi DEX・ステーブルコイン・エスクローなど本格展開 クロスチェーン Cardano↔Bitcoin 間の安全な資産移動 ZKセキュリティ基盤 ブロックチェーンの肥大化なしに信頼を構築 🤝 BitVMX FORCE：IOGの多元連携体制 Fairgate Labs、Rootstock Labsと共に「BitVMX FORCE」結成 Bitcoin 2025カンファレンスでデモ実施済 目的は「決済レイヤーとしてのビットコイン」へ進化させること 📍 開発者・ユーザーの参加方法 🛠 AikenでUPLCスマコンを記述 🧵 X（旧Twitter）で @InputOutputHK と @BitVMX をフォロー 🎓 ZK/異議システム/RISC-V系ハッカソンへ参加 👥 TelegramでBitVMXコミュニティに参加 🔮 シナリオ分析（BitVMXの展開予測） シナリオ 状況 確率 S5 Bitcoin DeFi普及、TVL激増、クロスチェーンHub化 25% S4 Cardano連携を中心に一部活用 35% S3 技術的成功も利用者少なく限定的活用 25% S2 導入困難・複雑すぎて停滞 10% S1 実装失敗・セキュリティ事故が頻発 5% ✨ まとめ BitVMXは「Cardano資産 × Bitcoinセキュリティ」の象徴 Cardano DAppのコード資産をビットコインで活用可能に MidnightやBabel Feesの構想と哲学的に接続される流れ ZK技術を活用した持続的セキュリティモデルとしても注目 作成日時：2025-07-23">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-23T00:00:00+00:00">
+    <meta property="article:tag" content="BitVMX">
+    <meta property="article:tag" content="Bitcoin">
+    <meta property="article:tag" content="Cardano">
+    <meta property="article:tag" content="IOG">
+    <meta property="article:tag" content="スマートコントラクト">
+    <meta property="article:tag" content="ZK">
+
+  <meta itemprop="name" content="IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図">
+  <meta itemprop="description" content="🧠 概要：IOGが描くBitVMXの未来図とは？ 2025年7月19日、Input Output（IOG）は、**ビットコイン上でスマートコントラクトを動作させる新アーキテクチャ「BitVMX」**を発表。EthereumやCardanoのような表現力のあるスマートコントラクトが、Bitcoinで実行可能になる画期的構想。
+🧩 BitVMXの技術構造：4層の実行スタック 層 説明 ハイレベル言語 Python, TypeScript, Aiken など UPLC Untyped Plutus Core（Cardanoで使用） CEKマシン 軽量・決定論的な仮想マシン（UPLC実行） RISC-V 現代的な命令セットアーキテクチャ BitVMX RISC-Vトレースを「楽観的検証」するBitcoin上のシステム 🔐 BitVMXのコア原理：「異議が出るまで沈黙するビットコイン」 実行はオフチェーン、検証はオンチェーン チャレンジゲーム方式によるゼロ知識証明で誤り検出 不正時は**担保金（デポジット）**が没収される経済的抑止力 ⚙ なぜRISC-Vなのか？なぜBitVMXなのか？ 項目 理由 RISC-V オープン・簡潔・豊富な開発ツール CEKマシン UPLC解釈に最適で変換容易 BitVMX Bitcoin本体の変更なしでプログラム可能性を実現 🪐 BitVMXで可能になる世界 分野 解説 Bitcoin DeFi DEX・ステーブルコイン・エスクローなど本格展開 クロスチェーン Cardano↔Bitcoin 間の安全な資産移動 ZKセキュリティ基盤 ブロックチェーンの肥大化なしに信頼を構築 🤝 BitVMX FORCE：IOGの多元連携体制 Fairgate Labs、Rootstock Labsと共に「BitVMX FORCE」結成 Bitcoin 2025カンファレンスでデモ実施済 目的は「決済レイヤーとしてのビットコイン」へ進化させること 📍 開発者・ユーザーの参加方法 🛠 AikenでUPLCスマコンを記述 🧵 X（旧Twitter）で @InputOutputHK と @BitVMX をフォロー 🎓 ZK/異議システム/RISC-V系ハッカソンへ参加 👥 TelegramでBitVMXコミュニティに参加 🔮 シナリオ分析（BitVMXの展開予測） シナリオ 状況 確率 S5 Bitcoin DeFi普及、TVL激増、クロスチェーンHub化 25% S4 Cardano連携を中心に一部活用 35% S3 技術的成功も利用者少なく限定的活用 25% S2 導入困難・複雑すぎて停滞 10% S1 実装失敗・セキュリティ事故が頻発 5% ✨ まとめ BitVMXは「Cardano資産 × Bitcoinセキュリティ」の象徴 Cardano DAppのコード資産をビットコインで活用可能に MidnightやBabel Feesの構想と哲学的に接続される流れ ZK技術を活用した持続的セキュリティモデルとしても注目 作成日時：2025-07-23">
+  <meta itemprop="datePublished" content="2025-07-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="106">
+  <meta itemprop="keywords" content="BitVMX,Bitcoin,Cardano,IOG,スマートコントラクト,ZK,RISC-V,Midnight">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図">
+  <meta name="twitter:description" content="🧠 概要：IOGが描くBitVMXの未来図とは？ 2025年7月19日、Input Output（IOG）は、**ビットコイン上でスマートコントラクトを動作させる新アーキテクチャ「BitVMX」**を発表。EthereumやCardanoのような表現力のあるスマートコントラクトが、Bitcoinで実行可能になる画期的構想。
+🧩 BitVMXの技術構造：4層の実行スタック 層 説明 ハイレベル言語 Python, TypeScript, Aiken など UPLC Untyped Plutus Core（Cardanoで使用） CEKマシン 軽量・決定論的な仮想マシン（UPLC実行） RISC-V 現代的な命令セットアーキテクチャ BitVMX RISC-Vトレースを「楽観的検証」するBitcoin上のシステム 🔐 BitVMXのコア原理：「異議が出るまで沈黙するビットコイン」 実行はオフチェーン、検証はオンチェーン チャレンジゲーム方式によるゼロ知識証明で誤り検出 不正時は**担保金（デポジット）**が没収される経済的抑止力 ⚙ なぜRISC-Vなのか？なぜBitVMXなのか？ 項目 理由 RISC-V オープン・簡潔・豊富な開発ツール CEKマシン UPLC解釈に最適で変換容易 BitVMX Bitcoin本体の変更なしでプログラム可能性を実現 🪐 BitVMXで可能になる世界 分野 解説 Bitcoin DeFi DEX・ステーブルコイン・エスクローなど本格展開 クロスチェーン Cardano↔Bitcoin 間の安全な資産移動 ZKセキュリティ基盤 ブロックチェーンの肥大化なしに信頼を構築 🤝 BitVMX FORCE：IOGの多元連携体制 Fairgate Labs、Rootstock Labsと共に「BitVMX FORCE」結成 Bitcoin 2025カンファレンスでデモ実施済 目的は「決済レイヤーとしてのビットコイン」へ進化させること 📍 開発者・ユーザーの参加方法 🛠 AikenでUPLCスマコンを記述 🧵 X（旧Twitter）で @InputOutputHK と @BitVMX をフォロー 🎓 ZK/異議システム/RISC-V系ハッカソンへ参加 👥 TelegramでBitVMXコミュニティに参加 🔮 シナリオ分析（BitVMXの展開予測） シナリオ 状況 確率 S5 Bitcoin DeFi普及、TVL激増、クロスチェーンHub化 25% S4 Cardano連携を中心に一部活用 35% S3 技術的成功も利用者少なく限定的活用 25% S2 導入困難・複雑すぎて停滞 10% S1 実装失敗・セキュリティ事故が頻発 5% ✨ まとめ BitVMXは「Cardano資産 × Bitcoinセキュリティ」の象徴 Cardano DAppのコード資産をビットコインで活用可能に MidnightやBabel Feesの構想と哲学的に接続される流れ ZK技術を活用した持続的セキュリティモデルとしても注目 作成日時：2025-07-23">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 571 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">IOGのBitVMX構想：ビットコインにスマートコントラクトをもたらす未来図</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-07-23T00:00:00Z">July 23, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="-概要iogが描くbitvmxの未来図とは">🧠 概要：IOGが描くBitVMXの未来図とは？</h2>
+<p>2025年7月19日、Input Output（IOG）は、**ビットコイン上でスマートコントラクトを動作させる新アーキテクチャ「BitVMX」**を発表。EthereumやCardanoのような表現力のあるスマートコントラクトが、Bitcoinで実行可能になる画期的構想。</p>
+<hr>
+<h2 id="-bitvmxの技術構造4層の実行スタック">🧩 BitVMXの技術構造：4層の実行スタック</h2>
+<table>
+  <thead>
+      <tr>
+          <th>層</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ハイレベル言語</td>
+          <td>Python, TypeScript, Aiken など</td>
+      </tr>
+      <tr>
+          <td>UPLC</td>
+          <td>Untyped Plutus Core（Cardanoで使用）</td>
+      </tr>
+      <tr>
+          <td>CEKマシン</td>
+          <td>軽量・決定論的な仮想マシン（UPLC実行）</td>
+      </tr>
+      <tr>
+          <td>RISC-V</td>
+          <td>現代的な命令セットアーキテクチャ</td>
+      </tr>
+      <tr>
+          <td>BitVMX</td>
+          <td>RISC-Vトレースを「楽観的検証」するBitcoin上のシステム</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-bitvmxのコア原理異議が出るまで沈黙するビットコイン">🔐 BitVMXのコア原理：「異議が出るまで沈黙するビットコイン」</h2>
+<ul>
+<li>実行はオフチェーン、検証はオンチェーン</li>
+<li>チャレンジゲーム方式によるゼロ知識証明で誤り検出</li>
+<li>不正時は**担保金（デポジット）**が没収される経済的抑止力</li>
+</ul>
+<hr>
+<h2 id="-なぜrisc-vなのかなぜbitvmxなのか">⚙ なぜRISC-Vなのか？なぜBitVMXなのか？</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>理由</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RISC-V</td>
+          <td>オープン・簡潔・豊富な開発ツール</td>
+      </tr>
+      <tr>
+          <td>CEKマシン</td>
+          <td>UPLC解釈に最適で変換容易</td>
+      </tr>
+      <tr>
+          <td>BitVMX</td>
+          <td>Bitcoin本体の変更なしでプログラム可能性を実現</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-bitvmxで可能になる世界">🪐 BitVMXで可能になる世界</h2>
+<table>
+  <thead>
+      <tr>
+          <th>分野</th>
+          <th>解説</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bitcoin DeFi</td>
+          <td>DEX・ステーブルコイン・エスクローなど本格展開</td>
+      </tr>
+      <tr>
+          <td>クロスチェーン</td>
+          <td>Cardano↔Bitcoin 間の安全な資産移動</td>
+      </tr>
+      <tr>
+          <td>ZKセキュリティ基盤</td>
+          <td>ブロックチェーンの肥大化なしに信頼を構築</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-bitvmx-forceiogの多元連携体制">🤝 BitVMX FORCE：IOGの多元連携体制</h2>
+<ul>
+<li><strong>Fairgate Labs</strong>、<strong>Rootstock Labs</strong>と共に「BitVMX FORCE」結成</li>
+<li>Bitcoin 2025カンファレンスでデモ実施済</li>
+<li>目的は「<strong>決済レイヤーとしてのビットコイン</strong>」へ進化させること</li>
+</ul>
+<hr>
+<h2 id="-開発者ユーザーの参加方法">📍 開発者・ユーザーの参加方法</h2>
+<ul>
+<li>🛠 AikenでUPLCスマコンを記述</li>
+<li>🧵 X（旧Twitter）で <code>@InputOutputHK</code> と <code>@BitVMX</code> をフォロー</li>
+<li>🎓 ZK/異議システム/RISC-V系ハッカソンへ参加</li>
+<li>👥 TelegramでBitVMXコミュニティに参加</li>
+</ul>
+<hr>
+<h2 id="-シナリオ分析bitvmxの展開予測">🔮 シナリオ分析（BitVMXの展開予測）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>シナリオ</th>
+          <th>状況</th>
+          <th>確率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S5</td>
+          <td>Bitcoin DeFi普及、TVL激増、クロスチェーンHub化</td>
+          <td>25%</td>
+      </tr>
+      <tr>
+          <td>S4</td>
+          <td>Cardano連携を中心に一部活用</td>
+          <td>35%</td>
+      </tr>
+      <tr>
+          <td>S3</td>
+          <td>技術的成功も利用者少なく限定的活用</td>
+          <td>25%</td>
+      </tr>
+      <tr>
+          <td>S2</td>
+          <td>導入困難・複雑すぎて停滞</td>
+          <td>10%</td>
+      </tr>
+      <tr>
+          <td>S1</td>
+          <td>実装失敗・セキュリティ事故が頻発</td>
+          <td>5%</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-まとめ">✨ まとめ</h2>
+<ul>
+<li>BitVMXは「<strong>Cardano資産 × Bitcoinセキュリティ</strong>」の象徴</li>
+<li>Cardano DAppのコード資産をビットコインで活用可能に</li>
+<li><strong>MidnightやBabel Feesの構想と哲学的に接続</strong>される流れ</li>
+<li>ZK技術を活用した持続的セキュリティモデルとしても注目</li>
+</ul>
+<hr>
+<p>作成日時：2025-07-23</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/bitvmx/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">BitVMX</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/bitcoin/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Bitcoin</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/iog/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">IOG</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">スマートコントラクト</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/zk/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ZK</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/risc-v/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">RISC-V</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/utxo%E9%99%A3%E5%96%B6%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E4%B8%BB%E8%A6%81%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%B8%80%E8%A6%A7%E3%81%A8%E3%81%9D%E3%81%AE%E6%80%9D%E6%83%B3%E7%9A%84%E6%8A%80%E8%A1%93%E7%9A%84%E7%AB%8B%E3%81%A1%E4%BD%8D%E7%BD%AE/">UTxO陣営とは何か？｜主要プロジェクト一覧とその思想的・技術的立ち位置</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/midnight-awesome-dapps-update/">Midnight Awesome dApps リポジトリアップデート</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/ethereum-l1%E3%81%B8%E3%81%AEzk%E7%B5%B1%E5%90%88%E7%99%BA%E8%A1%A8%E3%81%A8cardano-midnight%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%E5%88%86%E6%9E%90/">Ethereum L1へのZK統合発表とCardano/Midnightとの比較シナリオ分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/ethereum_zkevm_vs_midnight_comparison_20250712/">Ethereum_zkEVM_vs_Midnight_Comparison_20250712</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/cardano%E3%81%8C%E3%83%9E%E3%83%AB%E3%83%81%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E6%88%A6%E7%95%A5%E3%81%B8%E7%A7%BB%E8%A1%8Crare-evo%E3%81%A7%E3%81%AE%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E7%99%BA%E8%A1%A8%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3%E6%9E%90/">Cardanoがマルチチェーン戦略へ移行｜Rare Evoでのホスキンソン発表を徹底解析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/%E7%B1%B3%E4%B8%8B%E9%99%A2%E4%BB%AE%E6%83%B3%E9%80%9A%E8%B2%A8%E8%A6%8F%E5%88%B6%E3%81%AB%E6%AD%B4%E5%8F%B2%E7%9A%84%E9%80%B2%E5%B1%953%E6%B3%95%E6%A1%88%E5%8F%AF%E6%B1%BAgeniusclarity%E5%8F%8Dcbdc/">米下院、仮想通貨規制に歴史的進展｜3法案可決（GENIUS・CLARITY・反CBDC）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/whale%E5%8B%95%E7%94%BB%E8%A7%A3%E8%AA%AC%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AB%E3%82%BA%E3%83%9B%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BD%E3%83%B3%E3%81%8C%E8%AA%9E%E3%82%8B%E5%88%86%E6%95%A3%E5%9E%8B%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E8%A9%A6%E7%B7%B4%E3%81%A8%E6%88%90%E7%86%9F/">Whale動画解説：チャールズ・ホスキンソンが語る分散型ガバナンスの試練と成熟</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch571/cardanokit%E3%81%A8apple-pay%E9%80%A3%E6%90%BA%E3%81%AE%E7%9C%9F%E5%81%BD%E3%82%92%E6%A4%9C%E8%A8%BC%E3%81%99%E3%82%8B/">CardanoKitとApple Pay連携の真偽を検証する</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E3%81%AB%E8%A8%BC%E6%98%8E%E5%8F%AF%E8%83%BD%E3%81%AA%E5%AE%89%E5%85%A8%E6%80%A7%E3%82%92%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E%E3%81%AB%E8%A8%AA%E3%82%8C%E3%81%9F%E8%87%AA%E5%8B%95%E6%A4%9C%E8%A8%BC%E9%9D%A9%E5%91%BD/">「スマートコントラクトに証明可能な安全性を──カルダノに訪れた自動検証革命」</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3og%E3%82%AF%E3%82%B8%E3%83%A9%E3%81%AE%E5%A3%B2%E5%8D%B4%E5%B8%82%E5%A0%B4%E6%88%90%E7%86%9F%E3%82%92%E8%A9%A6%E3%81%996%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%E5%88%86%E6%9E%90/">ビットコインOGクジラの売却──市場成熟を試す6シナリオ分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch570/bitcoin_quantum_bip_proposal_analysis-1/">ビットコイン開発者、量子コンピューター脅威に対する段階的な暗号移行を提案</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/btc_whale_trend_2025_midnight_corrected/">2025年のBTCクジラの動きとその背景・Midnightへの展望</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/charles-hoskinson%E3%81%AFbitcoin%E3%82%92%E8%A6%8B%E9%99%90%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%8B/">Charles HoskinsonはBitcoinを見限ったのか？</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/ada_vs_midnight_fee_structure/">ada_vs_midnight_fee_structure</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/ctrlwallet_emurgo_analysis/">ctrlwallet_emurgo_analysis</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

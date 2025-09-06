@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577） | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="
+要旨
+Glacier Drop（2025-08-05〜10-04）のチェーン別配分差・請求複雑度（ウォレット互換性/アドレス要件/署名経路）を係数化し、8チェーン合計 ≈1.4B NIGHT（8/20時点の推定）に整合する形で現在の請求量・率を推計。期末（10/4）時点の最終請求率をシナリオ別に見通し、未請求は主にScavenger Mineへ移行すると評価。出典はMidnight公式の配分・互換性・手順・トークノミクス文書および公開済の初週進捗アナウンス等。
+
+1. 事実関係（公式に確認できる点）
+
+請求期間：2025-08-05〜2025-10-04（60日）
+配分と換算レート（例）
+
+配分：ADA 50%（12B）、BTC 20%（4.8B）、XRP 10.9%（2.623B）、ETH 9.6%（2.305B）、SOL 6.0%（1.429B）、BNB 3.3%（0.796B）、AVAX 0.18%（0.043B）、BAT 0.013%（0.03B）
+換算例：1 ADA=0.3466、1 BTC=696.9785、1 ETH=50.7321、1 SOL=2.9809、1 BNB=12.1748、1 XRP=0.04173、1 AVAX=0.4070、1 BAT=0.002589
+
+
+互換性（つまずき要因）
+
+ADA：CIP-30ネイティブ接続（Lace/Yoroi等）、同一ステークキー配下は自動合算、LedgerはLace/Yoroi経由、Trezor未対応
+BTC：アドレス単位で請求、P2SH不可、Taprootは拡張中
+EVM（ETH/BNB/AVAX/BAT）：EOAのみ（コントラクト口座不可）、AVAXはC-Chain限定、BATはETH上EOA
+SOL：PDA不可
+XRP：Xaman（旧Xumm）必須、クラシック形式のみ
+
+
+Thaw/Redeem：請求後は360日で25%×4回解凍、都度Redeem（少額ADA手数料）。最終解凍後**&#43;90日**の猶予
+初週の公表進捗：開始後1週で24B中 &gt;1B（≒4%超）請求済。外部集計の目安では8/13時点で約4.2%・約5.1万ウォレット
+
+
+出典：末尾「参考資料（公式/報道）」参照。
+
+2. 推定モデル（方法の透明性）
+目的：チェーン配分差と請求“摩擦”の違いを織り込み、8/20時点の請求量/率と締切時の取り切り率を推定。
+
+ステップA：チェーンごとの請求しやすさ指数（0〜1）
+
+指標：対応ウォレットの普及、署名/接続の摩擦、アドレス種別要件、手動経路の必要性、コミュニティ内の情報浸透度
+
+
+ステップB：8/20総請求量を1.3〜1.5B帯の中央値=1.4Bと仮置き（初週&gt;1Bに整合）
+ステップC：指数×配分量で現在の按分を推計
+ステップD：10/4時点の最終請求率をチェーン別に設定（後半の互換性改善/広報波及を見込む）
+
+
+注：本稿は推定であり、公式ダッシュボード等が出次第、差し替え前提。
+
+3. チェーン別の現在推定値と期末見通し（8/20基準）
+
+表1｜配分・現在推定・期末見通し（単位：NIGHT）
+
+  
+      
+          チェーン
+          配分
+          配分比
+          現在推定 請求量
+          現在推定 請求率
+          期末推定 請求率
+          期末推定 請求量
+          期末推定 未請求（→Scavenger）
+      
+  
+  
+      
+          ADA
+          12,000,000,000
+          49.95%
+          1,015,929,000
+          8.47%
+          62%
+          7,440,000,000
+          4,560,000,000
+      
+      
+          BTC
+          4,800,000,000
+          19.98%
+          148,162,000
+          3.09%
+          38%
+          1,824,000,000
+          2,976,000,000
+      
+      
+          XRP
+          2,623,000,000
+          10.92%
+          58,721,000
+          2.24%
+          32%
+          839,360,000
+          1,783,640,000
+      
+      
+          ETH
+          2,305,000,000
+          9.59%
+          76,764,000
+          3.33%
+          40%
+          922,000,000
+          1,383,000,000
+      
+      
+          SOL
+          1,429,000,000
+          5.95%
+          74,029,000
+          5.18%
+          48%
+          685,920,000
+          743,080,000
+      
+      
+          BNB
+          796,000,000
+          3.31%
+          24,300,000
+          3.05%
+          35%
+          278,600,000
+          517,400,000
+      
+      
+          AVAX
+          43,000,000
+          0.18%
+          1,448,000
+          3.37%
+          25%
+          10,750,000
+          32,250,000
+      
+      
+          BAT
+          30,000,000
+          0.12%
+          648,000
+          2.16%
+          18%
+          5,400,000
+          24,600,000
+      
+      
+          合計
+          24,026,000,000
+          100%
+          ≈1,400,000,000
+          ≈5.8%
+          ≈50%
+          ≈12,006,030,000
+          ≈12,019,970,000
+      
+  
+
+読み方：">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch577/glacier-drop-claim-estimates-epoch577/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch577/glacier-drop-claim-estimates-epoch577/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577）">
+  <meta property="og:description" content="要旨
+Glacier Drop（2025-08-05〜10-04）のチェーン別配分差・請求複雑度（ウォレット互換性/アドレス要件/署名経路）を係数化し、8チェーン合計 ≈1.4B NIGHT（8/20時点の推定）に整合する形で現在の請求量・率を推計。期末（10/4）時点の最終請求率をシナリオ別に見通し、未請求は主にScavenger Mineへ移行すると評価。出典はMidnight公式の配分・互換性・手順・トークノミクス文書および公開済の初週進捗アナウンス等。
+1. 事実関係（公式に確認できる点） 請求期間：2025-08-05〜2025-10-04（60日） 配分と換算レート（例） 配分：ADA 50%（12B）、BTC 20%（4.8B）、XRP 10.9%（2.623B）、ETH 9.6%（2.305B）、SOL 6.0%（1.429B）、BNB 3.3%（0.796B）、AVAX 0.18%（0.043B）、BAT 0.013%（0.03B） 換算例：1 ADA=0.3466、1 BTC=696.9785、1 ETH=50.7321、1 SOL=2.9809、1 BNB=12.1748、1 XRP=0.04173、1 AVAX=0.4070、1 BAT=0.002589 互換性（つまずき要因） ADA：CIP-30ネイティブ接続（Lace/Yoroi等）、同一ステークキー配下は自動合算、LedgerはLace/Yoroi経由、Trezor未対応 BTC：アドレス単位で請求、P2SH不可、Taprootは拡張中 EVM（ETH/BNB/AVAX/BAT）：EOAのみ（コントラクト口座不可）、AVAXはC-Chain限定、BATはETH上EOA SOL：PDA不可 XRP：Xaman（旧Xumm）必須、クラシック形式のみ Thaw/Redeem：請求後は360日で25%×4回解凍、都度Redeem（少額ADA手数料）。最終解凍後**&#43;90日**の猶予 初週の公表進捗：開始後1週で24B中 &gt;1B（≒4%超）請求済。外部集計の目安では8/13時点で約4.2%・約5.1万ウォレット 出典：末尾「参考資料（公式/報道）」参照。
+2. 推定モデル（方法の透明性） 目的：チェーン配分差と請求“摩擦”の違いを織り込み、8/20時点の請求量/率と締切時の取り切り率を推定。
+ステップA：チェーンごとの請求しやすさ指数（0〜1） 指標：対応ウォレットの普及、署名/接続の摩擦、アドレス種別要件、手動経路の必要性、コミュニティ内の情報浸透度 ステップB：8/20総請求量を1.3〜1.5B帯の中央値=1.4Bと仮置き（初週&gt;1Bに整合） ステップC：指数×配分量で現在の按分を推計 ステップD：10/4時点の最終請求率をチェーン別に設定（後半の互換性改善/広報波及を見込む） 注：本稿は推定であり、公式ダッシュボード等が出次第、差し替え前提。
+3. チェーン別の現在推定値と期末見通し（8/20基準） 表1｜配分・現在推定・期末見通し（単位：NIGHT）
+チェーン 配分 配分比 現在推定 請求量 現在推定 請求率 期末推定 請求率 期末推定 請求量 期末推定 未請求（→Scavenger） ADA 12,000,000,000 49.95% 1,015,929,000 8.47% 62% 7,440,000,000 4,560,000,000 BTC 4,800,000,000 19.98% 148,162,000 3.09% 38% 1,824,000,000 2,976,000,000 XRP 2,623,000,000 10.92% 58,721,000 2.24% 32% 839,360,000 1,783,640,000 ETH 2,305,000,000 9.59% 76,764,000 3.33% 40% 922,000,000 1,383,000,000 SOL 1,429,000,000 5.95% 74,029,000 5.18% 48% 685,920,000 743,080,000 BNB 796,000,000 3.31% 24,300,000 3.05% 35% 278,600,000 517,400,000 AVAX 43,000,000 0.18% 1,448,000 3.37% 25% 10,750,000 32,250,000 BAT 30,000,000 0.12% 648,000 2.16% 18% 5,400,000 24,600,000 合計 24,026,000,000 100% ≈1,400,000,000 ≈5.8% ≈50% ≈12,006,030,000 ≈12,019,970,000 読み方：">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-20T12:58:47+09:00">
+    <meta property="article:modified_time" content="2025-08-20T12:58:47+09:00">
+    <meta property="article:tag" content="Cardano">
+    <meta property="article:tag" content="Midnight">
+    <meta property="article:tag" content="NIGHT">
+    <meta property="article:tag" content="Glacier Drop">
+    <meta property="article:tag" content="Tokenomics">
+    <meta property="article:tag" content="DRep">
+
+  <meta itemprop="name" content="Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577）">
+  <meta itemprop="description" content="要旨
+Glacier Drop（2025-08-05〜10-04）のチェーン別配分差・請求複雑度（ウォレット互換性/アドレス要件/署名経路）を係数化し、8チェーン合計 ≈1.4B NIGHT（8/20時点の推定）に整合する形で現在の請求量・率を推計。期末（10/4）時点の最終請求率をシナリオ別に見通し、未請求は主にScavenger Mineへ移行すると評価。出典はMidnight公式の配分・互換性・手順・トークノミクス文書および公開済の初週進捗アナウンス等。
+1. 事実関係（公式に確認できる点） 請求期間：2025-08-05〜2025-10-04（60日） 配分と換算レート（例） 配分：ADA 50%（12B）、BTC 20%（4.8B）、XRP 10.9%（2.623B）、ETH 9.6%（2.305B）、SOL 6.0%（1.429B）、BNB 3.3%（0.796B）、AVAX 0.18%（0.043B）、BAT 0.013%（0.03B） 換算例：1 ADA=0.3466、1 BTC=696.9785、1 ETH=50.7321、1 SOL=2.9809、1 BNB=12.1748、1 XRP=0.04173、1 AVAX=0.4070、1 BAT=0.002589 互換性（つまずき要因） ADA：CIP-30ネイティブ接続（Lace/Yoroi等）、同一ステークキー配下は自動合算、LedgerはLace/Yoroi経由、Trezor未対応 BTC：アドレス単位で請求、P2SH不可、Taprootは拡張中 EVM（ETH/BNB/AVAX/BAT）：EOAのみ（コントラクト口座不可）、AVAXはC-Chain限定、BATはETH上EOA SOL：PDA不可 XRP：Xaman（旧Xumm）必須、クラシック形式のみ Thaw/Redeem：請求後は360日で25%×4回解凍、都度Redeem（少額ADA手数料）。最終解凍後**&#43;90日**の猶予 初週の公表進捗：開始後1週で24B中 &gt;1B（≒4%超）請求済。外部集計の目安では8/13時点で約4.2%・約5.1万ウォレット 出典：末尾「参考資料（公式/報道）」参照。
+2. 推定モデル（方法の透明性） 目的：チェーン配分差と請求“摩擦”の違いを織り込み、8/20時点の請求量/率と締切時の取り切り率を推定。
+ステップA：チェーンごとの請求しやすさ指数（0〜1） 指標：対応ウォレットの普及、署名/接続の摩擦、アドレス種別要件、手動経路の必要性、コミュニティ内の情報浸透度 ステップB：8/20総請求量を1.3〜1.5B帯の中央値=1.4Bと仮置き（初週&gt;1Bに整合） ステップC：指数×配分量で現在の按分を推計 ステップD：10/4時点の最終請求率をチェーン別に設定（後半の互換性改善/広報波及を見込む） 注：本稿は推定であり、公式ダッシュボード等が出次第、差し替え前提。
+3. チェーン別の現在推定値と期末見通し（8/20基準） 表1｜配分・現在推定・期末見通し（単位：NIGHT）
+チェーン 配分 配分比 現在推定 請求量 現在推定 請求率 期末推定 請求率 期末推定 請求量 期末推定 未請求（→Scavenger） ADA 12,000,000,000 49.95% 1,015,929,000 8.47% 62% 7,440,000,000 4,560,000,000 BTC 4,800,000,000 19.98% 148,162,000 3.09% 38% 1,824,000,000 2,976,000,000 XRP 2,623,000,000 10.92% 58,721,000 2.24% 32% 839,360,000 1,783,640,000 ETH 2,305,000,000 9.59% 76,764,000 3.33% 40% 922,000,000 1,383,000,000 SOL 1,429,000,000 5.95% 74,029,000 5.18% 48% 685,920,000 743,080,000 BNB 796,000,000 3.31% 24,300,000 3.05% 35% 278,600,000 517,400,000 AVAX 43,000,000 0.18% 1,448,000 3.37% 25% 10,750,000 32,250,000 BAT 30,000,000 0.12% 648,000 2.16% 18% 5,400,000 24,600,000 合計 24,026,000,000 100% ≈1,400,000,000 ≈5.8% ≈50% ≈12,006,030,000 ≈12,019,970,000 読み方：">
+  <meta itemprop="datePublished" content="2025-08-20T12:58:47+09:00">
+  <meta itemprop="dateModified" content="2025-08-20T12:58:47+09:00">
+  <meta itemprop="wordCount" content="333">
+  <meta itemprop="keywords" content="Cardano,Midnight,NIGHT,Glacier Drop,Tokenomics,DRep,分析,シナリオ">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577）">
+  <meta name="twitter:description" content="要旨
+Glacier Drop（2025-08-05〜10-04）のチェーン別配分差・請求複雑度（ウォレット互換性/アドレス要件/署名経路）を係数化し、8チェーン合計 ≈1.4B NIGHT（8/20時点の推定）に整合する形で現在の請求量・率を推計。期末（10/4）時点の最終請求率をシナリオ別に見通し、未請求は主にScavenger Mineへ移行すると評価。出典はMidnight公式の配分・互換性・手順・トークノミクス文書および公開済の初週進捗アナウンス等。
+1. 事実関係（公式に確認できる点） 請求期間：2025-08-05〜2025-10-04（60日） 配分と換算レート（例） 配分：ADA 50%（12B）、BTC 20%（4.8B）、XRP 10.9%（2.623B）、ETH 9.6%（2.305B）、SOL 6.0%（1.429B）、BNB 3.3%（0.796B）、AVAX 0.18%（0.043B）、BAT 0.013%（0.03B） 換算例：1 ADA=0.3466、1 BTC=696.9785、1 ETH=50.7321、1 SOL=2.9809、1 BNB=12.1748、1 XRP=0.04173、1 AVAX=0.4070、1 BAT=0.002589 互換性（つまずき要因） ADA：CIP-30ネイティブ接続（Lace/Yoroi等）、同一ステークキー配下は自動合算、LedgerはLace/Yoroi経由、Trezor未対応 BTC：アドレス単位で請求、P2SH不可、Taprootは拡張中 EVM（ETH/BNB/AVAX/BAT）：EOAのみ（コントラクト口座不可）、AVAXはC-Chain限定、BATはETH上EOA SOL：PDA不可 XRP：Xaman（旧Xumm）必須、クラシック形式のみ Thaw/Redeem：請求後は360日で25%×4回解凍、都度Redeem（少額ADA手数料）。最終解凍後**&#43;90日**の猶予 初週の公表進捗：開始後1週で24B中 &gt;1B（≒4%超）請求済。外部集計の目安では8/13時点で約4.2%・約5.1万ウォレット 出典：末尾「参考資料（公式/報道）」参照。
+2. 推定モデル（方法の透明性） 目的：チェーン配分差と請求“摩擦”の違いを織り込み、8/20時点の請求量/率と締切時の取り切り率を推定。
+ステップA：チェーンごとの請求しやすさ指数（0〜1） 指標：対応ウォレットの普及、署名/接続の摩擦、アドレス種別要件、手動経路の必要性、コミュニティ内の情報浸透度 ステップB：8/20総請求量を1.3〜1.5B帯の中央値=1.4Bと仮置き（初週&gt;1Bに整合） ステップC：指数×配分量で現在の按分を推計 ステップD：10/4時点の最終請求率をチェーン別に設定（後半の互換性改善/広報波及を見込む） 注：本稿は推定であり、公式ダッシュボード等が出次第、差し替え前提。
+3. チェーン別の現在推定値と期末見通し（8/20基準） 表1｜配分・現在推定・期末見通し（単位：NIGHT）
+チェーン 配分 配分比 現在推定 請求量 現在推定 請求率 期末推定 請求率 期末推定 請求量 期末推定 未請求（→Scavenger） ADA 12,000,000,000 49.95% 1,015,929,000 8.47% 62% 7,440,000,000 4,560,000,000 BTC 4,800,000,000 19.98% 148,162,000 3.09% 38% 1,824,000,000 2,976,000,000 XRP 2,623,000,000 10.92% 58,721,000 2.24% 32% 839,360,000 1,783,640,000 ETH 2,305,000,000 9.59% 76,764,000 3.33% 40% 922,000,000 1,383,000,000 SOL 1,429,000,000 5.95% 74,029,000 5.18% 48% 685,920,000 743,080,000 BNB 796,000,000 3.31% 24,300,000 3.05% 35% 278,600,000 517,400,000 AVAX 43,000,000 0.18% 1,448,000 3.37% 25% 10,750,000 32,250,000 BAT 30,000,000 0.12% 648,000 2.16% 18% 5,400,000 24,600,000 合計 24,026,000,000 100% ≈1,400,000,000 ≈5.8% ≈50% ≈12,006,030,000 ≈12,019,970,000 読み方：">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 577 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Midnight Glacier Drop：チェーン別請求率の推定とプロセス見通し（Epoch 577）</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-08-20T12:58:47+09:00">August 20, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><blockquote>
+<p><strong>要旨</strong><br>
+Glacier Drop（2025-08-05〜10-04）のチェーン別配分差・請求複雑度（ウォレット互換性/アドレス要件/署名経路）を係数化し、<strong>8チェーン合計 ≈1.4B NIGHT</strong>（8/20時点の推定）に整合する形で<strong>現在の請求量・率</strong>を推計。期末（10/4）時点の<strong>最終請求率</strong>をシナリオ別に見通し、<strong>未請求は主にScavenger Mineへ</strong>移行すると評価。出典は<strong>Midnight公式の配分・互換性・手順・トークノミクス文書</strong>および公開済の初週進捗アナウンス等。</p></blockquote>
+<hr>
+<h2 id="1-事実関係公式に確認できる点">1. 事実関係（公式に確認できる点）</h2>
+<ul>
+<li><strong>請求期間</strong>：2025-08-05〜2025-10-04（60日）</li>
+<li><strong>配分と換算レート（例）</strong>
+<ul>
+<li>配分：ADA 50%（12B）、BTC 20%（4.8B）、XRP 10.9%（2.623B）、ETH 9.6%（2.305B）、SOL 6.0%（1.429B）、BNB 3.3%（0.796B）、AVAX 0.18%（0.043B）、BAT 0.013%（0.03B）</li>
+<li>換算例：1 ADA=0.3466、1 BTC=696.9785、1 ETH=50.7321、1 SOL=2.9809、1 BNB=12.1748、1 XRP=0.04173、1 AVAX=0.4070、1 BAT=0.002589</li>
+</ul>
+</li>
+<li><strong>互換性（つまずき要因）</strong>
+<ul>
+<li>ADA：CIP-30ネイティブ接続（Lace/Yoroi等）、同一ステークキー配下は自動合算、LedgerはLace/Yoroi経由、Trezor未対応</li>
+<li>BTC：<strong>アドレス単位で請求</strong>、P2SH不可、Taprootは拡張中</li>
+<li>EVM（ETH/BNB/AVAX/BAT）：<strong>EOAのみ</strong>（コントラクト口座不可）、AVAXは<strong>C-Chain限定</strong>、BATはETH上EOA</li>
+<li>SOL：PDA不可</li>
+<li>XRP：<strong>Xaman（旧Xumm）必須</strong>、クラシック形式のみ</li>
+</ul>
+</li>
+<li><strong>Thaw/Redeem</strong>：請求後は<strong>360日で25%×4回解凍</strong>、都度Redeem（少額ADA手数料）。最終解凍後**+90日**の猶予</li>
+<li><strong>初週の公表進捗</strong>：開始後1週で<strong>24B中 &gt;1B（≒4%超）請求済</strong>。外部集計の目安では8/13時点で<strong>約4.2%・約5.1万ウォレット</strong></li>
+</ul>
+<blockquote>
+<p>出典：末尾「参考資料（公式/報道）」参照。</p></blockquote>
+<hr>
+<h2 id="2-推定モデル方法の透明性">2. 推定モデル（方法の透明性）</h2>
+<p><strong>目的</strong>：チェーン配分差と請求“摩擦”の違いを織り込み、<strong>8/20時点の請求量/率</strong>と<strong>締切時の取り切り率</strong>を推定。</p>
+<ul>
+<li><strong>ステップA</strong>：チェーンごとの<strong>請求しやすさ指数</strong>（0〜1）
+<ul>
+<li>指標：対応ウォレットの普及、署名/接続の摩擦、アドレス種別要件、手動経路の必要性、コミュニティ内の情報浸透度</li>
+</ul>
+</li>
+<li><strong>ステップB</strong>：8/20総請求量を<strong>1.3〜1.5B帯の中央値=1.4B</strong>と仮置き（初週&gt;1Bに整合）</li>
+<li><strong>ステップC</strong>：指数×配分量で<strong>現在の按分</strong>を推計</li>
+<li><strong>ステップD</strong>：10/4時点の<strong>最終請求率</strong>をチェーン別に設定（後半の互換性改善/広報波及を見込む）</li>
+</ul>
+<blockquote>
+<p>注：本稿は<strong>推定</strong>であり、公式ダッシュボード等が出次第、差し替え前提。</p></blockquote>
+<hr>
+<h2 id="3-チェーン別の現在推定値と期末見通し820基準">3. チェーン別の現在推定値と期末見通し（8/20基準）</h2>
+<blockquote>
+<p><strong>表1｜配分・現在推定・期末見通し</strong>（単位：NIGHT）</p></blockquote>
+<table>
+  <thead>
+      <tr>
+          <th>チェーン</th>
+          <th style="text-align: right">配分</th>
+          <th style="text-align: right">配分比</th>
+          <th style="text-align: right"><strong>現在推定 請求量</strong></th>
+          <th style="text-align: right"><strong>現在推定 請求率</strong></th>
+          <th style="text-align: right"><strong>期末推定 請求率</strong></th>
+          <th style="text-align: right"><strong>期末推定 請求量</strong></th>
+          <th style="text-align: right">期末推定 未請求（→Scavenger）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ADA</td>
+          <td style="text-align: right">12,000,000,000</td>
+          <td style="text-align: right">49.95%</td>
+          <td style="text-align: right"><strong>1,015,929,000</strong></td>
+          <td style="text-align: right">8.47%</td>
+          <td style="text-align: right"><strong>62%</strong></td>
+          <td style="text-align: right"><strong>7,440,000,000</strong></td>
+          <td style="text-align: right">4,560,000,000</td>
+      </tr>
+      <tr>
+          <td>BTC</td>
+          <td style="text-align: right">4,800,000,000</td>
+          <td style="text-align: right">19.98%</td>
+          <td style="text-align: right">148,162,000</td>
+          <td style="text-align: right">3.09%</td>
+          <td style="text-align: right">38%</td>
+          <td style="text-align: right">1,824,000,000</td>
+          <td style="text-align: right">2,976,000,000</td>
+      </tr>
+      <tr>
+          <td>XRP</td>
+          <td style="text-align: right">2,623,000,000</td>
+          <td style="text-align: right">10.92%</td>
+          <td style="text-align: right">58,721,000</td>
+          <td style="text-align: right">2.24%</td>
+          <td style="text-align: right">32%</td>
+          <td style="text-align: right">839,360,000</td>
+          <td style="text-align: right">1,783,640,000</td>
+      </tr>
+      <tr>
+          <td>ETH</td>
+          <td style="text-align: right">2,305,000,000</td>
+          <td style="text-align: right">9.59%</td>
+          <td style="text-align: right">76,764,000</td>
+          <td style="text-align: right">3.33%</td>
+          <td style="text-align: right">40%</td>
+          <td style="text-align: right">922,000,000</td>
+          <td style="text-align: right">1,383,000,000</td>
+      </tr>
+      <tr>
+          <td>SOL</td>
+          <td style="text-align: right">1,429,000,000</td>
+          <td style="text-align: right">5.95%</td>
+          <td style="text-align: right">74,029,000</td>
+          <td style="text-align: right">5.18%</td>
+          <td style="text-align: right">48%</td>
+          <td style="text-align: right">685,920,000</td>
+          <td style="text-align: right">743,080,000</td>
+      </tr>
+      <tr>
+          <td>BNB</td>
+          <td style="text-align: right">796,000,000</td>
+          <td style="text-align: right">3.31%</td>
+          <td style="text-align: right">24,300,000</td>
+          <td style="text-align: right">3.05%</td>
+          <td style="text-align: right">35%</td>
+          <td style="text-align: right">278,600,000</td>
+          <td style="text-align: right">517,400,000</td>
+      </tr>
+      <tr>
+          <td>AVAX</td>
+          <td style="text-align: right">43,000,000</td>
+          <td style="text-align: right">0.18%</td>
+          <td style="text-align: right">1,448,000</td>
+          <td style="text-align: right">3.37%</td>
+          <td style="text-align: right">25%</td>
+          <td style="text-align: right">10,750,000</td>
+          <td style="text-align: right">32,250,000</td>
+      </tr>
+      <tr>
+          <td>BAT</td>
+          <td style="text-align: right">30,000,000</td>
+          <td style="text-align: right">0.12%</td>
+          <td style="text-align: right">648,000</td>
+          <td style="text-align: right">2.16%</td>
+          <td style="text-align: right">18%</td>
+          <td style="text-align: right">5,400,000</td>
+          <td style="text-align: right">24,600,000</td>
+      </tr>
+      <tr>
+          <td><strong>合計</strong></td>
+          <td style="text-align: right"><strong>24,026,000,000</strong></td>
+          <td style="text-align: right">100%</td>
+          <td style="text-align: right"><strong>≈1,400,000,000</strong></td>
+          <td style="text-align: right"><strong>≈5.8%</strong></td>
+          <td style="text-align: right"><strong>≈50%</strong></td>
+          <td style="text-align: right"><strong>≈12,006,030,000</strong></td>
+          <td style="text-align: right"><strong>≈12,019,970,000</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>読み方</strong>：</p>
+<ul>
+<li>8/20時点の総請求量を**≈1.4B**と仮置きしてチェーン別に按分。</li>
+<li>10/4時点では**全体の約50%**が取り切られ、<strong>残り約50%がScavenger Mineへ</strong>移行すると推定。</li>
+<li><strong>ADAは請求摩擦が最小</strong>で早期進捗が大きく、<strong>BTC/XRP/EVM</strong>は互換性/口座種別の制約で相対的に遅行。</li>
+</ul>
+<hr>
+<h2 id="4-請求しやすさの差要点整理">4. “請求しやすさ”の差：要点整理</h2>
+<ul>
+<li><strong>ADA</strong>：CIP-30直結、<strong>ステークキー配下は自動合算</strong>、LedgerはLace/Yoroi経由で可 → <strong>最も摩擦が低い</strong></li>
+<li><strong>BTC</strong>：<strong>アドレスごとに請求</strong>、P2SH不可、Taprootは検証拡張中 → <strong>摩擦が高い</strong></li>
+<li><strong>EVM（ETH/BNB/AVAX/BAT）</strong>：<strong>EOA限定</strong>・AVAXは<strong>C-Chainのみ</strong> → コントラクト口座利用者は再配置が必要</li>
+<li><strong>SOL</strong>：PDA不可、Phantom/Solflare等で比較的スムーズ</li>
+<li><strong>XRP</strong>：<strong>Xaman必須</strong>・クラシック形式のみ → ウォレット要件が強め</li>
+</ul>
+<hr>
+<h2 id="5-今後のプロセス見通し820104以降">5. 今後のプロセス見通し（8/20→10/4→以降）</h2>
+<ol>
+<li><strong>8/20〜9月上旬</strong>：Ledger/XRP/Taproot等の<strong>ガイド整備・互換性更新</strong>で第2波の請求増。</li>
+<li><strong>9月全般</strong>：遅行チェーン（BTC・XRP・一部EVM）が<strong>追随</strong>、コミュニティ周知の進展。</li>
+<li><strong>10/4（UTC）</strong>：<strong>請求締切</strong>。<strong>未請求はScavenger Mineへ</strong>（設計上の多段階配分に沿う）。</li>
+<li><strong>請求後〜360日</strong>：<strong>Thaw（25%×4回）<strong>で段階解凍、都度</strong>Redeem</strong>（少額ADA必要）。さらに**+90日**猶予。</li>
+<li><strong>Lost-and-Found</strong>：長期未請求や誤配の回収枠。</li>
+</ol>
+<hr>
+<h2 id="6-5シナリオ分析良悪確率推定">6. 5シナリオ分析（良→悪、確率推定）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>ランク</th>
+          <th>概要</th>
+          <th style="text-align: right">期末総請求率（全体）</th>
+          <th>主因</th>
+          <th style="text-align: right">概算確率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>S5 最良</strong></td>
+          <td>Ledger/XRP/Taproot等の対応が早期完了、広報浸透で最大回収</td>
+          <td style="text-align: right"><strong>70%</strong></td>
+          <td>互換性改善×波及最大化</td>
+          <td style="text-align: right">20%</td>
+      </tr>
+      <tr>
+          <td><strong>S4 良好</strong></td>
+          <td>互換性改善は順調、後半の駆け込みで底上げ</td>
+          <td style="text-align: right"><strong>60%</strong></td>
+          <td>後半追い上げ</td>
+          <td style="text-align: right">30%</td>
+      </tr>
+      <tr>
+          <td><strong>S3 中央</strong></td>
+          <td><strong>本稿ベースライン（約50%）</strong></td>
+          <td style="text-align: right"><strong>50%</strong></td>
+          <td>改善は進むが保守的</td>
+          <td style="text-align: right">30%</td>
+      </tr>
+      <tr>
+          <td><strong>S2 弱め</strong></td>
+          <td>BTC/XRPの摩擦残存、偽サイト懸念で慎重姿勢</td>
+          <td style="text-align: right"><strong>40%</strong></td>
+          <td>署名/接続の躓き</td>
+          <td style="text-align: right">15%</td>
+      </tr>
+      <tr>
+          <td><strong>S1 最悪</strong></td>
+          <td>技術/運用の遅延や詐欺被害顕在化</td>
+          <td style="text-align: right"><strong>30%</strong></td>
+          <td>リスク顕在化</td>
+          <td style="text-align: right">5%</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>チェーン別レンジ例</strong></p>
+<ul>
+<li><strong>S5</strong>：ADA 75 / SOL 65 / ETH 60 / BTC 55 / XRP 45 / BNB 50 / AVAX 35 / BAT 30 (%)</li>
+<li><strong>S1</strong>：ADA 45 / SOL 30 / ETH 25 / BTC 20 / XRP 18 / BNB 20 / AVAX 12 / BAT 10 (%)</li>
+</ul>
+<hr>
+<h2 id="7-cgta所感">7. CGTA所感</h2>
+<ul>
+<li><strong>短期</strong>：<strong>公式リンクのみ周知</strong>（偽サイト回避）と<strong>遅行チェーン支援</strong>（XRPのXaman必須、BTCのアドレス単位請求、EVMのEOA限定）を重点的に案内すると実需が伸びる。</li>
+<li><strong>中期</strong>：<strong>未請求分がScavengerへ</strong>回る設計は、初期配布の分散性とオンボーディングの再活性化に資する。</li>
+<li><strong>長期</strong>：<strong>DUST生成×段階解凍</strong>が売り圧平準化と利用誘因を両立。Midnight利用の広がりがNIGHT/DUST経済圏の厚みにつながる。</li>
+</ul>
+<hr>
+<h2 id="8-リスクとバイアス">8. リスクとバイアス</h2>
+<ul>
+<li><strong>データ制約</strong>：チェーン別請求“実数”は未公開。本稿は<strong>方法を明示した推定</strong>であり、公式統計の公開に合わせて更新が必要。</li>
+<li><strong>互換性の動的変化</strong>：Taprootやウォレット対応は<strong>更新で摩擦が変動</strong>しうる。</li>
+<li><strong>偽サイト/詐欺</strong>：アクセス急増期に増える傾向。<strong>midnight.gd/claim</strong>以外のリンクは利用しない。</li>
+</ul>
+<hr>
+<h2 id="9-参考資料公式報道">9. 参考資料（公式/報道）</h2>
+<p><strong>公式（Midnight）</strong></p>
+<ul>
+<li>Claim Portal：<a href="https://claim.midnight.gd">https://claim.midnight.gd</a></li>
+<li>How to get NIGHT：<a href="https://midnight.gd/how-to-get-night">https://midnight.gd/how-to-get-night</a></li>
+<li>How to make a Glacier Drop claim：<a href="https://midnight.gd/news/how-to-make-a-glacier-drop-claim">https://midnight.gd/news/how-to-make-a-glacier-drop-claim</a></li>
+<li>Glacier Drop wallets &amp; address compatibility：<a href="https://midnight.gd/news/glacier-drop-wallets-and-address-type-compatibility">https://midnight.gd/news/glacier-drop-wallets-and-address-type-compatibility</a></li>
+<li>Breaking down Glacier Drop ecosystem allocations（配分・換算）：<a href="https://midnight.gd/news/glacier-drop-ecosystem-allocations">https://midnight.gd/news/glacier-drop-ecosystem-allocations</a></li>
+<li>Getting ready for Glacier Drop（スナップショット時刻/ブロック高）：<a href="https://midnight.gd/news/getting-ready-for-glacier-drop">https://midnight.gd/news/getting-ready-for-glacier-drop</a></li>
+<li>Tokenomics &amp; Incentives Whitepaper（PDF）：<a href="https://midnight.gd/">https://midnight.gd/</a>（資料ページ内）</li>
+</ul>
+<p><strong>報道/コミュニティ</strong></p>
+<ul>
+<li>初週進捗（&gt;1B/24B）の公式アナウンス：Midnight公式X・ブログ（2025-08-13頃）</li>
+<li>集計例（8/13時点 4.21%、約51,266ウォレット）：BeInCrypto ほか</li>
+</ul>
+<hr>
+<h3 id="付録a換算レートの例抜粋">付録A｜換算レートの例（抜粋）</h3>
+<table>
+  <thead>
+      <tr>
+          <th>資産</th>
+          <th style="text-align: right">NIGHT/単位</th>
+          <th>備考</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ADA</td>
+          <td style="text-align: right">0.3466</td>
+          <td>例：1,000 ADA → 346.6 NIGHT</td>
+      </tr>
+      <tr>
+          <td>BTC</td>
+          <td style="text-align: right">696.9785</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>ETH</td>
+          <td style="text-align: right">50.7321</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>SOL</td>
+          <td style="text-align: right">2.9809</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>BNB</td>
+          <td style="text-align: right">12.1748</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>XRP</td>
+          <td style="text-align: right">0.04173</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>AVAX</td>
+          <td style="text-align: right">0.4070</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>BAT</td>
+          <td style="text-align: right">0.002589</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>換算は<strong>スナップショット時点</strong>の各チェーン総量に基づく<strong>固定比率</strong>（価格変動ではなく配分比から導出）。</p></blockquote>
+<hr>
+<p><strong>作成者</strong>：BWtake（DRep） &amp; CGTA<br>
+<strong>作成日時</strong>：2025-08-20 12:58 JST</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/cardano/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Cardano</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/night/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">NIGHT</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/glacier-drop/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Glacier Drop</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/tokenomics/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Tokenomics</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/drep/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">DRep</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E5%88%86%E6%9E%90/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">分析</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">シナリオ</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/midnight%E3%83%88%E3%83%BC%E3%82%AF%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9%E3%81%A8night%E4%BE%A1%E5%80%A4%E5%BD%A2%E6%88%90%E3%83%A1%E3%82%AB%E3%83%8B%E3%82%BA%E3%83%A0%E8%A9%B3%E7%B4%B0%E8%A7%A3%E8%AA%AC/">MidnightトークノミクスとNIGHT価値形成メカニズム詳細解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/midnight%E3%82%A8%E3%82%A2%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E8%AB%8B%E6%B1%82%E6%89%8B%E7%B6%9A%E3%81%8D%E8%A7%A3%E8%AA%ACglacier-drop%E6%A6%82%E8%A6%81%E3%81%A8%E6%B3%A8%E6%84%8F%E7%82%B9/">MIDNIGHTエアドロップ請求手続き解説｜Glacier Drop概要と注意点</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/grayscale_cardano_etf_and_midnight_impact/">GrayscaleのカルダノETF動向とMidnight/NIGHTトークン需要への波及分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/midnight_glacierdrop_%E8%A7%A3%E8%AA%AC/">Midnight Glacier Drop 解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/weekly-development-report-%E8%A7%A3%E8%AA%AC2025-08-08/">Weekly Development Report 解説（2025-08-08）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch576/midnight%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8Bcharles-hoskinson%E7%99%BA%E8%A8%80%E5%88%86%E6%9E%90/">Midnightマーケティングに関するCharles Hoskinson発言分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch575/midnight_crosschain/">Midnight（計算型プライバシー）におけるSolana／Polkadot統合の深掘り分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/rare-evo-2024-%E5%8D%94%E8%B3%9B%E4%BC%81%E6%A5%AD%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E5%8F%96%E3%82%8C%E3%82%8Bcardano%E3%81%AE%E6%88%A6%E7%95%A5%E7%9A%84%E4%BD%8D%E7%BD%AE%E3%81%A5%E3%81%91/">Rare Evo 2024 協賛企業から読み取れるCardanoの戦略的位置づけ</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch574/%E6%9A%97%E5%8F%B7%E8%B3%87%E7%94%A3%E3%82%A6%E3%82%A9%E3%83%AC%E3%83%83%E3%83%88%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/">Midnightトークン請求における署名・公開鍵・秘密鍵の解説</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/shawn-ryan-show%E3%81%A71900%E4%B8%87%E5%86%8D%E7%94%9F%E7%AA%81%E7%A0%B4charles-hoskinson%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E6%88%A6%E7%95%A5%E5%88%86%E6%9E%90/">Shawn Ryan Showで1900万再生突破：Charles Hoskinsonのマーケティング戦略分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/-cardano-weekly-development-report--2025-07-25/">Cardano Weekly Development Report – 2025-07-25</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch572/cardano-weekly-report-%E8%A7%A3%E8%AA%AC2025%E5%B9%B47%E6%9C%8818%E6%97%A5/">📈 Cardano Weekly Report 解説（2025年7月18日）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/cardano%E3%81%8Cgpt-oss%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%80%E6%9C%AA%E6%9D%A5%E5%AE%9F%E8%A3%85%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3--%E8%A9%B3%E7%B4%B0%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA%E5%88%86%E6%9E%90/">Cardanoがgpt-ossを取り込む未来：実装アーキテクチャ &amp; 詳細シナリオ分析</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/weekly-development-report-%E8%A7%A3%E8%AA%AC2025-08-15/">Weekly Development Report 解説（2025-08-15）</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch577/-taptools%E8%AA%AC%E6%98%8E%E3%81%A8%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%BE%E3%81%A8%E3%82%81/">TapToolsの説明と使い方まとめ</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

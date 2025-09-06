@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenAI動向 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <link>http://localhost:1313/fbl-site/categories/openai%E5%8B%95%E5%90%91/</link>
+    <description>Recent content in OpenAI動向 on 未来サイバー生命体研究所 (Future BioCybernetics Lab)</description>
+    <generator>Hugo</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/fbl-site/categories/openai%E5%8B%95%E5%90%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAIがGPT-6を早期予告、記憶強化と政治対応がカギに</title>
+      <link>http://localhost:1313/fbl-site/posts/epoch578/openai%E3%81%8Cgpt-6%E3%82%92%E6%97%A9%E6%9C%9F%E4%BA%88%E5%91%8A%E8%A8%98%E6%86%B6%E5%BC%B7%E5%8C%96%E3%81%A8%E6%94%BF%E6%B2%BB%E5%AF%BE%E5%BF%9C%E3%81%8C%E3%82%AB%E3%82%AE%E3%81%AB/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/fbl-site/posts/epoch578/openai%E3%81%8Cgpt-6%E3%82%92%E6%97%A9%E6%9C%9F%E4%BA%88%E5%91%8A%E8%A8%98%E6%86%B6%E5%BC%B7%E5%8C%96%E3%81%A8%E6%94%BF%E6%B2%BB%E5%AF%BE%E5%BF%9C%E3%81%8C%E3%82%AB%E3%82%AE%E3%81%AB/</guid>
+      <description>GPT-5発表直後に、OpenAIの次世代モデルGPT-6が早期登場すると報道。記憶機能の強化や政治的中立性への対応が焦点。AGI実現へ向けたさらなる布石。</description>
+    </item>
+  </channel>
+</rss>

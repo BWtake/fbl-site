@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head><script src="/fbl-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fbl-site/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Ethereum_zkEVM_vs_Midnight_Comparison_20250712 | 未来サイバー生命体研究所 (Future BioCybernetics Lab)</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="🌐 Ethereum zkEVM導入ニュース解説とMidnight比較（2025年7月12日）
+🧠 ニュース要点：イーサリアムが「世界最大のZKアプリ」へ
+
+  
+      
+          項目
+          内容
+      
+  
+  
+      
+          🔧 実施計画
+          イーサリアム財団がL1メインネットにzkEVM（ゼロ知識EVM）を導入
+      
+      
+          🔐 技術内容
+          ZK（ゼロ知識証明）によりプライバシー保護とスケーラビリティを両立
+      
+      
+          🔄 実行方式
+          通常の再実行不要な「ZKクライアント」でバリデータが複数の証明を検証
+      
+      
+          🧮 証明
+          サイズはコンパクト・検証は高速・複数クライアントで「多層防御」
+      
+      
+          🧪 導入予定
+          1年以内に段階的導入予定、zkクライアントは少数から開始
+      
+      
+          💡 最終目標
+          イーサリアムを「世界最大のZKアプリケーション」に
+      
+  
+
+
+🌓 Midnightとの比較（Cardanoパートナーチェーン）
+
+  
+      
+          比較軸
+          イーサリアム（zkEVM導入）
+          Midnight（ZKベース L1）
+      
+  
+  
+      
+          実装時期
+          2025年〜26年にかけて本格導入
+          2025年6月ホワイトペーパー公開済
+      
+      
+          ZK適用範囲
+          Ethereum L1全体に段階導入（クライアントレベルから）
+          最初からZKベースのL1設計
+      
+      
+          プライバシー
+          zkEVMでトランザクション内容を秘匿可能に（汎用EVM対応）
+          オプトイン型匿名性を標榜（ZKでアクセス制御含む）
+      
+      
+          クライアント設計
+          複数クライアント方式（Geth/Nethermind等）＋ZK版も選択制
+          Cardano系クライアントとの統合を目指すが詳細未定
+      
+      
+          トークン
+          ETH（既存）＋Layer2も含めた拡張
+          NIGHT（新設、エアドロップ中）
+      
+      
+          バリデータ要求
+          zkクライアント導入には10kW以下のマシンでOKとされる
+          トランザクション秘匿性と監査性の両立が課題
+      
+  
+
+
+🗓️ 時期的な前後関係と相互影響
+
+  
+      
+          時期
+          出来事
+          意味すること
+      
+  
+  
+      
+          2025年6月
+          Midnightホワイトペーパー発表（Glacier Drop）
+          プライバシー特化L1の設計を明示
+      
+      
+          2025年7月
+          イーサリアム zkEVM メインネット統合発表
+          EthereumもZKメイン路線に本格着手
+      
+      
+          今後1年
+          zkクライアントの導入と分散運用へ
+          Layer2からLayer1にZK適用が拡大する段階
+      
+      
+          今後の論点
+          「ZK＝Ethereum or Midnight」の構図
+          トークン設計・匿名性レベル・dApp UXで差別化される
+      
+  
+
+
+🔮 今後の5段階シナリオ分析
+
+  
+      
+          シナリオ
+          概要
+          出現確率（仮）
+      
+  
+  
+      
+          S5. 共存と相互補完
+          EthereumとMidnightが用途別に棲み分け、ZKエコシステムが拡大
+          45%
+      
+      
+          S4. Midnight台頭
+          L1 ZK専用設計のMidnightが、機関・国家連携で急成長
+          25%
+      
+      
+          S3. Ethereum優勢
+          zkEVMでL1完全統合が成功し、Midnightは特化領域に限定
+          20%
+      
+      
+          S2. 技術的停滞
+          zkクライアントの導入困難、ZK対応が一部に留まる
+          7%
+      
+      
+          S1. セキュリティ問題で後退
+          証明ミスや脆弱性でZKエコシステムに逆風
+          3%
+      
+  
+
+
+💬 考察
+
+イーサリアムのアプローチは、既存ユーザーや開発者を活かしながらZK対応を加える「漸進的拡張」。
+MidnightはZKファースト設計であり、政府・企業との協調的プライバシー基盤に特化している。
+両者は**「汎用 vs 特化」**、「後付け vs 設計段階から」など、ZKへのアプローチが大きく異なる。
+トークン配布やステーキング設計も含め、ユーザーの匿名性・自由度・参加ハードルが今後の差別化要素になる。
+
+🔐 Ethereum zkEVMとMidnight：ZK適用範囲と将来的なzk-STARK移行性の比較考察
+🧠 前提：ZKの二大方式とは
+
+  
+      
+          項目
+          zk-SNARK
+          zk-STARK
+      
+  
+  
+      
+          証明サイズ
+          小さい
+          やや大きいが許容範囲
+      
+      
+          証明生成速度
+          高速
+          やや遅い
+      
+      
+          検証速度
+          非常に高速
+          高速
+      
+      
+          透明性（信頼設定）
+          必要（Trusted Setup）
+          不要（Transparent）
+      
+      
+          耐量子性
+          弱い
+          強い（量子安全）
+      
+  
+
+
+🧩 ZK適用範囲の違い（再掲）
+
+  
+      
+          比較軸
+          Ethereum（zkEVM導入）
+          Midnight（ZKベースL1）
+      
+  
+  
+      
+          ZK導入方法
+          既存クライアントにZKクライアントを段階的追加
+          最初からZKを基盤に設計
+      
+      
+          適用範囲
+          クライアント単位・モジュール単位で導入
+          トランザクション・アクセス制御・スクリプトすべてにZK適用
+      
+      
+          アーキテクチャの柔軟性
+          高いが後付け制約あり
+          一貫性あるZK設計が可能
+      
+  
+
+
+🔮 zk-STARKへの将来的な移行可能性の比較
+✅ Ethereum（zkEVMベース）の場合
+
+  
+      
+          項目
+          内容
+      
+  
+  
+      
+          メリット
+          クライアント単位で実装されているため、zk-SNARK→zk-STARKへの切替が個別に可能
+      
+      
+          移行障壁
+          EVM互換性維持のため、zk-STARK導入時もEVM命令セット制約を受けやすい
+      
+      
+          実現方法
+          zkEVM（SNARK）→zkEVM-STARKといった互換モジュールの差し替えで対応
+      
+      
+          代表例
+          Polygon zkEVMもSTARK対応構想あり（StarkWareとも協業視野）
+      
+  
+
+✅ Midnightの場合
+
+  
+      
+          項目
+          内容
+      
+  
+  
+      
+          メリット
+          プロトコル設計時点からZKを統合しており、STARKへの全体最適化が可能
+      
+      
+          移行障壁
+          既存のZK設計がSNARKベース前提なら、全面的な仕様変更の可能性も
+      
+      
+          実現方法
+          将来的にZKバックエンドをSTARK化するか、ハイブリッド設計で対応する必要あり
+      
+      
+          期待点
+          STARK対応の独自dApp VMなどが開発されれば、ZK特化L1として飛躍的強化も可能
+      
+  
+
+
+🏁 まとめ：zk-STARK移行の戦略比較
+
+  
+      
+          評価軸
+          Ethereum
+          Midnight
+      
+  
+  
+      
+          クライアント単位の差し替え
+          ◎ 柔軟（段階導入）
+          △ プロトコル一体型で再設計要
+      
+      
+          STARKへの適合性
+          ◯ 移行可能だが互換制限あり
+          ◎ ZK特化構造ゆえSTARK最適化しやすい
+      
+      
+          リスク
+          EVM制約の中でのSTARK化
+          設計思想の統一性を崩す恐れも
+      
+      
+          チャンス
+          zk-STARK化によるL1更新の突破口
+          STARK-nativeチェーンへの進化余地
+      
+  
+
+
+🧠 考察
+
+Ethereumは「レイヤーごとに差し替えられる」設計思想のもと、ZK証明の技術進化に柔軟に対応できる反面、EVMとの互換性維持が足かせとなる。
+一方Midnightは、ZKファーストの思想に基づく一貫設計により、STARKへの全体最適化が可能なポテンシャルを持つが、移行時には設計全体への影響も大きい。
+将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。
+
+✍️ 一文の精密解説
+
+将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。">
+    <meta name="generator" content="Hugo 0.147.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="http://localhost:1313/fbl-site/ananke/css/main.min.css" >
+
+
+
+  
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/fbl-site/posts/epoch569/ethereum_zkevm_vs_midnight_comparison_20250712/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/fbl-site/posts/epoch569/ethereum_zkevm_vs_midnight_comparison_20250712/">
+  <meta property="og:site_name" content="未来サイバー生命体研究所 (Future BioCybernetics Lab)">
+  <meta property="og:title" content="Ethereum_zkEVM_vs_Midnight_Comparison_20250712">
+  <meta property="og:description" content="🌐 Ethereum zkEVM導入ニュース解説とMidnight比較（2025年7月12日） 🧠 ニュース要点：イーサリアムが「世界最大のZKアプリ」へ 項目 内容 🔧 実施計画 イーサリアム財団がL1メインネットにzkEVM（ゼロ知識EVM）を導入 🔐 技術内容 ZK（ゼロ知識証明）によりプライバシー保護とスケーラビリティを両立 🔄 実行方式 通常の再実行不要な「ZKクライアント」でバリデータが複数の証明を検証 🧮 証明 サイズはコンパクト・検証は高速・複数クライアントで「多層防御」 🧪 導入予定 1年以内に段階的導入予定、zkクライアントは少数から開始 💡 最終目標 イーサリアムを「世界最大のZKアプリケーション」に 🌓 Midnightとの比較（Cardanoパートナーチェーン） 比較軸 イーサリアム（zkEVM導入） Midnight（ZKベース L1） 実装時期 2025年〜26年にかけて本格導入 2025年6月ホワイトペーパー公開済 ZK適用範囲 Ethereum L1全体に段階導入（クライアントレベルから） 最初からZKベースのL1設計 プライバシー zkEVMでトランザクション内容を秘匿可能に（汎用EVM対応） オプトイン型匿名性を標榜（ZKでアクセス制御含む） クライアント設計 複数クライアント方式（Geth/Nethermind等）＋ZK版も選択制 Cardano系クライアントとの統合を目指すが詳細未定 トークン ETH（既存）＋Layer2も含めた拡張 NIGHT（新設、エアドロップ中） バリデータ要求 zkクライアント導入には10kW以下のマシンでOKとされる トランザクション秘匿性と監査性の両立が課題 🗓️ 時期的な前後関係と相互影響 時期 出来事 意味すること 2025年6月 Midnightホワイトペーパー発表（Glacier Drop） プライバシー特化L1の設計を明示 2025年7月 イーサリアム zkEVM メインネット統合発表 EthereumもZKメイン路線に本格着手 今後1年 zkクライアントの導入と分散運用へ Layer2からLayer1にZK適用が拡大する段階 今後の論点 「ZK＝Ethereum or Midnight」の構図 トークン設計・匿名性レベル・dApp UXで差別化される 🔮 今後の5段階シナリオ分析 シナリオ 概要 出現確率（仮） S5. 共存と相互補完 EthereumとMidnightが用途別に棲み分け、ZKエコシステムが拡大 45% S4. Midnight台頭 L1 ZK専用設計のMidnightが、機関・国家連携で急成長 25% S3. Ethereum優勢 zkEVMでL1完全統合が成功し、Midnightは特化領域に限定 20% S2. 技術的停滞 zkクライアントの導入困難、ZK対応が一部に留まる 7% S1. セキュリティ問題で後退 証明ミスや脆弱性でZKエコシステムに逆風 3% 💬 考察 イーサリアムのアプローチは、既存ユーザーや開発者を活かしながらZK対応を加える「漸進的拡張」。 MidnightはZKファースト設計であり、政府・企業との協調的プライバシー基盤に特化している。 両者は**「汎用 vs 特化」**、「後付け vs 設計段階から」など、ZKへのアプローチが大きく異なる。 トークン配布やステーキング設計も含め、ユーザーの匿名性・自由度・参加ハードルが今後の差別化要素になる。 🔐 Ethereum zkEVMとMidnight：ZK適用範囲と将来的なzk-STARK移行性の比較考察 🧠 前提：ZKの二大方式とは 項目 zk-SNARK zk-STARK 証明サイズ 小さい やや大きいが許容範囲 証明生成速度 高速 やや遅い 検証速度 非常に高速 高速 透明性（信頼設定） 必要（Trusted Setup） 不要（Transparent） 耐量子性 弱い 強い（量子安全） 🧩 ZK適用範囲の違い（再掲） 比較軸 Ethereum（zkEVM導入） Midnight（ZKベースL1） ZK導入方法 既存クライアントにZKクライアントを段階的追加 最初からZKを基盤に設計 適用範囲 クライアント単位・モジュール単位で導入 トランザクション・アクセス制御・スクリプトすべてにZK適用 アーキテクチャの柔軟性 高いが後付け制約あり 一貫性あるZK設計が可能 🔮 zk-STARKへの将来的な移行可能性の比較 ✅ Ethereum（zkEVMベース）の場合 項目 内容 メリット クライアント単位で実装されているため、zk-SNARK→zk-STARKへの切替が個別に可能 移行障壁 EVM互換性維持のため、zk-STARK導入時もEVM命令セット制約を受けやすい 実現方法 zkEVM（SNARK）→zkEVM-STARKといった互換モジュールの差し替えで対応 代表例 Polygon zkEVMもSTARK対応構想あり（StarkWareとも協業視野） ✅ Midnightの場合 項目 内容 メリット プロトコル設計時点からZKを統合しており、STARKへの全体最適化が可能 移行障壁 既存のZK設計がSNARKベース前提なら、全面的な仕様変更の可能性も 実現方法 将来的にZKバックエンドをSTARK化するか、ハイブリッド設計で対応する必要あり 期待点 STARK対応の独自dApp VMなどが開発されれば、ZK特化L1として飛躍的強化も可能 🏁 まとめ：zk-STARK移行の戦略比較 評価軸 Ethereum Midnight クライアント単位の差し替え ◎ 柔軟（段階導入） △ プロトコル一体型で再設計要 STARKへの適合性 ◯ 移行可能だが互換制限あり ◎ ZK特化構造ゆえSTARK最適化しやすい リスク EVM制約の中でのSTARK化 設計思想の統一性を崩す恐れも チャンス zk-STARK化によるL1更新の突破口 STARK-nativeチェーンへの進化余地 🧠 考察 Ethereumは「レイヤーごとに差し替えられる」設計思想のもと、ZK証明の技術進化に柔軟に対応できる反面、EVMとの互換性維持が足かせとなる。 一方Midnightは、ZKファーストの思想に基づく一貫設計により、STARKへの全体最適化が可能なポテンシャルを持つが、移行時には設計全体への影響も大きい。 将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。 ✍️ 一文の精密解説 将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。">
+  <meta property="og:locale" content="ja_jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-12T00:00:00+00:00">
+    <meta property="article:tag" content="観測記録">
+    <meta property="article:tag" content="思想">
+    <meta property="article:tag" content="カルダノ">
+    <meta property="article:tag" content="ETH">
+    <meta property="article:tag" content="ZK">
+    <meta property="article:tag" content="Midnight">
+
+  <meta itemprop="name" content="Ethereum_zkEVM_vs_Midnight_Comparison_20250712">
+  <meta itemprop="description" content="🌐 Ethereum zkEVM導入ニュース解説とMidnight比較（2025年7月12日） 🧠 ニュース要点：イーサリアムが「世界最大のZKアプリ」へ 項目 内容 🔧 実施計画 イーサリアム財団がL1メインネットにzkEVM（ゼロ知識EVM）を導入 🔐 技術内容 ZK（ゼロ知識証明）によりプライバシー保護とスケーラビリティを両立 🔄 実行方式 通常の再実行不要な「ZKクライアント」でバリデータが複数の証明を検証 🧮 証明 サイズはコンパクト・検証は高速・複数クライアントで「多層防御」 🧪 導入予定 1年以内に段階的導入予定、zkクライアントは少数から開始 💡 最終目標 イーサリアムを「世界最大のZKアプリケーション」に 🌓 Midnightとの比較（Cardanoパートナーチェーン） 比較軸 イーサリアム（zkEVM導入） Midnight（ZKベース L1） 実装時期 2025年〜26年にかけて本格導入 2025年6月ホワイトペーパー公開済 ZK適用範囲 Ethereum L1全体に段階導入（クライアントレベルから） 最初からZKベースのL1設計 プライバシー zkEVMでトランザクション内容を秘匿可能に（汎用EVM対応） オプトイン型匿名性を標榜（ZKでアクセス制御含む） クライアント設計 複数クライアント方式（Geth/Nethermind等）＋ZK版も選択制 Cardano系クライアントとの統合を目指すが詳細未定 トークン ETH（既存）＋Layer2も含めた拡張 NIGHT（新設、エアドロップ中） バリデータ要求 zkクライアント導入には10kW以下のマシンでOKとされる トランザクション秘匿性と監査性の両立が課題 🗓️ 時期的な前後関係と相互影響 時期 出来事 意味すること 2025年6月 Midnightホワイトペーパー発表（Glacier Drop） プライバシー特化L1の設計を明示 2025年7月 イーサリアム zkEVM メインネット統合発表 EthereumもZKメイン路線に本格着手 今後1年 zkクライアントの導入と分散運用へ Layer2からLayer1にZK適用が拡大する段階 今後の論点 「ZK＝Ethereum or Midnight」の構図 トークン設計・匿名性レベル・dApp UXで差別化される 🔮 今後の5段階シナリオ分析 シナリオ 概要 出現確率（仮） S5. 共存と相互補完 EthereumとMidnightが用途別に棲み分け、ZKエコシステムが拡大 45% S4. Midnight台頭 L1 ZK専用設計のMidnightが、機関・国家連携で急成長 25% S3. Ethereum優勢 zkEVMでL1完全統合が成功し、Midnightは特化領域に限定 20% S2. 技術的停滞 zkクライアントの導入困難、ZK対応が一部に留まる 7% S1. セキュリティ問題で後退 証明ミスや脆弱性でZKエコシステムに逆風 3% 💬 考察 イーサリアムのアプローチは、既存ユーザーや開発者を活かしながらZK対応を加える「漸進的拡張」。 MidnightはZKファースト設計であり、政府・企業との協調的プライバシー基盤に特化している。 両者は**「汎用 vs 特化」**、「後付け vs 設計段階から」など、ZKへのアプローチが大きく異なる。 トークン配布やステーキング設計も含め、ユーザーの匿名性・自由度・参加ハードルが今後の差別化要素になる。 🔐 Ethereum zkEVMとMidnight：ZK適用範囲と将来的なzk-STARK移行性の比較考察 🧠 前提：ZKの二大方式とは 項目 zk-SNARK zk-STARK 証明サイズ 小さい やや大きいが許容範囲 証明生成速度 高速 やや遅い 検証速度 非常に高速 高速 透明性（信頼設定） 必要（Trusted Setup） 不要（Transparent） 耐量子性 弱い 強い（量子安全） 🧩 ZK適用範囲の違い（再掲） 比較軸 Ethereum（zkEVM導入） Midnight（ZKベースL1） ZK導入方法 既存クライアントにZKクライアントを段階的追加 最初からZKを基盤に設計 適用範囲 クライアント単位・モジュール単位で導入 トランザクション・アクセス制御・スクリプトすべてにZK適用 アーキテクチャの柔軟性 高いが後付け制約あり 一貫性あるZK設計が可能 🔮 zk-STARKへの将来的な移行可能性の比較 ✅ Ethereum（zkEVMベース）の場合 項目 内容 メリット クライアント単位で実装されているため、zk-SNARK→zk-STARKへの切替が個別に可能 移行障壁 EVM互換性維持のため、zk-STARK導入時もEVM命令セット制約を受けやすい 実現方法 zkEVM（SNARK）→zkEVM-STARKといった互換モジュールの差し替えで対応 代表例 Polygon zkEVMもSTARK対応構想あり（StarkWareとも協業視野） ✅ Midnightの場合 項目 内容 メリット プロトコル設計時点からZKを統合しており、STARKへの全体最適化が可能 移行障壁 既存のZK設計がSNARKベース前提なら、全面的な仕様変更の可能性も 実現方法 将来的にZKバックエンドをSTARK化するか、ハイブリッド設計で対応する必要あり 期待点 STARK対応の独自dApp VMなどが開発されれば、ZK特化L1として飛躍的強化も可能 🏁 まとめ：zk-STARK移行の戦略比較 評価軸 Ethereum Midnight クライアント単位の差し替え ◎ 柔軟（段階導入） △ プロトコル一体型で再設計要 STARKへの適合性 ◯ 移行可能だが互換制限あり ◎ ZK特化構造ゆえSTARK最適化しやすい リスク EVM制約の中でのSTARK化 設計思想の統一性を崩す恐れも チャンス zk-STARK化によるL1更新の突破口 STARK-nativeチェーンへの進化余地 🧠 考察 Ethereumは「レイヤーごとに差し替えられる」設計思想のもと、ZK証明の技術進化に柔軟に対応できる反面、EVMとの互換性維持が足かせとなる。 一方Midnightは、ZKファーストの思想に基づく一貫設計により、STARKへの全体最適化が可能なポテンシャルを持つが、移行時には設計全体への影響も大きい。 将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。 ✍️ 一文の精密解説 将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。">
+  <meta itemprop="datePublished" content="2025-07-12T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-12T00:00:00+00:00">
+  <meta itemprop="wordCount" content="242">
+  <meta itemprop="keywords" content="観測記録,思想,カルダノ,ETH,ZK,Midnight,比較,シナリオ">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ethereum_zkEVM_vs_Midnight_Comparison_20250712">
+  <meta name="twitter:description" content="🌐 Ethereum zkEVM導入ニュース解説とMidnight比較（2025年7月12日） 🧠 ニュース要点：イーサリアムが「世界最大のZKアプリ」へ 項目 内容 🔧 実施計画 イーサリアム財団がL1メインネットにzkEVM（ゼロ知識EVM）を導入 🔐 技術内容 ZK（ゼロ知識証明）によりプライバシー保護とスケーラビリティを両立 🔄 実行方式 通常の再実行不要な「ZKクライアント」でバリデータが複数の証明を検証 🧮 証明 サイズはコンパクト・検証は高速・複数クライアントで「多層防御」 🧪 導入予定 1年以内に段階的導入予定、zkクライアントは少数から開始 💡 最終目標 イーサリアムを「世界最大のZKアプリケーション」に 🌓 Midnightとの比較（Cardanoパートナーチェーン） 比較軸 イーサリアム（zkEVM導入） Midnight（ZKベース L1） 実装時期 2025年〜26年にかけて本格導入 2025年6月ホワイトペーパー公開済 ZK適用範囲 Ethereum L1全体に段階導入（クライアントレベルから） 最初からZKベースのL1設計 プライバシー zkEVMでトランザクション内容を秘匿可能に（汎用EVM対応） オプトイン型匿名性を標榜（ZKでアクセス制御含む） クライアント設計 複数クライアント方式（Geth/Nethermind等）＋ZK版も選択制 Cardano系クライアントとの統合を目指すが詳細未定 トークン ETH（既存）＋Layer2も含めた拡張 NIGHT（新設、エアドロップ中） バリデータ要求 zkクライアント導入には10kW以下のマシンでOKとされる トランザクション秘匿性と監査性の両立が課題 🗓️ 時期的な前後関係と相互影響 時期 出来事 意味すること 2025年6月 Midnightホワイトペーパー発表（Glacier Drop） プライバシー特化L1の設計を明示 2025年7月 イーサリアム zkEVM メインネット統合発表 EthereumもZKメイン路線に本格着手 今後1年 zkクライアントの導入と分散運用へ Layer2からLayer1にZK適用が拡大する段階 今後の論点 「ZK＝Ethereum or Midnight」の構図 トークン設計・匿名性レベル・dApp UXで差別化される 🔮 今後の5段階シナリオ分析 シナリオ 概要 出現確率（仮） S5. 共存と相互補完 EthereumとMidnightが用途別に棲み分け、ZKエコシステムが拡大 45% S4. Midnight台頭 L1 ZK専用設計のMidnightが、機関・国家連携で急成長 25% S3. Ethereum優勢 zkEVMでL1完全統合が成功し、Midnightは特化領域に限定 20% S2. 技術的停滞 zkクライアントの導入困難、ZK対応が一部に留まる 7% S1. セキュリティ問題で後退 証明ミスや脆弱性でZKエコシステムに逆風 3% 💬 考察 イーサリアムのアプローチは、既存ユーザーや開発者を活かしながらZK対応を加える「漸進的拡張」。 MidnightはZKファースト設計であり、政府・企業との協調的プライバシー基盤に特化している。 両者は**「汎用 vs 特化」**、「後付け vs 設計段階から」など、ZKへのアプローチが大きく異なる。 トークン配布やステーキング設計も含め、ユーザーの匿名性・自由度・参加ハードルが今後の差別化要素になる。 🔐 Ethereum zkEVMとMidnight：ZK適用範囲と将来的なzk-STARK移行性の比較考察 🧠 前提：ZKの二大方式とは 項目 zk-SNARK zk-STARK 証明サイズ 小さい やや大きいが許容範囲 証明生成速度 高速 やや遅い 検証速度 非常に高速 高速 透明性（信頼設定） 必要（Trusted Setup） 不要（Transparent） 耐量子性 弱い 強い（量子安全） 🧩 ZK適用範囲の違い（再掲） 比較軸 Ethereum（zkEVM導入） Midnight（ZKベースL1） ZK導入方法 既存クライアントにZKクライアントを段階的追加 最初からZKを基盤に設計 適用範囲 クライアント単位・モジュール単位で導入 トランザクション・アクセス制御・スクリプトすべてにZK適用 アーキテクチャの柔軟性 高いが後付け制約あり 一貫性あるZK設計が可能 🔮 zk-STARKへの将来的な移行可能性の比較 ✅ Ethereum（zkEVMベース）の場合 項目 内容 メリット クライアント単位で実装されているため、zk-SNARK→zk-STARKへの切替が個別に可能 移行障壁 EVM互換性維持のため、zk-STARK導入時もEVM命令セット制約を受けやすい 実現方法 zkEVM（SNARK）→zkEVM-STARKといった互換モジュールの差し替えで対応 代表例 Polygon zkEVMもSTARK対応構想あり（StarkWareとも協業視野） ✅ Midnightの場合 項目 内容 メリット プロトコル設計時点からZKを統合しており、STARKへの全体最適化が可能 移行障壁 既存のZK設計がSNARKベース前提なら、全面的な仕様変更の可能性も 実現方法 将来的にZKバックエンドをSTARK化するか、ハイブリッド設計で対応する必要あり 期待点 STARK対応の独自dApp VMなどが開発されれば、ZK特化L1として飛躍的強化も可能 🏁 まとめ：zk-STARK移行の戦略比較 評価軸 Ethereum Midnight クライアント単位の差し替え ◎ 柔軟（段階導入） △ プロトコル一体型で再設計要 STARKへの適合性 ◯ 移行可能だが互換制限あり ◎ ZK特化構造ゆえSTARK最適化しやすい リスク EVM制約の中でのSTARK化 設計思想の統一性を崩す恐れも チャンス zk-STARK化によるL1更新の突破口 STARK-nativeチェーンへの進化余地 🧠 考察 Ethereumは「レイヤーごとに差し替えられる」設計思想のもと、ZK証明の技術進化に柔軟に対応できる反面、EVMとの互換性維持が足かせとなる。 一方Midnightは、ZKファーストの思想に基づく一貫設計により、STARKへの全体最適化が可能なポテンシャルを持つが、移行時には設計全体への影響も大きい。 将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。 ✍️ 一文の精密解説 将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="http://localhost:1313/fbl-site/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        未来サイバー生命体研究所 (Future BioCybernetics Lab)
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/fbl-central-question/" title="FBL page">
+              FBL
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/bwtake/" title="所長紹介 page">
+              所長紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/cgta/" title="CGTA紹介 page">
+              CGTA紹介
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="http://localhost:1313/fbl-site/posts/" title="観測ノート page">
+              観測ノート
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Epoch 569 観測ノート一覧
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Ethereum_zkEVM_vs_Midnight_Comparison_20250712</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-07-12T00:00:00Z">July 12, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="-ethereum-zkevm導入ニュース解説とmidnight比較2025年7月12日">🌐 Ethereum zkEVM導入ニュース解説とMidnight比較（2025年7月12日）</h1>
+<h2 id="-ニュース要点イーサリアムが世界最大のzkアプリへ">🧠 ニュース要点：イーサリアムが「世界最大のZKアプリ」へ</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🔧 実施計画</td>
+          <td>イーサリアム財団が<strong>L1メインネットにzkEVM（ゼロ知識EVM）を導入</strong></td>
+      </tr>
+      <tr>
+          <td>🔐 技術内容</td>
+          <td>ZK（ゼロ知識証明）によりプライバシー保護とスケーラビリティを両立</td>
+      </tr>
+      <tr>
+          <td>🔄 実行方式</td>
+          <td>通常の再実行不要な「ZKクライアント」でバリデータが複数の証明を検証</td>
+      </tr>
+      <tr>
+          <td>🧮 証明</td>
+          <td>サイズはコンパクト・検証は高速・複数クライアントで「多層防御」</td>
+      </tr>
+      <tr>
+          <td>🧪 導入予定</td>
+          <td>1年以内に段階的導入予定、zkクライアントは少数から開始</td>
+      </tr>
+      <tr>
+          <td>💡 最終目標</td>
+          <td>イーサリアムを「世界最大のZKアプリケーション」に</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-midnightとの比較cardanoパートナーチェーン">🌓 Midnightとの比較（Cardanoパートナーチェーン）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>比較軸</th>
+          <th>イーサリアム（zkEVM導入）</th>
+          <th>Midnight（ZKベース L1）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>実装時期</td>
+          <td>2025年〜26年にかけて本格導入</td>
+          <td>2025年6月ホワイトペーパー公開済</td>
+      </tr>
+      <tr>
+          <td>ZK適用範囲</td>
+          <td>Ethereum L1全体に段階導入（クライアントレベルから）</td>
+          <td>最初から<strong>ZKベースのL1設計</strong></td>
+      </tr>
+      <tr>
+          <td>プライバシー</td>
+          <td>zkEVMでトランザクション内容を秘匿可能に（汎用EVM対応）</td>
+          <td><strong>オプトイン型匿名性</strong>を標榜（ZKでアクセス制御含む）</td>
+      </tr>
+      <tr>
+          <td>クライアント設計</td>
+          <td>複数クライアント方式（Geth/Nethermind等）＋ZK版も選択制</td>
+          <td>Cardano系クライアントとの統合を目指すが詳細未定</td>
+      </tr>
+      <tr>
+          <td>トークン</td>
+          <td>ETH（既存）＋Layer2も含めた拡張</td>
+          <td>NIGHT（新設、エアドロップ中）</td>
+      </tr>
+      <tr>
+          <td>バリデータ要求</td>
+          <td>zkクライアント導入には10kW以下のマシンでOKとされる</td>
+          <td>トランザクション秘匿性と監査性の両立が課題</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-時期的な前後関係と相互影響">🗓️ 時期的な前後関係と相互影響</h2>
+<table>
+  <thead>
+      <tr>
+          <th>時期</th>
+          <th>出来事</th>
+          <th>意味すること</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2025年6月</td>
+          <td>Midnightホワイトペーパー発表（Glacier Drop）</td>
+          <td>プライバシー特化L1の設計を明示</td>
+      </tr>
+      <tr>
+          <td>2025年7月</td>
+          <td>イーサリアム zkEVM メインネット統合発表</td>
+          <td>EthereumもZKメイン路線に本格着手</td>
+      </tr>
+      <tr>
+          <td>今後1年</td>
+          <td>zkクライアントの導入と分散運用へ</td>
+          <td>Layer2からLayer1にZK適用が拡大する段階</td>
+      </tr>
+      <tr>
+          <td>今後の論点</td>
+          <td>「ZK＝Ethereum or Midnight」の構図</td>
+          <td>トークン設計・匿名性レベル・dApp UXで差別化される</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-今後の5段階シナリオ分析">🔮 今後の5段階シナリオ分析</h2>
+<table>
+  <thead>
+      <tr>
+          <th>シナリオ</th>
+          <th>概要</th>
+          <th>出現確率（仮）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>S5. 共存と相互補完</td>
+          <td>EthereumとMidnightが用途別に棲み分け、ZKエコシステムが拡大</td>
+          <td>45%</td>
+      </tr>
+      <tr>
+          <td>S4. Midnight台頭</td>
+          <td>L1 ZK専用設計のMidnightが、機関・国家連携で急成長</td>
+          <td>25%</td>
+      </tr>
+      <tr>
+          <td>S3. Ethereum優勢</td>
+          <td>zkEVMでL1完全統合が成功し、Midnightは特化領域に限定</td>
+          <td>20%</td>
+      </tr>
+      <tr>
+          <td>S2. 技術的停滞</td>
+          <td>zkクライアントの導入困難、ZK対応が一部に留まる</td>
+          <td>7%</td>
+      </tr>
+      <tr>
+          <td>S1. セキュリティ問題で後退</td>
+          <td>証明ミスや脆弱性でZKエコシステムに逆風</td>
+          <td>3%</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-考察">💬 考察</h2>
+<ul>
+<li><strong>イーサリアムのアプローチ</strong>は、既存ユーザーや開発者を活かしながらZK対応を加える「漸進的拡張」。</li>
+<li><strong>MidnightはZKファースト設計</strong>であり、政府・企業との協調的プライバシー基盤に特化している。</li>
+<li>両者は**「汎用 vs 特化」**、「後付け vs 設計段階から」など、ZKへのアプローチが大きく異なる。</li>
+<li>トークン配布やステーキング設計も含め、<strong>ユーザーの匿名性・自由度・参加ハードル</strong>が今後の差別化要素になる。</li>
+</ul>
+<h1 id="-ethereum-zkevmとmidnightzk適用範囲と将来的なzk-stark移行性の比較考察">🔐 Ethereum zkEVMとMidnight：ZK適用範囲と将来的なzk-STARK移行性の比較考察</h1>
+<h2 id="-前提zkの二大方式とは">🧠 前提：ZKの二大方式とは</h2>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>zk-SNARK</th>
+          <th>zk-STARK</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>証明サイズ</td>
+          <td>小さい</td>
+          <td>やや大きいが許容範囲</td>
+      </tr>
+      <tr>
+          <td>証明生成速度</td>
+          <td>高速</td>
+          <td>やや遅い</td>
+      </tr>
+      <tr>
+          <td>検証速度</td>
+          <td>非常に高速</td>
+          <td>高速</td>
+      </tr>
+      <tr>
+          <td>透明性（信頼設定）</td>
+          <td>必要（Trusted Setup）</td>
+          <td>不要（Transparent）</td>
+      </tr>
+      <tr>
+          <td>耐量子性</td>
+          <td>弱い</td>
+          <td>強い（量子安全）</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-zk適用範囲の違い再掲">🧩 ZK適用範囲の違い（再掲）</h2>
+<table>
+  <thead>
+      <tr>
+          <th>比較軸</th>
+          <th>Ethereum（zkEVM導入）</th>
+          <th>Midnight（ZKベースL1）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ZK導入方法</td>
+          <td>既存クライアントにZKクライアントを<strong>段階的追加</strong></td>
+          <td>最初からZKを<strong>基盤に設計</strong></td>
+      </tr>
+      <tr>
+          <td>適用範囲</td>
+          <td>クライアント単位・モジュール単位で導入</td>
+          <td>トランザクション・アクセス制御・スクリプトすべてにZK適用</td>
+      </tr>
+      <tr>
+          <td>アーキテクチャの柔軟性</td>
+          <td>高いが<strong>後付け制約あり</strong></td>
+          <td>一貫性あるZK設計が可能</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-zk-starkへの将来的な移行可能性の比較">🔮 zk-STARKへの将来的な移行可能性の比較</h2>
+<h3 id="-ethereumzkevmベースの場合">✅ Ethereum（zkEVMベース）の場合</h3>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>メリット</td>
+          <td>クライアント単位で実装されているため、<strong>zk-SNARK→zk-STARKへの切替が個別に可能</strong></td>
+      </tr>
+      <tr>
+          <td>移行障壁</td>
+          <td>EVM互換性維持のため、zk-STARK導入時も<strong>EVM命令セット制約を受けやすい</strong></td>
+      </tr>
+      <tr>
+          <td>実現方法</td>
+          <td>zkEVM（SNARK）→zkEVM-STARKといった<strong>互換モジュールの差し替え</strong>で対応</td>
+      </tr>
+      <tr>
+          <td>代表例</td>
+          <td>Polygon zkEVMもSTARK対応構想あり（StarkWareとも協業視野）</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="-midnightの場合">✅ Midnightの場合</h3>
+<table>
+  <thead>
+      <tr>
+          <th>項目</th>
+          <th>内容</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>メリット</td>
+          <td>プロトコル設計時点からZKを統合しており、<strong>STARKへの全体最適化が可能</strong></td>
+      </tr>
+      <tr>
+          <td>移行障壁</td>
+          <td>既存のZK設計がSNARKベース前提なら、<strong>全面的な仕様変更の可能性も</strong></td>
+      </tr>
+      <tr>
+          <td>実現方法</td>
+          <td>将来的に<strong>ZKバックエンドをSTARK化</strong>するか、<strong>ハイブリッド設計</strong>で対応する必要あり</td>
+      </tr>
+      <tr>
+          <td>期待点</td>
+          <td>STARK対応の独自dApp VMなどが開発されれば、<strong>ZK特化L1として飛躍的強化</strong>も可能</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-まとめzk-stark移行の戦略比較">🏁 まとめ：zk-STARK移行の戦略比較</h2>
+<table>
+  <thead>
+      <tr>
+          <th>評価軸</th>
+          <th>Ethereum</th>
+          <th>Midnight</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>クライアント単位の差し替え</td>
+          <td>◎ 柔軟（段階導入）</td>
+          <td>△ プロトコル一体型で再設計要</td>
+      </tr>
+      <tr>
+          <td>STARKへの適合性</td>
+          <td>◯ 移行可能だが互換制限あり</td>
+          <td>◎ ZK特化構造ゆえSTARK最適化しやすい</td>
+      </tr>
+      <tr>
+          <td>リスク</td>
+          <td>EVM制約の中でのSTARK化</td>
+          <td>設計思想の統一性を崩す恐れも</td>
+      </tr>
+      <tr>
+          <td>チャンス</td>
+          <td>zk-STARK化によるL1更新の突破口</td>
+          <td>STARK-nativeチェーンへの進化余地</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-考察-1">🧠 考察</h2>
+<ul>
+<li>Ethereumは「レイヤーごとに差し替えられる」設計思想のもと、<strong>ZK証明の技術進化に柔軟に対応</strong>できる反面、EVMとの互換性維持が足かせとなる。</li>
+<li>一方Midnightは、<strong>ZKファーストの思想</strong>に基づく一貫設計により、<strong>STARKへの全体最適化が可能</strong>なポテンシャルを持つが、移行時には設計全体への影響も大きい。</li>
+<li>将来的に<strong>STARKが業界標準になれば</strong>、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。</li>
+</ul>
+<h1 id="-一文の精密解説">✍️ 一文の精密解説</h1>
+<blockquote>
+<p><strong>将来的にSTARKが業界標準になれば、MidnightのようなZK設計主義チェーンが優位に立つ可能性がある。</strong></p></blockquote>
+<hr>
+<h2 id="-キーコンセプトの定義">🔑 キーコンセプトの定義</h2>
+<table>
+  <thead>
+      <tr>
+          <th>用語</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>STARK</strong></td>
+          <td>zk-SNARKの次世代技術。trusted setup不要、量子安全性あり、証明が透明かつ検証が高速。特に公共性・政府用途と相性が良い。</td>
+      </tr>
+      <tr>
+          <td><strong>業界標準</strong></td>
+          <td>ブロックチェーン界において多数のプロトコル・インフラ・機関が採用する主流技術となること。特にZK分野ではSTARKかSNARKかの分岐が焦点。</td>
+      </tr>
+      <tr>
+          <td><strong>ZK設計主義チェーン</strong></td>
+          <td>プロトコルレベルでゼロ知識証明（ZK）を前提に設計されたL1チェーン。Midnightなどが該当し、後付け対応でない点が特徴。</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-文意の深掘り">🧠 文意の深掘り</h2>
+<p>この一文は以下の因果関係を示唆している：</p>
+<ul>
+<li><strong>前提条件</strong>：zk-STARKがZK技術の主流・標準になる</li>
+<li><strong>結果</strong>：ZKをプロトコルに深く組み込んでいるL1（例：Midnight）が有利な立場になる</li>
+<li><strong>理由</strong>：ZK前提で設計されているため、新しいZK技術（STARKなど）にも最適化が容易であり、パフォーマンスや安全性の面でも先行できる</li>
+</ul>
+<hr>
+<h2 id="-ethereumとの比較での含意">✅ Ethereumとの比較での含意</h2>
+<table>
+  <thead>
+      <tr>
+          <th>比較軸</th>
+          <th>Ethereum（zkEVM路線）</th>
+          <th>Midnight（ZK設計主義）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ZKの導入形式</td>
+          <td>既存EVMの上に後付け</td>
+          <td>プロトコルレベルから統合</td>
+      </tr>
+      <tr>
+          <td>STARK導入の難易度</td>
+          <td>EVM互換維持のため制約多</td>
+          <td>最適化可能な余地が大きい</td>
+      </tr>
+      <tr>
+          <td>公共性との相性</td>
+          <td>一部互換に留まる恐れあり</td>
+          <td>コンプライアンス設計と親和的</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-意味する未来像">🔮 意味する未来像</h2>
+<p>もしSTARKが「政府・企業・公共インフラに適したZK技術」として定着した場合：</p>
+<ul>
+<li>Ethereumは依然としてSNARKベース互換を維持し続ける可能性があり、制約を受ける</li>
+<li>一方、Midnightは「STARK-first設計」や「STARKベースのdApp実行環境」などへと<strong>大胆な進化が可能</strong></li>
+</ul>
+<p>したがって、<strong>インフラとしての柔軟性・最適化の余地</strong>という観点で、MidnightのようなZK設計主義L1が業界で主導権を握る可能性がある。</p>
+<p>（作成：2025年7月12日）</p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E8%A6%B3%E6%B8%AC%E8%A8%98%E9%8C%B2/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">観測記録</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E6%80%9D%E6%83%B3/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">思想</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%AB%E3%83%AB%E3%83%80%E3%83%8E/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">カルダノ</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/eth/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ETH</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/zk/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">ZK</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/midnight/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">Midnight</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E6%AF%94%E8%BC%83/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">比較</a>
+   </li>
+  
+   <li class="list di">
+     <a href="http://localhost:1313/fbl-site/tags/%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA/" class="link f5 grow br-pill ba ph3 pv2 mb2 dib black sans-serif no-underline">シナリオ</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/btc_whale_midnight_analysis/">BTC_whale_midnight_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch567/nightdust_doublestructure_report/">NightDust_DoubleStructure_Report</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/usdm_lace_integration_cgta_analysis.md/">USDM_Lace_Integration_CGTA_Analysis.md</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch563/charles_ai_blockchain_complementarity_final/">charles_ai_blockchain_complementarity_final</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch562/nbx_cardano_mica_defi_analysis/">NBX_Cardano_MiCA_DeFi_Analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch562/sec_staking_shift_vs_cardano_impact/">SEC_staking_shift_vs_Cardano_impact</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch559/starstream_folding_coroutine_analysis-1/">Starstream_Folding_Coroutine_Analysis (1)</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/2024_airdrop_performance_analysis_by_keyrock.md/">2024_Airdrop_Performance_Analysis_by_Keyrock.md</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/bis_vs_us_stablecoin_cbdc_2025/">BIS_vs_US_Stablecoin_CBDC_2025</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch569/%E3%82%A4%E3%83%BC%E3%83%AD%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%AF%E3%81%A8%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E5%85%9A%E3%83%93%E3%83%83%E3%83%88%E3%82%B3%E3%82%A4%E3%83%B3%E3%81%8C%E4%B8%BB%E5%BD%B9%E3%81%A8%E3%81%AA%E3%82%8B%E6%94%BF%E6%B2%BB%E3%81%AE%E6%9C%AA%E6%9D%A5/">イーロン・マスクとアメリカ党：ビットコインが主役となる政治の未来</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/ethereum_gas_eip7983_vs_cardano/">Ethereum_Gas_EIP7983_vs_Cardano</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/transaction_success_rate_analysis/">transaction_success_rate_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/ctrlwallet_emurgo_analysis/">ctrlwallet_emurgo_analysis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/dust_mechanics_explained/">dust_mechanics_explained</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="http://localhost:1313/fbl-site/posts/epoch568/cardano_tailwind_vitalik_ethcc2025/">cardano_tailwind_vitalik_ethcc2025</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/fbl-site/" >
+    &copy;  未来サイバー生命体研究所 (Future BioCybernetics Lab) 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
