@@ -34,8 +34,7 @@ article table td {
   padding: 8px !important;
 }
 
-/* 4) Ananke（Tachyons）の本文ラッパに合わせて最終上書き
-      ※ .nested-copy-line-height は Ananke の本文ブロック */
+/* 4) Ananke（Tachyons）の本文ラッパに合わせて最終上書き */
 .nested-copy-line-height table,
 .nested-copy-line-height table th,
 .nested-copy-line-height table td {

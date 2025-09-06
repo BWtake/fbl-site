@@ -28,7 +28,7 @@ canonifyURLs = true
 [params]
   mainSections = ["posts"]
   recentPostsLimit = 3
-  customCSS = ["css/custom.css"]
+  custom_css = ["custom.css"]
   googleAnalytics = "G-XTDDG90VL1"
 
 [outputs]
@@ -36,3 +36,9 @@ home     = ["HTML","RSS"]
 section  = ["HTML","RSS"]
 taxonomy = ["HTML","RSS"]
 term     = ["HTML","RSS"]
+
+# すでにある baseURL, params, [outputs] 等の下あたりに追加
+[module]
+  [module.hugoVersion]
+    min = "0.128.0"     # 使うHugoの最小バージョン要件
+    # extended = true   # 拡張版が必須なら付ける（AnankeはSCSSありなので拡張版推奨）
